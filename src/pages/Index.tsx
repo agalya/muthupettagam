@@ -4,17 +4,49 @@ import CategoryCard from "@/components/CategoryCard";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+import img1 from "@/assets/periyappaAndPeriyamma.jpeg";
+import img2 from "@/assets/periyappaAndSiddhu.jpeg";
+import img3 from "@/assets/periyappaKavinandShawn.jpeg";
+import img4 from "@/assets/periyappareadingpaper.jpeg";
+import img5 from "@/assets/Railviharperiyappa.jpeg";
+
+const photos = [img1, img2, img3, img4, img5];
+
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      {/* Hero Section */}
+      {/* Hero Section with Photo Background */}
       <section className="gradient-memorial relative overflow-hidden py-24 px-4 text-center">
+        {/* Photo mosaic background */}
+        <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-5 gap-0 opacity-[0.12]">
+          {photos.map((src, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, delay: i * 0.2 }}
+              className="relative overflow-hidden"
+            >
+              <img
+                src={src}
+                alt=""
+                className="w-full h-full object-cover grayscale"
+              />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(240_50%_16%/0.7)] via-[hsl(240_40%_22%/0.6)] to-[hsl(260_35%_28%/0.8)]" />
+
+        {/* Ambient glow */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-1/4 w-64 h-64 rounded-full bg-accent blur-[100px]" />
           <div className="absolute bottom-10 right-1/4 w-48 h-48 rounded-full bg-accent blur-[80px]" />
         </div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
