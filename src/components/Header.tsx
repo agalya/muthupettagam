@@ -6,10 +6,10 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link to="/" className="flex items-center gap-3 group">
           <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-sm text-primary-foreground font-bold">நி</span>
+            <span className="text-sm text-primary-foreground font-bold">மு</span>
           </div>
           <span className="font-tamil-heading text-lg font-semibold text-foreground">
-            நினைவு மலர்
+            முத்துக்குமாரின் நினைவகம்
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">

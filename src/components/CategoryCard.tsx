@@ -13,19 +13,17 @@ const CategoryCard = ({ category, index }: CategoryCardProps) => {
 
   return (
     <motion.div
+      className="h-full"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08, duration: 0.5 }}
     >
       <Link
         to={`/category/${category.id}`}
-        className="group block rounded-2xl bg-card border border-border/50 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 hover:border-accent/30"
+        className="group flex flex-col h-full rounded-2xl bg-card border border-border/50 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 hover:border-accent/30"
       >
         <div className="mb-4 h-11 w-11 rounded-xl bg-secondary flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
           {category.icon}
-        </div>
-        <div className="mb-1 font-tamil-body text-xs text-accent font-semibold tracking-wider">
-          {category.number}.
         </div>
         <h3 className="mb-2 font-tamil-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
           {category.title}
@@ -33,7 +31,7 @@ const CategoryCard = ({ category, index }: CategoryCardProps) => {
         <p className="text-sm text-muted-foreground font-tamil-body leading-relaxed">
           {category.description}
         </p>
-        <div className="mt-5 flex items-center justify-between">
+        <div className="mt-auto pt-5 flex items-center justify-between">
           <span className="text-xs text-muted-foreground font-tamil-body bg-secondary px-2.5 py-1 rounded-full">
             {itemCount} படைப்புகள்
           </span>
