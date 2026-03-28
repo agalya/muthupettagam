@@ -18,7 +18,7 @@ const Index = () => {
       <Header />
 
       {/* Hero Section with Photo Background */}
-      <section className="gradient-memorial relative overflow-hidden py-24 px-4 text-center">
+      <section className="bg-[hsl(220_20%_12%)] relative overflow-hidden py-24 px-4 text-center">
         {/* Photo mosaic background */}
         <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-5 gap-0 opacity-[0.75]">
           {photos.map((src, i) => (
@@ -39,7 +39,7 @@ const Index = () => {
         </div>
 
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(240_50%_16%/0.7)] via-[hsl(240_40%_22%/0.6)] to-[hsl(260_35%_28%/0.8)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220_30%_8%/0.6)] via-[hsl(220_25%_12%/0.5)] to-[hsl(220_20%_15%/0.7)]" />
 
         {/* Ambient glow */}
         <div className="absolute inset-0 opacity-10">
