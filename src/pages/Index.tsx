@@ -10,7 +10,7 @@ import img3 from "@/assets/periyappaKavinandShawn.jpeg";
 import img4 from "@/assets/periyappareadingpaper.jpeg";
 import img5 from "@/assets/Railviharperiyappa.jpeg";
 
-const photos = [img1, img2, img3, img4, img5];
+const photos = [img1, img2, img5, img4, img3];
 
 const Index = () => {
   return (
@@ -20,7 +20,7 @@ const Index = () => {
       {/* Hero Section with Photo Background */}
       <section className="gradient-memorial relative overflow-hidden py-24 px-4 text-center">
         {/* Photo mosaic background */}
-        <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-5 gap-0 opacity-[0.35]">
+        <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-5 gap-0 opacity-[0.5]">
           {photos.map((src, i) => (
             <motion.div
               key={i}
