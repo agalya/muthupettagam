@@ -20,7 +20,7 @@ const Index = () => {
       {/* Hero Section with Photo Background */}
       <section className="gradient-memorial relative overflow-hidden py-24 px-4 text-center">
         {/* Photo mosaic background */}
-        <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-5 gap-0 opacity-[0.12]">
+        <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-5 gap-0 opacity-[0.35]">
           {photos.map((src, i) => (
             <motion.div
               key={i}
