@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TextToSpeech from "@/components/TextToSpeech";
+import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
 import { Languages } from "lucide-react";
 
 const CategoryPage = () => {
@@ -103,7 +104,7 @@ const CategoryPage = () => {
                         className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
                       >
                         <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left py-4">
-                          {item.title}
+                          <ArticleTitle item={item} titleClassName="font-tamil-heading font-semibold" />
                         </AccordionTrigger>
                         <AccordionContent>
                           <div className="pt-2 pb-4">
@@ -123,7 +124,7 @@ const CategoryPage = () => {
                             )}
                             {item.image && (
                               <div className="mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
-                                <img src={item.image} alt={item.title} className="w-full h-auto" />
+                                <img src={item.image} alt={articleDisplayTitle(item)} className="w-full h-auto" />
                               </div>
                             )}
                             <p className="font-tamil-body text-sm md:text-base text-foreground whitespace-pre-wrap leading-relaxed max-w-3xl mx-auto">
@@ -173,7 +174,7 @@ const CategoryPage = () => {
                   className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
                 >
                   <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left py-4">
-                    {item.title}
+                    <ArticleTitle item={item} titleClassName="font-tamil-heading font-semibold" />
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="pt-2 pb-4">
@@ -193,7 +194,7 @@ const CategoryPage = () => {
                       )}
                       {item.image && (
                         <div className="mb-5 rounded-lg overflow-hidden border border-border/50 shadow-sm">
-                          <img src={item.image} alt={item.title} className="w-full h-auto" />
+                          <img src={item.image} alt={articleDisplayTitle(item)} className="w-full h-auto" />
                         </div>
                       )}
                       <p className="font-tamil-body text-sm text-foreground whitespace-pre-wrap leading-relaxed">

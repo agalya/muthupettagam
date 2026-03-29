@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import TextToSpeech from "@/components/TextToSpeech";
+import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
 
 import img1 from "@/assets/periyappaAndPeriyamma.jpeg";
 import img2 from "@/assets/periyappaAndSiddhu.jpeg";
@@ -71,10 +72,15 @@ const Index = () => {
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
     const query = searchQuery.toLowerCase();
-    return allArticles.filter(item => 
-      item.title?.toLowerCase().includes(query) || 
-      item.content?.toLowerCase().includes(query)
-    );
+    return allArticles.filter((item) => {
+      const titleBlock = articleDisplayTitle(item).toLowerCase();
+      return (
+        item.title?.toLowerCase().includes(query) ||
+        item.date?.toLowerCase().includes(query) ||
+        titleBlock.includes(query) ||
+        item.content?.toLowerCase().includes(query)
+      );
+    });
   }, [searchQuery, allArticles]);
 
   return (
@@ -166,7 +172,9 @@ const Index = () => {
                     className="rounded-xl border border-border/50 bg-background px-5 py-1 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/30"
                   >
                     <AccordionTrigger className="font-tamil-heading font-medium text-foreground hover:no-underline text-left py-4 flex flex-col items-start gap-1">
-                      <span>{item.title}</span>
+                      <span className="w-full text-left">
+                        <ArticleTitle item={item} titleClassName="font-tamil-heading font-medium" />
+                      </span>
                       <span className="text-xs font-tamil-body text-muted-foreground/80 font-normal">
                         {item.categoryTitle} {item.subCategoryTitle ? `> ${item.subCategoryTitle}` : ''}
                       </span>
@@ -189,7 +197,7 @@ const Index = () => {
                         )}
                         {item.image && (
                           <div className="mb-5 rounded-lg overflow-hidden border border-border/50 shadow-sm">
-                            <img src={item.image} alt={item.title} className="w-full h-auto" />
+                            <img src={item.image} alt={articleDisplayTitle(item)} className="w-full h-auto" />
                           </div>
                         )}
                         <p className="font-tamil-body text-sm md:text-base text-foreground whitespace-pre-wrap leading-relaxed">

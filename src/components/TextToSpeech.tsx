@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Play, Square } from "lucide-react";
 
 interface TextToSpeechProps {
@@ -7,6 +7,10 @@ interface TextToSpeechProps {
   lang?: string;
   labelPlay?: string;
   labelStop?: string;
+}
+
+function hasProvidedAudioFile(audioFile?: string): boolean {
+  return Boolean(audioFile?.trim());
 }
 
 const TextToSpeech = ({ 
@@ -18,19 +22,97 @@ const TextToSpeech = ({
 }: TextToSpeechProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioFailedRef = useRef(false);
+
+  const speakWithBrowserTts = useCallback(() => {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    const voices = window.speechSynthesis.getVoices();
+    const targetLangPrefix = lang.split("-")[0].toLowerCase();
+
+    let preferredVoice =
+      voices.find(
+        (v) =>
+          v.lang.toLowerCase().startsWith(targetLangPrefix) &&
+          v.name.toLowerCase().includes("male") &&
+          !v.name.toLowerCase().includes("female")
+      ) ||
+      voices.find((v) => v.lang.toLowerCase().startsWith(targetLangPrefix));
+
+    if (targetLangPrefix === "en") {
+      const maleUkVoice = voices.find(
+        (v) =>
+          (v.lang === "en-GB" || v.name.includes("UK")) &&
+          v.name.toLowerCase().includes("male") &&
+          !v.name.toLowerCase().includes("female")
+      );
+      const knownMaleVoice = voices.find(
+        (v) =>
+          v.lang.startsWith("en") &&
+          (v.name.includes("Daniel") ||
+            v.name.includes("David") ||
+            v.name.includes("Mark") ||
+            v.name.includes("Arthur"))
+      );
+      const maleEnglishVoice = voices.find(
+        (v) =>
+          v.lang.startsWith("en") &&
+          v.name.toLowerCase().includes("male") &&
+          !v.name.toLowerCase().includes("female")
+      );
+      const ukVoice = voices.find(
+        (v) =>
+          v.lang === "en-GB" ||
+          v.name.includes("UK") ||
+          v.name.includes("Great Britain")
+      );
+
+      if (maleUkVoice) preferredVoice = maleUkVoice;
+      else if (knownMaleVoice) preferredVoice = knownMaleVoice;
+      else if (maleEnglishVoice) preferredVoice = maleEnglishVoice;
+      else if (ukVoice) preferredVoice = ukVoice;
+    }
+
+    if (preferredVoice) {
+      utterance.voice = preferredVoice;
+    }
+
+    utterance.lang = lang;
+    utterance.rate = 0.85;
+    utterance.pitch = 0.95;
+
+    utterance.onend = () => setIsPlaying(false);
+    utterance.onerror = () => setIsPlaying(false);
+
+    window.speechSynthesis.speak(utterance);
+    setIsPlaying(true);
+  }, [text, lang]);
 
   useEffect(() => {
-    if (audioFile) {
-      const audio = new window.Audio(audioFile);
-      audio.onended = () => setIsPlaying(false);
-      audio.onerror = () => setIsPlaying(false);
-      audioRef.current = audio;
+    audioFailedRef.current = false;
+    const path = audioFile?.trim();
+
+    if (!path) {
+      audioRef.current = null;
+      return () => {
+        window.speechSynthesis.cancel();
+      };
     }
+
+    const audio = new window.Audio(path);
+    audio.onended = () => setIsPlaying(false);
+    audio.onerror = () => {
+      audioFailedRef.current = true;
+      setIsPlaying(false);
+    };
+    audioRef.current = audio;
 
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
+        audioRef.current = null;
       }
       window.speechSynthesis.cancel();
     };
@@ -38,7 +120,7 @@ const TextToSpeech = ({
 
   const handleTogglePlay = () => {
     if (isPlaying) {
-      if (audioFile && audioRef.current) {
+      if (hasProvidedAudioFile(audioFile) && audioRef.current && !audioFailedRef.current) {
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
       } else {
@@ -46,52 +128,23 @@ const TextToSpeech = ({
       }
       setIsPlaying(false);
     } else {
-      if (audioFile && audioRef.current) {
-        audioRef.current.currentTime = 0;
-        audioRef.current.play().catch(e => {
-          console.error("Audio playback failed:", e);
-          setIsPlaying(false);
-        });
-        setIsPlaying(true);
-      } else {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        
-        const voices = window.speechSynthesis.getVoices();
-        const targetLangPrefix = lang.split('-')[0].toLowerCase();
-        
-        let preferredVoice = voices.find(
-          (v) => v.lang.toLowerCase().startsWith(targetLangPrefix) && (v.name.toLowerCase().includes('male') && !v.name.toLowerCase().includes('female'))
-        ) || voices.find(
-          (v) => v.lang.toLowerCase().startsWith(targetLangPrefix)
-        );
-        
-        if (targetLangPrefix === "en") {
-          const maleUkVoice = voices.find(v => (v.lang === 'en-GB' || v.name.includes('UK')) && (v.name.toLowerCase().includes('male') && !v.name.toLowerCase().includes('female')));
-          const knownMaleVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Daniel') || v.name.includes('David') || v.name.includes('Mark') || v.name.includes('Arthur')));
-          const maleEnglishVoice = voices.find(v => v.lang.startsWith('en') && (v.name.toLowerCase().includes('male') && !v.name.toLowerCase().includes('female')));
-          const ukVoice = voices.find(v => v.lang === 'en-GB' || v.name.includes('UK') || v.name.includes('Great Britain'));
-          
-          if (maleUkVoice) preferredVoice = maleUkVoice;
-          else if (knownMaleVoice) preferredVoice = knownMaleVoice;
-          else if (maleEnglishVoice) preferredVoice = maleEnglishVoice;
-          else if (ukVoice) preferredVoice = ukVoice;
-        }
-        
-        if (preferredVoice) {
-          utterance.voice = preferredVoice;
-        }
-        
-        utterance.lang = lang;
-        utterance.rate = 0.85; // Slower, poetic pacing
-        utterance.pitch = 0.95; // Slightly deeper, calming tone
-        
-        utterance.onend = () => setIsPlaying(false);
-        utterance.onerror = () => setIsPlaying(false);
-        
-        window.speechSynthesis.speak(utterance);
-        setIsPlaying(true);
+      const useTts =
+        !hasProvidedAudioFile(audioFile) || audioFailedRef.current || !audioRef.current;
+
+      if (useTts) {
+        speakWithBrowserTts();
+        return;
       }
+
+      const el = audioRef.current;
+      el.currentTime = 0;
+      el.play()
+        .then(() => setIsPlaying(true))
+        .catch((e) => {
+          console.error("Audio playback failed:", e);
+          audioFailedRef.current = true;
+          speakWithBrowserTts();
+        });
     }
   };
 
