@@ -39,7 +39,7 @@ export const categories: Category[] = [
         items: [
           { id: "hv4", title: "மணிவிழா வாழ்த்து - [நாயகன்: திருமிகு.இராமலிங்கம், நாயகி: திருமதி.கௌரி இராமலிங்கம்]", 
             date: "07 ஏப்ரல் 1996", 
-            audioFile: "", 
+            audioFile: "/madras thaatha - 60.m4a", 
             image: "/vazhthu-2.jpg",
             englishTranslation: `Dear ones!
 Our ideal couple!
@@ -1041,7 +1041,7 @@ Let us cherish the memory of our dear Aunt. Let us seek her blessings for our we
             title: "சிங்கி அண்ணன்", 
             date: "06 டிசம்பர் 2024",
             image:"/singi.jpg",
-            audioFile: "", 
+            audioFile: "/singi-audio.m4a", 
             englishTranslation: `
           A messenger of love...
           Who arrives in the early hours
@@ -1223,7 +1223,7 @@ Medical Reportகளை
             title: "மணிவிழா வாழ்த்து [விழா நாயகர்: பொன். முத்துக்குமார் : விழா நாயகி: மு. வேலம்மாள் அண்ணி]", 
             date: "25 செப்டம்பர் 2015",
             image:"/periyappa-periyamma-60.jpg", 
-            audioFile: "", 
+            audioFile: "/manivizha.mp3", 
             englishTranslation: `Diamond Jubilee (60th Anniversary) Greetings
 
 Hero of the Jubilee: Pon. Muthukumar
