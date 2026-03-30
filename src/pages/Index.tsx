@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import TextToSpeech from "@/components/TextToSpeech";
 import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
+import { downloadArticlePdf } from "@/lib/downloadArticlePdf";
 
 import img1 from "@/assets/periyappaAndPeriyamma.jpeg";
 import img2 from "@/assets/periyappaAndSiddhu.jpeg";
@@ -191,6 +192,14 @@ const Index = () => {
                               >
                                 <Languages className="w-4 h-4" />
                                 <span>English Translation</span>
+                              </button>
+                            )}
+                            {item.englishTranslation && (
+                              <button
+                                onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
+                                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
+                              >
+                                <span>Download PDF</span>
                               </button>
                             )}
                           </div>

@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TextToSpeech from "@/components/TextToSpeech";
 import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
+import { downloadArticlePdf } from "@/lib/downloadArticlePdf";
 import { Languages } from "lucide-react";
 
 const CategoryPage = () => {
@@ -120,6 +121,14 @@ const CategoryPage = () => {
                                     <span>English Translation</span>
                                   </button>
                                 )}
+                                {item.englishTranslation && (
+                                  <button
+                                    onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
+                                    className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
+                                  >
+                                    <span>Download PDF</span>
+                                  </button>
+                                )}
                               </div>
                             )}
                             {item.image && (
@@ -188,6 +197,14 @@ const CategoryPage = () => {
                             >
                               <Languages className="w-4 h-4" />
                               <span>English Translation</span>
+                            </button>
+                          )}
+                          {item.englishTranslation && (
+                            <button
+                              onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
+                              className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
+                            >
+                              <span>Download PDF</span>
                             </button>
                           )}
                         </div>

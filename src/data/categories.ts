@@ -1438,6 +1438,107 @@ We, who are always blessed by them, wish them a healthy life today.
             வந்தது போல் சென்றான் காண்
             ` 
           },
+          { id: "fi4", 
+            title: "அக்கா தனலட்சுமி (குந்தவை பிராட்டியின்) இரங்கல்", 
+            date: "29 மார்ச் 2026", 
+            image: "/aththai-img.jpg",
+            audioFile: "/maranthai_aththai.m4a", 
+            englishTranslation: `Brother...
+You are three years younger than me, but in this life, you were always the first to support me... like an elder brother! Since childhood, you did not walk in front of me... you were always by my side... and at times, behind me like a shadow... I never asked for myself, but you were always there at the moment I needed you... and you did what was necessary...
+You
+You never expected anything..
+But
+You wanted to live
+Without losing my respect for you!
+That was your world!
+
+The long phone conversation
+I had with you
+Keeps echoing within me
+Without ceasing!
+
+Believing that being with you
+Was safety,
+I moved into Panagudi!
+But you...
+You surrendered
+To the haste of the God of Time!
+
+To whom shall I tell?
+What shall I do?
+Confused like a child
+In the silence of your absence,
+I am wasting away searching for you!
+I search for your voice
+Saying, "I am here."
+
+All that I pray for
+Is only one thing!
+That you alone must be my younger brother...
+Even in the next life...
+
+With love forever,
+Your affectionate elder sister,
+P. Dhanalakshmi Somasundaram.`, 
+            content: `
+            தம்பி! 
+            என்னை விட 
+            மூன்று வயது இளையவன் 
+            ஆனால் 
+            இந்த வாழ்க்கையில் 
+            எப்போதும் 
+            நீயே 
+            என்னை முதலில் தாங்கினாய்... 
+            அண்ணனாக! 
+            
+            சிறு வயதிலிருந்தே 
+            எனக்கு முன்னால் நடக்கவில்லை நீ... 
+            எப்போதும் என் பக்கத்தில்... 
+            சில நேரங்களில் என் பின்னால் நிழலாக... 
+            நான் கேட்டதில்லை
+            ஆனால் 
+            நீ எப்போதும் எனக்கு 
+            தேவையான நேரத்தில் இருந்தாய்... 
+            தேவையானதை செய்தாய்...
+            நீ
+            எதையும் எதிர்பார்த்ததில்லை..
+            ஆனால்
+            என் மரியாதை உடைந்து போகாமல்
+            வாழ வேண்டும்
+            என நினைத்தாய்!
+            அதுதான் உன் உலகம்!
+
+            உன்னுடனான
+            நீண்ட அலைபேசி உரையாடல்
+            என்னுள்
+            ஓயாமல் ஒலித்து கொண்டிருக்கிறது!
+
+            உன்னுடன் இருப்பதே
+            பாதுகாப்பு என்று
+            பணகுடிக்கு இடம்பெயர்ந்தேன்!
+            நீயோ
+            காலதேவனின் அவசரத்திற்கு
+            இணங்கி விட்டாய்!
+
+            யாரிடம் சொல்வது?
+            என்ன செய்வது?
+            குழந்தை போல குழம்பி
+            நீ இல்லாத மௌனத்தில்
+            உன்னைத் தேடி அழுகின்றேன்!
+            "நான் இருக்கிறேன்"
+            என்ற உன் குரலை தேடுகின்றேன்!
+
+            நான் வேண்டுவதெல்லாம்
+            ஒன்றே!
+            நீயே என் தம்பியாக
+            வேண்டும்...
+            அடுத்த பிறவியிலும்...
+
+            என்றென்றும் அன்புடன்
+            உன் பாசமிகு அக்காள்
+            P. தனலட்சுமி சோமசுந்தரம்.
+                        `
+                      },
           { id: "fi2", title: "தங்கை சங்கீதா இனியனின் இரங்கல்", 
             date: "28 மார்ச் 2026", 
             audioFile: "/babuththai-audio.mp3",
@@ -1528,26 +1629,43 @@ It is only your body that has departed from us; you are always with our hearts..
 
 பாபு இனியன்.` 
           },
+
           { id: "fi3", title: "தம்பி கந்தனின் இரங்கல்", 
             date: "24 மார்ச் 2026", 
-            audioFile: "",
+            audioFile: "/appa_audio_clean.mp3",
             image:"/kandhan.jpg",
-            englishTranslation: `How could your heart find the will to part, Brother,
+            englishTranslation: `The divine hand that embraced those who were forsaken.
+The supreme light of grace that showed mercy to the needy and the helpless.
+
+How could your heart find the will to part, Brother,
 From those who held you in such boundless love
 And the vast circle of friendship you leave behind?
 
 The Kuyil Paattu (Cuckoo’s Song) of Bharathi Illam has fallen into silence...
 Our guiding light, our shining lamp—
-How can we ever bid you farewell, Brother?`, 
+How can we ever bid you farewell, Brother?
+
+I truly believed we would converse at leisure after my retirement.
+But you have plunged us into an unhealable sorrow
+And departed into an eternal sleep, Brother.`, 
             content: `
+            புறக்கணிக்கப்பட்டவர்களையும் அரவணைக்கும் திருக்கரம்
+            இல்லாதோருக்கும் இயலாதோருக்கும் இரங்கும் அருட்பெருஞ்ஜோதி
             பேரன்புக்குரியவர்களையும் 
             பெரும்நட்பு வட்டத்தையும் 
             பிரிய எப்படி மனம் வந்தது அண்ணா. 
-            பாரதி இல்லத்தின் குயில் பாட்டு அமைதியாகி விட்டது.. 
-            வழிகாட்டும் ஒளி விளக்கை எப்படி வழி அனுப்பி வைப்போம் அண்ணா.`
+            பாரதி இல்லத்தின் குயில் பாட்டு அமைதியாகி விட்டதே.. 
+            வழிகாட்டும் ஒளி விளக்கை எப்படி வழி அனுப்பி வைப்போம் அண்ணா.
+            ஓய்வுக்குப் பின் நிதானமாக உரையாடலாம் என்று தானே இருந்தேன்
+            ஆறாத் துயரில் தள்ளிவிட்டு மீளாத் துயிலில் சென்றுவிட்டாயே அண்ணா `
           },
-          { id: "fi4", title: "இரங்கல் கவிதை 4", date: "25 நவம்பர் 2024", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-          { id: "fi5", title: "இரங்கல் கவிதை 5", date: "10 டிசம்பர் 2024", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
+          
+          { id: "fi5", title: "சகோதரிகளின் விழுதுகள் - மருமக(ன்)ள்களின் இரங்கல்", 
+            date: "10 டிசம்பர் 2024", 
+            audioFile: "", 
+            englishTranslation: "Will be uploaded soon...", 
+            content: "விரைவில் பதிவேற்றப்படும்..." 
+          },
           { id: "fi6", title: "இரங்கல் கவிதை 6", date: "30 டிசம்பர் 2024", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
         ],
       },
