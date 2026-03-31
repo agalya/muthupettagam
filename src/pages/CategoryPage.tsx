@@ -9,6 +9,7 @@ import TextToSpeech from "@/components/TextToSpeech";
 import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
 import { downloadArticlePdf } from "@/lib/downloadArticlePdf";
 import { Languages } from "lucide-react";
+import ZipDownloadButton from "@/components/ZipDownloadButton";
 
 const CategoryPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -49,17 +50,23 @@ const CategoryPage = () => {
             <Link to="/" className="inline-flex items-center gap-1 text-white/50 font-tamil-body text-sm mb-6 hover:text-white/80 transition-colors">
               ← முகப்பு
             </Link>
-            <div className="flex items-center gap-4 mb-3">
-              <div className="h-12 w-12 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center text-3xl">
-                {category.icon}
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-3">
+              <div className="flex items-center gap-4">
+                <div className="h-12 w-12 rounded-xl bg-white/10 backdrop-blur flex-shrink-0 flex items-center justify-center text-3xl">
+                  {category.icon}
+                </div>
+                <div>
+                  <h1 className="font-tamil-heading text-2xl md:text-3xl font-bold text-white">
+                    {category.title}
+                  </h1>
+                  <p className="font-tamil-body text-white/60 text-sm mt-1">
+                    {category.description}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h1 className="font-tamil-heading text-2xl md:text-3xl font-bold text-white">
-                  {category.title}
-                </h1>
-                <p className="font-tamil-body text-white/60 text-sm mt-1">
-                  {category.description}
-                </p>
+              
+              <div className="flex-shrink-0">
+                <ZipDownloadButton categories={[category]} />
               </div>
             </div>
           </motion.div>

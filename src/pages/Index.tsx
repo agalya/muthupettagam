@@ -9,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import TextToSpeech from "@/components/TextToSpeech";
 import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
 import { downloadArticlePdf } from "@/lib/downloadArticlePdf";
+import ZipDownloadButton from "@/components/ZipDownloadButton";
 
 import img1 from "@/assets/periyappaAndPeriyamma.jpeg";
 import img2 from "@/assets/periyappaAndSiddhu.jpeg";
@@ -244,6 +245,9 @@ const Index = () => {
         </section>
       ) : (
         <section className="container mx-auto px-4 -mt-8 relative z-10 pb-16">
+          <div className="flex justify-center mb-8">
+            <ZipDownloadButton categories={categories} isAll={true} />
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {categories.map((category, index) => (
               <CategoryCard key={category.id} category={category} index={index} />

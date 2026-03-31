@@ -1,7 +1,8 @@
 import type { WritingItem } from "@/data/categories";
 import { articleDisplayTitle } from "@/lib/articleDisplayTitle";
+import html2canvas from "html2canvas";
 
-function safeFilename(name: string) {
+export function safeFilename(name: string) {
   return name
     .trim()
     .replace(/\s+/g, "_")
@@ -32,158 +33,174 @@ async function imageUrlToDataUrl(url: string): Promise<{ dataUrl: string; kind: 
   return { dataUrl, kind };
 }
 
-function writeTextPreservingNewlines(
-  doc: any,
-  text: string,
-  x: number,
-  y: number,
-  maxWidth: number,
-  lineHeightMm: number,
-  pageHeight: number,
-  marginBottom = 10
-) {
-  const rows = text.split(/\r?\n/);
-  const startY = y;
-  const wrappedLines: string[] = [];
+export async function generateArticlePdf(item: WritingItem) {
+  // Helper to create styled containers for rendering via DOM
+  const createContainer = () => {
+    const container = document.createElement("div");
+    // 794px is roughly 210mm at 96 DPI (A4 Width)
+    container.style.width = "794px";
+    container.style.padding = "40px"; // 40px padding acts as roughly 10mm margin
+    container.style.position = "absolute";
+    container.style.left = "-9999px";
+    container.style.top = "0";
+    container.style.backgroundColor = "white";
+    container.style.color = "black";
+    container.style.fontFamily = "ui-sans-serif, system-ui, sans-serif, Noto Sans Tamil"; 
+    return container;
+  };
 
-  for (const row of rows) {
-    if (row.trim().length === 0) {
-      wrappedLines.push(""); // blank line
-      continue;
-    }
-    const parts = doc.splitTextToSize(row, maxWidth);
-    for (const p of parts) wrappedLines.push(String(p));
+  const tamilContainer = createContainer();
+  const englishContainer = createContainer();
+
+  // 1. Tamil Container Setup
+  const titleEl = document.createElement("h1");
+  titleEl.innerText = articleDisplayTitle(item);
+  titleEl.style.fontSize = "24px";
+  titleEl.style.fontWeight = "bold";
+  titleEl.style.marginBottom = "24px";
+  tamilContainer.appendChild(titleEl);
+
+  if (item.content) {
+    const contentEl = document.createElement("div");
+    contentEl.style.fontSize = "16px";
+    contentEl.style.whiteSpace = "pre-wrap";
+    contentEl.style.marginBottom = "24px";
+    contentEl.style.lineHeight = "1.6";
+    contentEl.innerText = item.content;
+    tamilContainer.appendChild(contentEl);
   }
 
-  let cursorY = startY;
-  for (const line of wrappedLines) {
-    if (cursorY > pageHeight - marginBottom) {
-      doc.addPage();
-      cursorY = 10;
+  // 2. English Container Setup (Image + Translation)
+  const hasEnglishSection = Boolean(item.image || item.englishTranslation);
+  if (hasEnglishSection) {
+    const englishSection = document.createElement("div");
+    englishSection.style.display = "flex";
+    englishSection.style.gap = "24px";
+    
+    // Image
+    if (item.image) {
+      const imgCont = document.createElement("div");
+      // 85mm is approx 321px
+      imgCont.style.width = "320px";
+      imgCont.style.flexShrink = "0";
+      
+      const imgEl = document.createElement("img");
+      try {
+        const { dataUrl } = await imageUrlToDataUrl(item.image);
+        imgEl.src = dataUrl;
+        imgEl.style.width = "100%";
+        imgEl.style.height = "auto";
+        imgEl.style.objectFit = "contain";
+        
+        await new Promise((resolve) => {
+          imgEl.onload = resolve;
+          imgEl.onerror = resolve; // Just resolve on error so we continue
+        });
+        imgCont.appendChild(imgEl);
+        englishSection.appendChild(imgCont);
+      } catch (e) {
+        console.error("Failed to load image for PDF", e);
+      }
     }
-    // Blank line spacing
-    if (line === "") {
-      cursorY += lineHeightMm;
-      continue;
+
+    // English text
+    if (item.englishTranslation) {
+      const engTextCont = document.createElement("div");
+      engTextCont.style.flexGrow = "1";
+      
+      const engTitleEl = document.createElement("h2");
+      engTitleEl.innerText = "English Translation";
+      engTitleEl.style.fontSize = "18px";
+      engTitleEl.style.fontWeight = "bold";
+      engTitleEl.style.marginBottom = "12px";
+      engTextCont.appendChild(engTitleEl);
+
+      const engContentEl = document.createElement("div");
+      engContentEl.style.fontSize = "14px";
+      engContentEl.style.whiteSpace = "pre-wrap";
+      engContentEl.style.lineHeight = "1.5";
+      engContentEl.innerText = item.englishTranslation;
+      engTextCont.appendChild(engContentEl);
+
+      englishSection.appendChild(engTextCont);
     }
-    doc.text(line, x, cursorY);
-    cursorY += lineHeightMm;
+    
+    englishContainer.appendChild(englishSection);
   }
 
-  return cursorY; // next Y
+  // Append containers to body to compute styles and render fonts
+  document.body.appendChild(tamilContainer);
+  if (hasEnglishSection) document.body.appendChild(englishContainer);
+
+  // Wait a brief moment to ensure browser renders fonts fully
+  await new Promise(resolve => setTimeout(resolve, 150));
+
+  // 3. Capture as canvas
+  const canvases = [];
+  
+  const tamilCanvas = await html2canvas(tamilContainer, {
+    scale: 2, // 2x scale for better text resolution
+    useCORS: true,
+    logging: false
+  });
+  canvases.push(tamilCanvas);
+
+  if (hasEnglishSection) {
+    const englishCanvas = await html2canvas(englishContainer, {
+      scale: 2,
+      useCORS: true,
+      logging: false
+    });
+    canvases.push(englishCanvas);
+  }
+
+  // Cleanup
+  document.body.removeChild(tamilContainer);
+  if (hasEnglishSection) document.body.removeChild(englishContainer);
+
+  // 4. Generate PDF
+  const mod: any = await import("jspdf");
+  const JsPdfCtor = mod.jsPDF ?? mod.default;
+  const pdf = new JsPdfCtor({ unit: "mm", format: "a4" });
+  
+  const pdfWidth = pdf.internal.pageSize.getWidth(); // in mm (approx 210)
+  const pageHeight = pdf.internal.pageSize.getHeight(); // in mm (approx 297)
+
+  for (let i = 0; i < canvases.length; i++) {
+    if (i > 0) pdf.addPage(); // Start a new page for the next canvas (e.g., English section)
+    
+    const canvas = canvases[i];
+    const imgData = canvas.toDataURL("image/jpeg", 0.95);
+    const imgProps = pdf.getImageProperties(imgData);
+    // Calculate height that maintains aspect ratio based on full document width
+    const totalImgHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+    let heightLeft = totalImgHeight;
+    let position = 0;
+
+    pdf.addImage(imgData, "JPEG", 0, position, pdfWidth, totalImgHeight);
+    heightLeft -= pageHeight;
+
+    // Multi-page slicing within the same canvas if it's very long
+    while (heightLeft > 0) {
+      position -= pageHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, "JPEG", 0, position, pdfWidth, totalImgHeight);
+      heightLeft -= pageHeight;
+    }
+  }
+
+  return pdf;
+}
+
+export async function generateArticlePdfBlob(item: WritingItem): Promise<Blob> {
+  const pdf = await generateArticlePdf(item);
+  return pdf.output('blob');
 }
 
 export async function downloadArticlePdf(item: WritingItem) {
-  // Dynamic import keeps initial bundle smaller and avoids SSR issues.
-  const mod: any = await import("jspdf");
-  const JsPdfCtor = mod.jsPDF ?? mod.default;
-  const doc = new JsPdfCtor({ unit: "mm", format: "a4" });
-
-  const pageWidth = doc.internal.pageSize.getWidth();
-  const pageHeight = doc.internal.pageSize.getHeight();
-  const marginX = 10;
-  let cursorY = 10;
-
-  // Title
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(14);
-  const title = articleDisplayTitle(item);
-  const titleLines = doc.splitTextToSize(title, pageWidth - marginX * 2);
-  doc.text(titleLines, marginX, cursorY);
-  cursorY += 8 + titleLines.length * 5;
-
-  // Tamil first (top alignment)
-  const tamilMaxWidth = pageWidth - marginX * 2;
-  if (item.content) {
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(11);
-
-    // Render Tamil preserving newlines
-    cursorY = writeTextPreservingNewlines(
-      doc,
-      item.content,
-      marginX,
-      cursorY,
-      tamilMaxWidth,
-      5,
-      pageHeight,
-      10
-    );
-    cursorY += 4;
-  }
-
-  // English section: image (left) + English translation (right)
-  const imageUrl = item.image;
-  const englishText = item.englishTranslation;
-
-  const hasImage = Boolean(imageUrl);
-  const hasEnglish = Boolean(englishText);
-
-  const colGap = 5;
-  const leftColW = 85; // mm
-  const rightColW = pageWidth - marginX * 2 - leftColW - colGap;
-
-  let topRowY = cursorY + 2;
-  let imageHeightMm = 0;
-
-  // If the English row would overflow, start it on a new page.
-  // (This keeps the requested alignment: tamil at top, english below.)
-  if (hasImage) {
-    try {
-      const { dataUrl, kind } = await imageUrlToDataUrl(imageUrl as string);
-      const img = new Image();
-      img.src = dataUrl;
-      await new Promise<void>((resolve, reject) => {
-        img.onload = () => resolve();
-        img.onerror = reject;
-      });
-
-      // Preserve aspect ratio, cap so it fits on one page section.
-      const aspect = img.height / Math.max(1, img.width);
-      const rawH = leftColW * aspect;
-      imageHeightMm = Math.min(95, Math.max(35, rawH));
-
-      if (topRowY + imageHeightMm > pageHeight - 10) {
-        doc.addPage();
-        topRowY = 10;
-      }
-
-      doc.addImage(dataUrl, kind, marginX, topRowY, leftColW, imageHeightMm);
-    } catch {
-      imageHeightMm = 0;
-    }
-  }
-
-  if (hasEnglish) {
-    if (topRowY > pageHeight - 30) {
-      doc.addPage();
-      topRowY = 10;
-    }
-
-    const headerY = topRowY + 4;
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(12);
-    doc.text("English Translation", marginX + leftColW + colGap, headerY);
-
-    const textYStart = headerY + 6;
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(10.5);
-
-    const lines = doc.splitTextToSize(englishText as string, rightColW);
-    let y = textYStart;
-    for (const line of lines) {
-      if (y > pageHeight - 10) {
-        doc.addPage();
-        y = 10;
-      }
-      doc.text(String(line), marginX + leftColW + colGap, y);
-      y += 5;
-    }
-  }
-
-  cursorY = topRowY + (imageHeightMm || 70) + 5;
-
+  const pdf = await generateArticlePdf(item);
   const filenameBase = safeFilename(item.id ? item.id : item.title);
-  doc.save(`${filenameBase || "article"}-muthupettagam.pdf`);
+  pdf.save(`${filenameBase || "article"}-muthupettagam.pdf`);
 }
 

@@ -18,6 +18,7 @@ const Header = () => {
             { to: "/category/his-poems", label: "கவிதைகள்" },
             { to: "/category/press", label: "பத்திரிக்கை" },
             { to: "/category/memories", label: "நினைவுகள்" },
+            { to: "/upload", label: "புதிய பதிவு (Upload)" },
           ].map((link) => (
             <Link
               key={link.to}

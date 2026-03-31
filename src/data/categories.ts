@@ -37,9 +37,10 @@ export const categories: Category[] = [
         id: "his-vaazhthu",
         title: "வாழ்த்து மடல்கள்",
         items: [
-          { id: "hv4", title: "மணிவிழா வாழ்த்து - [நாயகன்: திருமிகு.இராமலிங்கம், நாயகி: திருமதி.கௌரி இராமலிங்கம்]", 
-            date: "07 ஏப்ரல் 1996", 
-            audioFile: "/madras thaatha - 60.m4a", 
+          {
+            id: "hv4", title: "மணிவிழா வாழ்த்து - [நாயகன்: திருமிகு.இராமலிங்கம், நாயகி: திருமதி.கௌரி இராமலிங்கம்]",
+            date: "07 ஏப்ரல் 1996",
+            audioFile: "/madras thaatha - 60.m4a",
             image: "/vazhthu-2.jpg",
             englishTranslation: `Dear ones!
 Our ideal couple!
@@ -69,7 +70,7 @@ Pon. Muthukumar
 Seeking blessings with reverence:
 M. Velammal Muthukumar
 M. Sathish
-M. Arasi`, 
+M. Arasi`,
             content: `மணி விழா வாழ்த்து
 அன்பானவர்களே!
 எங்களின் ஆதர்ச தம்பதிகளே!
@@ -101,9 +102,10 @@ M. வேலம்மாள் முத்துக்குமார்
 M. சதீஷ்
 M. அரசி`
           },
-          { id: "hv7", title: "மணிவிழா வாழ்த்து - [நாயகன்: திருமிகு.M.இராமலிங்கம் B.Com., H.D.C., CAIIB., நாயகி: திருமதி. கோமதி இராமலிங்கம்]", 
-            date: "09 நவம்பர் 1997", 
-            audioFile: "/Perumalpuram_Thatha_60th_Marriage.mp3", 
+          {
+            id: "hv7", title: "மணிவிழா வாழ்த்து - [நாயகன்: திருமிகு.M.இராமலிங்கம் B.Com., H.D.C., CAIIB., நாயகி: திருமதி. கோமதி இராமலிங்கம்]",
+            date: "09 நவம்பர் 1997",
+            audioFile: "/Perumalpuram_Thatha_60th_Marriage.mp3",
             image: "/chinna_thaatha-pik.jpg",
             englishTranslation: `Dear ones!
 My memories blooming during your Diamond Jubilee
@@ -129,7 +131,7 @@ The 'Monetary Discipline' that is talked about so grandly by Finance Ministers t
 O, ones worthy of unchanging affection! Ones who are always filled in our hearts! Diamond Jubilee Love Birds! You are the literary evidence for the grammar that "A family is a University!" I bow and greet you, and greet and bow to you—may you live with prosperity and good health.
 
 Forever with love, the child of your house,
-Pon. Muthukumar`, 
+Pon. Muthukumar`,
             content: `அன்புக்குரியவர்களே!
 உங்கள் மணிவிழாவின் போது மலரும் என் நினைவுகள்
 
@@ -156,10 +158,11 @@ Pon. Muthukumar`,
 என்றென்றும் அன்புடன், உங்கள் வீட்டுப் பிள்ளை,
 பொன். முத்துக்குமார்`
           },
-          { id: "hv2", 
-            title: "மணி விழா வாழ்த்து - மேலாண்மை இயக்குநர் மற்றும் தலைவர் - திரிவேணி, சேலம்", 
+          {
+            id: "hv2",
+            title: "மணி விழா வாழ்த்து - மேலாண்மை இயக்குநர் மற்றும் தலைவர் - திரிவேணி, சேலம்",
             date: "29 அக்டோபர் 2006",
-            audioFile: "", 
+            audioFile: "",
             englishTranslation: `O, Diamond Jubilee Couple!
 We greet and salute you!
 We salute and greet you!
@@ -196,7 +199,7 @@ Hearts that greet, salute, and seek your blessings:
 On behalf of Tiriveni Office Colleagues
 
  - Pon Muthukumar,
-   Panagudi`, 
+   Panagudi`,
             content: `மணிவிழா தம்பதியரே!
 வாழ்த்தி வணங்குகிறோம்!
 வணங்கி வாழ்த்துகிறோம்!
@@ -236,9 +239,9 @@ On behalf of Tiriveni Office Colleagues
           பொன்.முத்துக்குமார்,
           பணகுடி.` },
           {
-            id: "hv6", title: "சதாபிஷேக வாழ்த்து - [நாயகன்: திருமிகு இரா. வேதநாயகம், நாயகி: திருமதி.நவநீத கிருஷ்ணம்மாள்]", 
-            date: "28 மார்ச் 2007", 
-            audioFile: "/sadha.mp3", 
+            id: "hv6", title: "சதாபிஷேக வாழ்த்து - [நாயகன்: திருமிகு இரா. வேதநாயகம், நாயகி: திருமதி.நவநீத கிருஷ்ணம்மாள்]",
+            date: "28 மார்ச் 2007",
+            audioFile: "/sadha.mp3",
             englishTranslation: `
             If domestic life possesses love and virtue, that itself is its character and its reward.
     
@@ -287,7 +290,7 @@ On behalf of Tiriveni Office Colleagues
     From the bottom of our hearts, we place our sweet greetings at your feet and seek your blessings.
     
     Forever with love,
-    Pon. Muthukumar - Mu. Velammal, Panagudi.`, 
+    Pon. Muthukumar - Mu. Velammal, Panagudi.`,
             content: `
             அன்பும் அறனும் உடைத்தாயின் இல்வாழ்க்கை
             பண்பும் பயனும் அது.
@@ -346,11 +349,12 @@ On behalf of Tiriveni Office Colleagues
     
     என்றும் அன்புடன்
     பொன். முத்துக்குமார் - மு. வேலம்மாள், பணகுடி.`
-    },
-          { id: "hv5",
-            title: "மணிவிழா வாழ்த்து - [நாயகன்: திருமிகு.A.S பிச்சையா, நாயகி: திருமதி.P.சங்கர வடிவு]", 
-            date: "01 செப்டம்பர் 2007", 
-            audioFile: "/sankara_athai.opus", 
+          },
+          {
+            id: "hv5",
+            title: "மணிவிழா வாழ்த்து - [நாயகன்: திருமிகு.A.S பிச்சையா, நாயகி: திருமதி.P.சங்கர வடிவு]",
+            date: "01 செப்டம்பர் 2007",
+            audioFile: "/sankara_athai.opus",
             englishTranslation: `If domestic life possesses love and virtue,
 that itself is its character and its reward." (Couplet from Thirukkural)
 
@@ -387,7 +391,7 @@ that 'all goodness may befall us.'
 
   Forever with love,
     Pon. Muthukumar,
-    Muthu Velammal.`, 
+    Muthu Velammal.`,
             content: `அன்பும் அறனும் உடைத்தாயின் இல்வாழ்க்கை
 பண்பும் பயனும் அது.
 
@@ -423,14 +427,14 @@ that 'all goodness may befall us.'
 
   என்றென்றும் அன்புடன்,
     பொன். முத்துக்குமார்,
-    முத்து. வேலம்மாள்.` 
+    முத்து. வேலம்மாள்.`
           },
-          { 
-            id: "hv1", 
-            title: "மணிவிழா வாழ்த்து - [நாயகன்: மீ.ஆறுமுகம், நாயகி: ஆ.நீலா]", 
-            date: "5 செப்டம்பர் 2025", 
+          {
+            id: "hv1",
+            title: "மணிவிழா வாழ்த்து - [நாயகன்: மீ.ஆறுமுகம், நாயகி: ஆ.நீலா]",
+            date: "5 செப்டம்பர் 2025",
             image: "/vazhthu-1.jpg",
-            audioFile: "", 
+            audioFile: "",
             englishTranslation: `O, one who rose high through hard work!
 One who touched hearts with shown compassion!
 Hero of this Manivizha!
@@ -457,7 +461,7 @@ Our dear Moon (Neela)! We greet you with emotion and joy!!!
 May the Diamond Jubilee couple live for many more years...
 
 - Pon Muthukumar,
-  Panagudi`, 
+  Panagudi`,
             content: `உழைப்பால் உயர்ந்தவரே!
 காட்டும் பரிவால் இதயம் தொட்டவரே!
 மணிவிழா நாயகரே!
@@ -483,9 +487,9 @@ May the Diamond Jubilee couple live for many more years...
 எங்கள் நிலாவே! நெகிழ்ந்தும் மகிழ்ந்தும் வாழ்த்துகிறோம்!!!
 மணிவிழா மணமக்களே வாழ்க பல்லாண்டு...
     - பொன். முத்துக்குமார்,
-      பணகுடி` 
+      பணகுடி`
           },
-          ],
+        ],
       },
       {
         id: "his-irangal",
@@ -997,11 +1001,11 @@ Such was
                            பணகுடி`
           },
           {
-            id: "hi-poem-4", 
-            title: "மாறாந்தை திருமதி. கோ. சாரதா அத்தை அவர்களுக்கு புகழ் அஞ்சலி", 
+            id: "hi-poem-4",
+            title: "மாறாந்தை திருமதி. கோ. சாரதா அத்தை அவர்களுக்கு புகழ் அஞ்சலி",
             date: "14 நவம்பர் 2018",
             image: "/poem-4.jpg",
-            audioFile: "/saradha_paati.opus", 
+            audioFile: "/saradha_paati.opus",
             englishTranslation: `Love, patience, kindness, and dignity were Aunt's ornaments. Like the 'Nightingale of Music' M.S. Subbulakshmi, she was a representative of Indian culture. If Uncle was a strict father, Aunt was a tender mother. The way she would bless the children every day and send them to Nallur school in a bullock cart (vill vandi) would make us envious.
 
 Aunt’s sense of responsibility and patience were the pillars that allowed Uncle to achieve whatever he set his mind to. Is there any child who wouldn't be captivated by Aunt calling them "Ayya"? Before Aunt’s milk-porridge, herbal tonics (kasayam), compassion, and concern, our fevers, coughs, and colds would run away in fear. Aunt was the strength that ensured Uncle’s noble quality of philanthropy never withered. How many, many weddings has she conducted and guided?
@@ -1018,7 +1022,7 @@ The scenes from those days—of you giving us milk and fruit, performing Arathi,
 
 Let us cherish the memory of our dear Aunt. Let us seek her blessings for our well-being!
 - Pon Muthukumar,
-  Panagudi`, 
+  Panagudi`,
             content: `அன்பு, பொறுமை, கனிவு, கம்பீரம் அத்தையின் அணிகலன். இசைக்குயில் எம்.எஸ் போல இந்திய கலாசாரத்தின் பிரதிநிதி. மாமா ஒரு கண்டிப்பான தந்தை என்றால் அத்தை ஒரு கனிவான தாய். பிள்ளைகளை நித்தம் ஆசீர்வதித்து நல்லூர் பள்ளிக்கு வில் வண்டியில் அனுப்பும் பாங்கு, எங்களை பொறாமைப்பட வைக்கும்.
 
 அத்தையின் பொறுப்புணர்வும், பொறுமையும் தானே மாமாவை நினைத்ததை முடிப்பவராக மிளிரச் செய்தது. அத்தையின் அய்யா என்ற அழைப்புக்கு மயங்காத பிள்ளைகள் தான் உண்டா? அத்தையின் பால்கஞ்சி, கசாயும், பரிவு, கரிசனம் முன் நிற்க அஞ்சி ஓடுமே, எங்கள் காய்ச்சல், இருமல், சளி தொந்தரவுகள். மாமாவின் பரோபகாரம் என்ற நல்ல குணம் பட்டுப் போகாமல் இருக்க அத்தை தானே பக்கபலம். நடத்தி வைத்த திருமணங்கள் தான் எத்தனை? எத்தனை?
@@ -1036,12 +1040,13 @@ Let us cherish the memory of our dear Aunt. Let us seek her blessings for our we
 அன்பு அத்தையின் நினைவைப் போற்றுவோம். நம் நல்வாழ்வுக்கு அத்தையின் ஆசியை நாடுவோம்!
 - பொன். முத்துக்குமார்,
   பணகுடி`
-           },
-           { id: "hi-poem-3", 
-            title: "சிங்கி அண்ணன்", 
+          },
+          {
+            id: "hi-poem-3",
+            title: "சிங்கி அண்ணன்",
             date: "06 டிசம்பர் 2024",
-            image:"/singi.jpg",
-            audioFile: "/singi-audio.m4a", 
+            image: "/singi.jpg",
+            audioFile: "/singi-audio.m4a",
             englishTranslation: `
           A messenger of love...
           Who arrives in the early hours
@@ -1063,7 +1068,7 @@ Let us cherish the memory of our dear Aunt. Let us seek her blessings for our we
           You shone as the one who carried the weight for others.
           We bow and salute you in reverence...
           - Pon Muthukumar,
-            Panagudi`, 
+            Panagudi`,
             content: `
           அதிகாலை நேரங்களிலே
           செய்திகளை உறவுகளுக்கு சொல்ல
@@ -1091,11 +1096,12 @@ Let us cherish the memory of our dear Aunt. Let us seek her blessings for our we
           
           பொன்.முத்துக்குமார்,
           பணகுடி.` },
-          { id: "hi-poem-5", 
-            title: "வீர பத்திர பிள்ளை அண்ணாச்சி", 
+          {
+            id: "hi-poem-5",
+            title: "வீர பத்திர பிள்ளை அண்ணாச்சி",
             date: "11 ஜனவரி 2026",
-            audioFile: "", 
-            image:"/veerabathra.jpg",
+            audioFile: "",
+            image: "/veerabathra.jpg",
             englishTranslation: `A friend of the family!
 One who always sought our well-being!
 One who rose high through hard work!
@@ -1144,7 +1150,7 @@ Through memories,
 You will live forever.
 Farewell, Annanachi...
 - Pon Muthukumar,
-  Panagudi`, 
+  Panagudi`,
             content: `குடும்ப நண்பரே!
 எங்கள் நலம் நாடும் ஆர்வலரே!
 உழைப்பால் உயர்ந்தவரே!
@@ -1219,11 +1225,12 @@ Medical Reportகளை
         id: "for-vaazhthu",
         title: "வாழ்த்து மடல்கள்",
         items: [
-          { id: "fv2", 
-            title: "மணிவிழா வாழ்த்து [விழா நாயகர்: பொன். முத்துக்குமார் : விழா நாயகி: மு. வேலம்மாள் அண்ணி]", 
+          {
+            id: "fv2",
+            title: "மணிவிழா வாழ்த்து [விழா நாயகர்: பொன். முத்துக்குமார் : விழா நாயகி: மு. வேலம்மாள் அண்ணி]",
             date: "25 செப்டம்பர் 2015",
-            image:"/periyappa-periyamma-60.jpg", 
-            audioFile: "/manivizha.mp3", 
+            image: "/periyappa-periyamma-60.jpg",
+            audioFile: "/manivizha.mp3",
             englishTranslation: `Diamond Jubilee (60th Anniversary) Greetings
 
 Hero of the Jubilee: Pon. Muthukumar
@@ -1261,7 +1268,7 @@ We greet them today,
 Wishing that they live in good health.
 
 Hearts that Greet,
-Loving Younger Brothers.`, 
+Loving Younger Brothers.`,
             content: `எங்களின் வழிகாட்டும் ஒளிவிளக்கே உலகைக்காட்டும் கிழக்கே
 உங்களுக்கு அறிவதில் ஆர்வம் அதனைப் பகிர்வதில் அக்கறை
 பிறர்மீதான கரிசனமே நீங்கள் விரும்பும் இறைதரிசனம்.
@@ -1295,12 +1302,13 @@ Loving Younger Brothers.`,
 
 வாழ்த்தும் உள்ளங்கள்,
 அன்புத்தம்பிகள்.` },
-{ id: "fv3", 
-  title: "பிறந்த நாள் வாழ்த்து", 
-  date: "28 செப்டம்பர் 2018",
-  image:"/kumar_to_kumar.jpeg", 
-  audioFile: "/kumar_to_kumar-audio.m4a", 
-  englishTranslation: `It is your nature to speak in a style unique to Panagudi, mixing humor and wit while adding words as strong as fertilizer.
+          {
+            id: "fv3",
+            title: "பிறந்த நாள் வாழ்த்து",
+            date: "28 செப்டம்பர் 2018",
+            image: "/kumar_to_kumar.jpeg",
+            audioFile: "/kumar_to_kumar-audio.m4a",
+            englishTranslation: `It is your nature to speak in a style unique to Panagudi, mixing humor and wit while adding words as strong as fertilizer.
 Kindness in your eyes, humanity in your heart, and books in your hands are your identity.
 Turning darkness into day, enjoying the beauty of the daylight, and making reading your own is your excellence.
 Making relationships your life force and traveling hand-in-hand with your younger brothers is your path.
@@ -1310,8 +1318,8 @@ Bless us instead on your birthday.
   
 - Your well wishing Doctor
   Dr. R. Meenatchi Sundaram
-  Nellai`, 
-  content: `குமார் அத்தானுக்கு வணக்கம்....
+  Nellai`,
+            content: `குமார் அத்தானுக்கு வணக்கம்....
 
 உரமென சொற்களை சேர்த்து 
 கிண்டலும் கேலியுமாய் பணகுடிக்கே உண்டான  பாணியில் பழகுவது உங்கள் இயல்பு 
@@ -1332,12 +1340,12 @@ Bless us instead on your birthday.
    தங்கள் நலம் விரும்பும் மருத்துவர்
    Dr. இரா.மீனாட்சி சுந்தரம்
    நெல்லை ` },
-          { 
-            id: "fv1", 
-            title: "எழுபதைத் தொழுவோம்", 
+          {
+            id: "fv1",
+            title: "எழுபதைத் தொழுவோம்",
             date: "28 செப்டம்பர் 2025",
-            image: "/bdy-70.jpg", 
-            audioFile: "/bdy-70-audio.mp3", 
+            image: "/bdy-70.jpg",
+            audioFile: "/bdy-70-audio.mp3",
             englishTranslation: `We salute this seventy.
 A seventy-year-old youth.
 An artist of speech even at a young age; the reason for such sweet speech is not the sugar level in the body, but the immense love within the heart.
@@ -1380,7 +1388,7 @@ Their home served as a rain-bearing cloud for the thirsty and a sanctuary like V
 In a world that amasses assets, they prioritized their kin.
 We, who are always blessed by them, wish them a healthy life today.
 
-- Pon. Kandasamy`, 
+- Pon. Kandasamy`,
             content: `எழுபதைத் தொழுகிறோம்.
 எழுபது வயது இளைஞர் 
 பேச்சில் இளம் வயது கலைஞர் இனிமையான பேச்சுக்குக் காரணம் உடலில் உள்ள சர்க்கரை அளவல்ல இதயத்தில்  உள்ள பேரன்புதான்.
@@ -1414,35 +1422,40 @@ We, who are always blessed by them, wish them a healthy life today.
 விழுந்து விழுந்து உபசரிக்கும் 
 உற்ற துணைவி எங்கள் அண்ணி.
 உறவுகளின்  கூடலே இவர்களது உயிர்.
+
+
 உரிமையுடன் உரையாடுவார் மழலைகளுடன் உறவாடுவார். கள்ளம் இல்லா வெள்ளை மனம். களங்கமில்லா பிள்ளைக்குணம். சோதனைகளை வேதனைகளை எல்லாம் விளையாட்டாய் கடந்த இருவரும் சாதனையாளர்கள் . தாகத்தோடிருப்போருக்கு மழை தரும் மேகமாகவும்
 பறவைகளுக்கு வேடந்தாங்கல் இடமாக திகழ்ந்தது இவர்கள் அகம்.
 சொத்துக்கள் குவிக்கும் உலகில் சொந்தங்களுக்கு முதன்மை தந்தவர்கள் 
 என்றும் வாழ்த்தும் இவர்களை நலமோடு வாழ்க என இன்றும் நாங்கள் வாழ்த்துகிறோம்.
 
- - பொன் கந்தசாமி` 
+ - பொன் கந்தசாமி`
           }
-          
+
         ],
       },
       {
         id: "for-irangal",
         title: "இரங்கல் கவிதைகள்",
         items: [
-          { id: "fi1", title: "சித்தப்பா இராமலிங்கம் அவர்களின் இரங்கல்", 
-            date: "24 மார்ச் 2026", 
+          {
+            id: "fi1", title: "சித்தப்பா இராமலிங்கம் அவர்களின் இரங்கல்",
+            date: "24 மார்ச் 2026",
             audioFile: "",
-            image:"/perumalpuram_thaatha_periyappa.jpg", 
-            englishTranslation: "I have no words to express my grief. O God you are so cruel to take a graceful soul at an early age ", 
+            image: "/perumalpuram_thaatha_periyappa.jpg",
+            englishTranslation: `I have no words to express my grief. 
+            O God you are so cruel to take a graceful soul at an early age`,
             content: `
             வானத்து அமரன் வந்தான் காண்,
             வந்தது போல் சென்றான் காண்
-            ` 
+            `
           },
-          { id: "fi4", 
-            title: "அக்கா தனலட்சுமி (குந்தவை பிராட்டியின்) இரங்கல்", 
-            date: "29 மார்ச் 2026", 
+          {
+            id: "fi4",
+            title: "அக்கா தனலட்சுமி (குந்தவை பிராட்டியின்) இரங்கல்",
+            date: "29 மார்ச் 2026",
             image: "/aththai-img.jpg",
-            audioFile: "/maranthai_aththai.m4a", 
+            audioFile: "/maranthai_aththai.m4a",
             englishTranslation: `Brother...
 You are three years younger than me, but in this life, you were always the first to support me... like an elder brother! Since childhood, you did not walk in front of me... you were always by my side... and at times, behind me like a shadow... I never asked for myself, but you were always there at the moment I needed you... and you did what was necessary...
 You
@@ -1479,7 +1492,7 @@ Even in the next life...
 
 With love forever,
 Your affectionate elder sister,
-P. Dhanalakshmi Somasundaram.`, 
+P. Dhanalakshmi Somasundaram.`,
             content: `
             தம்பி! 
             என்னை விட 
@@ -1538,11 +1551,12 @@ P. Dhanalakshmi Somasundaram.`,
             உன் பாசமிகு அக்காள்
             P. தனலட்சுமி சோமசுந்தரம்.
                         `
-                      },
-          { id: "fi2", title: "தங்கை சங்கீதா இனியனின் இரங்கல்", 
-            date: "28 மார்ச் 2026", 
+          },
+          {
+            id: "fi2", title: "தங்கை சங்கீதா இனியனின் இரங்கல்",
+            date: "28 மார்ச் 2026",
             audioFile: "/babuththai-audio.mp3",
-            image:"/babuththai-hw.jpg", 
+            image: "/babuththai-hw.jpg",
             englishTranslation: `You are the 'Resting Stone' (Sumai Thaangi) who voluntarily bears the burdens of others.
 Has anyone ever seen you set down your own burden?
 You are the one who gave us the stylus to sketch the great portrait of our lives!
@@ -1574,7 +1588,7 @@ That is why there are so many Mohanangal (enchantments).
 
 It is only your body that has departed from us; you are always with our hearts... ever alive.
 
-- Babu Iniyan.`, 
+- Babu Iniyan.`,
             content: `பிறர் சுமை வலிய, சுமக்கும் 'சுமை தாங்கி' நீங்கள்
 
 தன் சுமை இறக்கி யாராவது கண்டதுண்டோ?
@@ -1627,13 +1641,13 @@ It is only your body that has departed from us; you are always with our hearts..
 
 உங்களின் உடல் தான் பிரிந்தது எங்களுக்கு; நீங்கள் என்றும் எங்களின் மனதோடு தான்... உயர்ப்போடு.
 
-பாபு இனியன்.` 
+பாபு இனியன்.`
           },
-
-          { id: "fi3", title: "தம்பி கந்தனின் இரங்கல்", 
-            date: "24 மார்ச் 2026", 
+          {
+            id: "fi3", title: "தம்பி கந்தனின் இரங்கல்",
+            date: "24 மார்ச் 2026",
             audioFile: "/appa_audio_clean.mp3",
-            image:"/kandhan.jpg",
+            image: "/kandhan.jpg",
             englishTranslation: `The divine hand that embraced those who were forsaken.
 The supreme light of grace that showed mercy to the needy and the helpless.
 
@@ -1647,7 +1661,7 @@ How can we ever bid you farewell, Brother?
 
 I truly believed we would converse at leisure after my retirement.
 But you have plunged us into an unhealable sorrow
-And departed into an eternal sleep, Brother.`, 
+And departed into an eternal sleep, Brother.`,
             content: `
             புறக்கணிக்கப்பட்டவர்களையும் அரவணைக்கும் திருக்கரம்
             இல்லாதோருக்கும் இயலாதோருக்கும் இரங்கும் அருட்பெருஞ்ஜோதி
@@ -1659,14 +1673,681 @@ And departed into an eternal sleep, Brother.`,
             ஓய்வுக்குப் பின் நிதானமாக உரையாடலாம் என்று தானே இருந்தேன்
             ஆறாத் துயரில் தள்ளிவிட்டு மீளாத் துயிலில் சென்றுவிட்டாயே அண்ணா `
           },
-          
-          { id: "fi5", title: "சகோதரிகளின் விழுதுகள் - மருமக(ன்)ள்களின் இரங்கல்", 
-            date: "10 டிசம்பர் 2024", 
-            audioFile: "", 
-            englishTranslation: "Will be uploaded soon...", 
-            content: "விரைவில் பதிவேற்றப்படும்..." 
+          {
+            id: "item_1774935563695",
+            title: "மகன் வேதநாயகத்தின் இரங்கல்",
+            date: "28 மார்ச், 2026",
+            image: "/Vetham.jpg",
+            audioFile: "/item_1774935563695_Vetham-audio.opus",
+            content: `பெரிய(அ)ப்பாவுக்கு அர்ப்பணிப்பு
+
+ஆலமரமாய் நின்ற உன் நிழல்,
+எங்கள் வீட்டின் அஸ்திவாரமாக இருந்தது.
+எங்கள் இருளில் ஒளியாகவும்,
+எங்கள் வாழ்வில் உறுதியாகவும் நீயே இருந்தாய்.
+உடைமைகள் மட்டும் அல்ல,
+உறவுகளையும் தந்தாய்;
+உரிமைகளை காத்து,
+வாழ்க்கையை உருவாக்கினாய்.
+எங்கள் வாழ்க்கை என்ற செடியை நட்டு,
+அதை மரமாக வளர்த்தாய்.
+ஆனால் கனியை காணும் முன்பே
+நீ மறைந்தாய்.
+"பெரியப்பா இருக்கிறார்" என்ற நம்பிக்கை—
+இன்று சிதறி விழுந்துவிட்டது.
+வாழ்க்கைப் பயணத்தின் கால்கள் இடறினாலும்,
+பிடிக்கக் கை இருந்தது;
+இன்று அந்த கை
+கண்ணீரில் கரைந்துவிட்டது.
+ஆரம்ப பள்ளி முதல் கல்லூரி வரை,
+என் வாழ்க்கைப் பாதை முழுவதும் நீயே நடந்தாய்.
+என் கல்வி, என் தேர்வு,
+பேச்சுப் போட்டி, கட்டுரை போட்டி, கவிதைப் போட்டி—
+எனக்கான அனைத்திலும்
+நீயே வழிநடத்தினாய்.
+என் முதல் எழுத்தை கற்றுக்கொடுத்த கை நீ;
+பள்ளி, கல்லூரி நாட்களில் நான் பெற்ற பரிசுகளுக்கும்,
+என் மேடைப் பேச்சுகளுக்கும் காரணம் நீ.
+நான் பெற்ற ஒவ்வொரு சாதனையின் பின்னாலும் நீ மட்டுமே இருந்தாய்.
+என் பெயருக்கு மதிப்பு தந்தது நீ,
+என் வாழ்க்கைக்கு அர்த்தம் தந்தது நீ.
+என் ஊரில் நான் யார் என்றால்—
+அது உன் பெயரால் தான்.
+"பாங்கர் தம்பியின் மகன்" என்றே நான் அறியப்படுவேன்.
+உடல் நலம் பார்த்து உதவும் உறவுகளுக்கு நடுவில் நீயோ;
+என் முகம் பார்த்து உதவினாய்.
+என் முகம் வாடினால்,
+வார்த்தைகளால் ஊக்கமூட்டி
+என்னவென்று அறிந்து உதவுவாய்.
+மருத்துவ செலவுகள், குடும்பச் செலவுகள் முதல்
+சின்ன சந்தோஷங்கள் வரை—
+அனைத்தையும் என் வாழ்க்கையில் விதைத்தாய்.
+ஹோட்டல் உணவுகளும், திரையரங்கங்களும்,
+பூங்கா சுற்றுலாக்களும்—
+என் சிறுவயது மகிழ்ச்சிகள் அனைத்தும்
+வழங்கியது நீயே.
+அந்த நினைவுகள் இன்று
+கண்ணீரின் சுமையாக மாறிவிட்டன.
+என் முதல் வெளியூர் பயணம் கூட
+உன்னால்தான் தொடங்கியது.
+இன்று அந்த நினைவுகள்
+என் இதயத்தை நொறுக்குகின்றன.
+ATM அட்டை இல்லாத காலத்திலிருந்து
+என் பிறப்பு முதல் இன்று வரை
+எங்களுக்கு ஆதரவான ஒரே ஆதாரம் நீ.
+எங்கள் குடும்பத்தை தாங்கிய தூண் நீ.
+எல்லாவற்றையும் நான் கேட்கும் முன்பே கொடுத்தாய்;
+என் தேவைகள் அனைத்துக்கும் நீயே ஆதாரம்.
+நீர் இல்லாத மீன் போல,
+நீ இல்லாத நான்—
+உன் குரல், உன் எண்ணங்கள்
+இன்றும் எங்கள் மனதில் ஒலிக்கின்றன.
+உன் இடத்தை யாராலும் நிரப்ப முடியாது.
+உன் நிழலில் வாழ்ந்த நான்,
+இன்று நிழல் இன்றிக் நிற்கிறேன்.
+என் ஒவ்வொரு கண்ணீரிலும்
+உன் அன்பு ஓடிக்கொண்டிருக்கிறது.
+நீ இல்லாமல் நான் இன்று
+என்னையே இழந்து தவிக்கிறேன், பெரியப்பா...
+
+என்றென்றும் நன்றியோடு நீ வளர்த்த பிள்ளை
+C.Vethanayagam MCA
+Consultant, Atos Syntel
+Chennai`,
+            englishTranslation: `Your shadow, which stood like a Banyan tree,
+Was the very foundation of our home.
+You were the light in our darkness,
+And the strength within our lives.
+You gave us not just possessions,
+But meaningful relationships too;
+By protecting our rights,
+You built our lives for us.
+You planted the sapling of our life
+And nurtured it into a tree.
+But before you could see the fruit,
+You have vanished.
+The belief that "Periyappa is here"—
+Has shattered and fallen today.
+Even when my feet stumbled on life's journey,
+There was a hand for me to hold;
+Today, that hand
+Has dissolved into tears.
+From elementary school to college,
+You walked beside me through my entire life path.
+My education, my exams,
+Speech competitions, essay contests, poetry recitals—
+In everything that was for me,
+It was you who guided the way.
+Yours was the hand that taught me my first letter;
+For the prizes I won during my school and college days,
+You are the reason behind my public speeches.
+Behind every achievement I earned, you alone stood.
+You gave value to my name,
+You gave meaning to my life.
+If asked who I am in my hometown—
+It is only through your name.
+I am known as the "son of Banker Thambi."
+Among relatives who help only after seeing one's physical health;
+You helped just by looking at my face.
+If my face withered (in sadness),
+You would encourage me with words,
+Understand what was wrong, and help.
+From medical expenses and family costs
+To the smallest joys—
+You sowed everything into my life.
+Restaurant meals, movie theaters,
+And trips to the park—
+All my childhood happiness
+Was provided by you.
+Those memories today
+Have turned into a burden of tears.
+Even my first journey out of town
+Started because of you.
+Today, those memories
+Are crushing my heart.
+From the times when there were no ATM cards...
+From my birth until today,
+You were the only source of support for us.
+You were the pillar that held our family together.
+You gave me everything even before I asked;
+You were the provider for all my needs.
+Like a fish out of water,
+So am I without you—
+Your voice, your thoughts,
+Still resonate in our hearts today.
+No one can ever fill your place.
+I, who lived in your shadow (protection),
+Stand today without any shade.
+In every one of my tears,
+Your love keeps flowing.
+Without you today,
+I am lost and struggling to find myself, Periyappa...
+
+Forever with gratitude, the child you raised,
+
+C. Vethanayagam MCA
+Consultant, Atos Syntel
+Chennai`,
           },
-          { id: "fi6", title: "இரங்கல் கவிதை 6", date: "30 டிசம்பர் 2024", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
+          {
+            id: "item_1774936549085",
+            title: "மருமகள் பிரதீபா வேதநாயகத்தின் இரங்கல்",
+            date: "28 மார்ச், 2026",
+            image: "/item_1774936549085_Prathiba_anni.jpg",
+            audioFile: "/item_1774936549085_prathiba_anni.opus",
+            content: `பெரிய மாமனாருக்கு கண்ணீர் அஞ்சலி
+
+நான் பார்த்த அமைதியின் உருவம்,
+அன்பின் சிகரம், ஆளுமையின் வடிவம்;
+அதிகம் பேச மாட்டார்,
+ஆனால் இவரின் கண் அசைவிற்கும்,
+புன்முறுவலுக்கும் ஆயிரம் அர்த்தங்கள் இருக்கும்.
+
+“தம்பி உடையான் படைக்கு அஞ்சான் என்று கேள்வி பட்டதுண்டு”
+“ஆனால் இவர் போன்ற அண்ணன் இருந்தால்,
+வாழ்க்கையில் எதற்கும் அச்சம் கொள்ள தேவையில்லை என்று
+தன் செயல்களால் நிருபித்து காட்டியவர்.”
+
+கண்களில் இருக்கும் கண்ணாடியும்,
+கைகளில் புத்தகமும்,
+சாய்வு நாற்காலியில்அமர்ந்தபடி உரையாடும் விதமும்
+காண்போருக்கு இவரின் அடையாளம்...
+
+நெஞ்சம் நிறைந்த அன்பும்,
+நேர்மையுடன் கூடிய உழைப்பும்,
+உறவுகளை கட்டி அணைக்கும் விதமும்
+இவருக்கே உரித்தான தனி சிறப்பு.
+
+வாழ்வில் சிலரை மறக்க நினைப்பதுண்டு,
+ஆனால் நினைவலைகளில் நீக்கமற நிறைந்து
+நெஞ்சில் குடி கொண்ட எங்கள் இதய தெய்வம்,
+மரியாதைக்குரிய மாமா “பொன் முத்துக்குமார்”,
+அவர்களை இழந்து வாடும் அன்பு சொந்தங்கள் நாங்கள்,
+
+எங்கள் கண்ணீரை காணிக்கை ஆக்குகிறோம்.
+
+பிரதீபா வேதநாயகம் B.E
+VSL India Private Limited
+Chennai`,
+            englishTranslation: `A Tearful Tribute to My Father-in-law (Periya Maamanar)
+
+He was the embodiment of peace I witnessed,
+The peak of love, and the form of personality;
+He did not speak much,
+But his slight eye movements and his faint smile
+Held a thousand meanings.
+
+"I have heard it said that he who has a younger brother fears no army,"
+"But he proved through his actions
+That if one has an elder brother (a protector) like him,
+There is no need to fear anything in life."
+
+The spectacles on his eyes,
+The book in his hands,
+And the way he conversed while sitting in his recliner—
+These were his trademarks to those who saw him...
+
+A heart full of love,
+Hard work coupled with honesty,
+And the way he embraced and held relationships together
+Were the unique qualities special only to him.
+
+In life, we may wish to forget some people,
+But you are the divine soul who dwells in our hearts,
+Permanently filling our waves of memory.
+Our respectful Uncle (Maama), "Pon Muthukumar,"
+We, the loving relatives who grieve your loss,
+
+Offer our tears as our tribute.
+
+Prathiba Vethanayagam B.E
+VSL India Private Limited
+Chennai`,
+          },
+          {
+            id: "fi5", title: "சகோதரிகளின் விழுதுகள் - மருமக(ன்)ள்களின் இரங்கல்",
+            date: "29 மார்ச் 2026",
+            audioFile: "/guru-audio.m4a",
+            image: "/marumagangal.jpg",
+            englishTranslation: `
+Mama...
+Both my eyes
+Have become pools (of tears)..
+My mind suffers in loneliness...
+My heart feels heavy...
+Words are failing...
+The waves of your memories
+Rise like a tsunami
+And keep crashing against my entire soul!
+
+You always loved
+Taking us all
+Out together...
+When that is so,
+How did your heart agree
+To depart and leave us behind?
+
+To describe your love
+In mere words
+Feels like a great crime...
+Because...
+It is
+An emotion that needs
+No explanation...
+You are not just a relative—
+You are life itself...
+
+Not just mother’s brother,
+But our protector,
+Our best friend!
+The sculptor who
+Silently carved us (into who we are)...
+
+In our childhood,
+On weekends,
+At the Thalavai Bhadrakali Amman bus stop—
+Those evening hours
+When we waited for you
+Still remain unforgettable in our minds...
+
+In our tiny, little
+Achievements,
+Oh, how much joy you found...
+Seeing that (your joy),
+We strove
+Even harder!
+
+Today I understand—
+That we grew up
+Not because of ourselves...
+But because of your faith in us!
+
+Your voice,
+Resounding as you said,
+"My elder sister's children"...
+I cannot hear it today...
+But it is echoing
+Throughout my entire soul!
+
+This pride
+Still makes us
+Stand tall today!
+
+Your smile
+Has become a memory today,
+And it hurts (it feels hollow)...
+Your patience
+Has become a lesson
+For our lives...
+
+What you taught us
+Were not mere words—but love (affections).
+To be human... that even if there are
+Differences of opinion,
+To still love and respect that person...
+Though your physical body has left,
+Your love
+Will never, ever
+Leave us...
+
+Thank you, Mama...
+Not for leaving us,
+But for living in such a way
+That you shaped us into who we are.
+
+As long as
+This heart beats,
+In every deep breath (we take),
+You are —
+Though silent,
+Yet fully
+With us!
+
+With unchanging love
+And immeasurable gratitude...
+The roots (descendants) of your loving sisters....`,
+            content: `
+மாமா...
+கண்கள் இரண்டும்
+குளமாகின்றன..
+மனம் தவியாய் தவிக்கிறது...
+இதயம் கனமாகிறது...
+வார்த்தைகள் தடைபடுகிறது...
+உன் நினைவலைகள் சுனாமியாக
+எழுந்து
+உள்ளம் முழுதும் மோதிக் கொண்டிருக்கின்றன!
+
+எங்களையெல்லாம் ஒன்றாக
+கூட்டிச் செல்வதற்கே
+உங்களுக்கு பிடிக்கும்...
+அப்படியிருக்க
+எங்களை விட்டு பிரிந்து செல்ல
+உங்கள் மனம் எப்படி சம்மதித்தது?
+
+உங்கள் அன்பை
+வார்த்தையில் வர்ணிப்பது
+ஒரு மாபெரும் குற்றமாகவே
+தோன்றுகிறது...
+ஏனென்றால்
+அது
+விளக்கம் தேவைப்படாத
+ஒரு உணர்வு...
+நீங்கள் உறவல்ல -
+உயிர்...
+
+அம்மாவின் சகோதரன் மட்டுமல்ல
+எங்களின் பாதுகாவலன்
+சிறந்த தோழன்!
+மௌனமாய் எங்களை
+செதுக்கிய சிற்பி...
+
+எங்கள் குழந்தை பருவத்தில்,
+வார இறுதியில்
+தளவாய் பத்திரகாளியம்மன் பேருந்து நிறுத்தத்தில்
+நாங்கள் உங்களுக்காக
+காத்திருந்த அந்த மாலை நேரங்கள்
+இன்றும் மனதில் ரீங்காரமிடுகிறது...
+
+எங்களின் சின்னச் சின்ன
+சாதனைகளில் தான்
+உங்களுக்கு எவ்வளவு மகிழ்ச்சி...
+
+அதைப் பார்த்து
+நாங்கள் இன்னும்
+முயற்சி செய்தோம்!
+
+இன்று புரிகிறது—
+நாங்கள் வளர்ந்தது
+எங்களால் அல்ல..
+உங்கள் நம்பிக்கையால்!
+
+என் "அக்கா பிள்ளைகள்"
+என்று ஒலிக்கும்
+உங்கள் குரல்...
+இன்று கேட்க முடியவில்லை...
+ஆனால் மனம் முழுக்க
+எதிரொலித்து கொண்டிருக்கிறது!
+
+இந்த பெருமை
+இன்றும் எங்களை
+நிமிர்ந்து நிற்க செய்கிறது!
+
+உங்கள் புன்னகை
+இன்று நினைவாகி
+வெறுக்கிறது....
+உங்கள் பொறுமை
+எங்கள் வாழ்வுக்கு
+பாடமாக இருக்கிறது...
+
+நீங்கள் கற்றுத் தந்தது
+வாசகங்கள் அல்ல - நேசங்கள்
+மனிதராக இருப்பது... கருத்து வேறுபாடு
+இருப்பினும் அவரை நேசிப்பது / மதிப்பதே...
+
+உடல் நீங்கினாலும்
+உங்கள் அன்பு
+ஒரு போதும் எங்களை
+விட்டு நீங்காது...
+
+நன்றி மாமா...
+எங்களை விட்டு போனதற்காக அல்ல,
+இப்படி வாழ்ந்து
+எங்களை உருவாக்கியதற்காக,
+
+இந்த நெஞ்சம்
+துடிக்கும் வரைக்கும்,
+ஒவ்வொரு பெரும் மூச்சிலும்
+நீங்கள் —
+மௌனமாகி,
+ஆனால் முழுமையாக
+எங்களோடு!
+
+மாறா அன்படனும்
+அளவில்லா நன்றியுடனும்...
+உங்கள் அன்பு சகோதரிகளின்
+விழுதுகள்....
+`
+          },
+          {
+            id: "item_1774933301251",
+            title: "மகள் ஜோதிமணி பொன்னப்பனின் இரங்கல்",
+            date: "30 மார்ச் 2026",
+            image: "/jothi_akka_img.jpg",
+            audioFile: "/item_1774933301251_jothi_akka_audio.m4a",
+            content: `சித்தப்பா...
+நீங்கள் என் கணவருக்கு பிரியமான தாய்மாமன். ஆனால் எனக்கு தாயுமானவன்!
+என்மேல் நீங்கள் காட்டிய அன்பு, ஒரு தாயின் மடிச்சாயல்... பாதுகாப்பு, பரிவு என்று ஒரு சேரக் சேர்ந்தது.
+அதனால்தானோ என்னவோ புதியதாய் இணைந்த நான் ஐக்கியமாகிவிட்டேன் என் புகுந்த வீட்டில்!
+வங்கி வேலை என்று ஏதேனும் ஒரு சிறு அவசியம் வந்தாலும் நான் அழைப்பது உங்களைத்தானே! சலிக்காமல் நிழலாய் கவசமாய் என்னுடன் வந்தீர்களே!
+என் மகனுக்கு உயிரோட்டத்துடன் ரைம்ஸ் (தென்னை மரத்தில்...) சொல்லித்தர உங்களைத் தேடுகின்றேன்!
+மனம் நிறைந்த நன்றிகளுடன் 
+
+உங்கள் அன்பு மகள்,
+ஜோதிமணி பொன்னப்பன்.`,
+            englishTranslation: `You are a beloved maternal uncle (Thaaimaman) To my husband. But to me, You are like a mother! (Thaayumaanavan)
+The love you showered upon me Was like leaning into a mother's lap... A blend of Protection and compassion.
+Perhaps that is why, Though I was a newcomer (to the family), I was able to merge so completely With my marital home!
+Even for a small necessity, Like a trip to the bank, It was always you I called upon! Without ever getting tired, Like a shadow, Like a shield, You always came with me!
+I am searching for you... To teach rhymes With such liveliness To my Son! ("In the coconut tree...")
+With a heart full of gratitude, 
+
+Your loving daughter, 
+Jothimani Ponnappan.`,
+          }
+          ,
+
+          {
+            id: "item_1774940432499",
+            title: "அத்தான் சோமசுந்தரத்தின் இரங்கல்",
+            date: "31 மார்ச், 2026",
+            image: "/item_1774940432499_maranthai_mama_img.jpg",
+
+            content: `என் அருமை மைத்துனனே...
+"அத்தான்"
+என்று
+அன்பு பொங்க அழைக்கும்
+உன் குரலுக்காக
+ஏங்கிக் கொண்டிருக்கிறேன்!
+
+நீ
+பொறுமையின் சிகரம்
+அன்பின் கடல்
+பாசத்தில் விரிந்த வானம்
+பண்பில் உயர்ந்த மனிதன்...
+
+உறவுகளுடன் கூடுவதிலும்
+உறவுகளை பேணுவதிலும் — தான்
+உனக்கு சந்தோஷம்!
+எங்களுக்கு பார்க்க பார்க்க
+பரவசம்!
+
+விருந்தோம்பலில்
+உன்னை மிஞ்ச யாருமில்லை!
+"வந்தவருக்கு
+என்ன பிடிக்கும்?" என்று
+பார்த்து பார்த்து உபசரிப்பதில்
+உனக்கு பேரானந்தம்!
+
+பதவிகளை நாடாமல்
+பொறுப்புகளை
+எங்களிடம் வழங்கி
+தலைமையை கற்றுத்தந்தாய்
+உடனிருந்து...
+
+இன்று இளந்தலைமுறை
+வெற்றியோடு
+பயணிக்கின்றது என்றால்
+உனது வழிகாட்டுதலே காரணம்!
+
+உன் அன்பு என்றும்
+பிரகாசிக்கிறது.
+உன் மதிப்பு நாள்தோறும்
+உயர்கிறது
+உன் நினைவு
+எங்கள் மூச்சோடு கலந்து
+உயிரோடு உள்ளது!
+
+என்றும் அன்புடன்
+உன் அத்தான்
+கோ. சோமசுந்தரம்.`,
+            englishTranslation: `My dear brother-in-law...
+I am longing
+For your voice
+That used to call out "Athaan" Overflowing with love!
+
+You were:
+The peak of patience,
+The ocean of love,
+The sky expanded with affection,
+A man of supreme character...
+
+In gathering with relatives
+And in nurturing those relationships—
+That is where your joy lay!
+For us, watching you
+Was sheer delight!
+
+In hospitality (Virunthompalam),
+There is no one to surpass you!
+"What would
+Our guest like?"
+Taking such meticulous care in hosting
+Brought you the greatest happiness!
+
+Without seeking titles (positions of power),
+You handed over responsibilities
+To us, and
+Taught us leadership
+By being right beside us...
+
+If today the younger generation
+Travels with success,
+It is because of your guidance!
+
+Your love shines
+Forever.
+Your worth increases
+With every passing day.
+Your memory
+Is mingled with our breath
+And remains alive!
+
+Always with love,
+Your Athaan,
+G. Somasundaram.`,
+          }
+          ,
+          {
+            id: "item_1774940548683",
+            title: "மகள் முத்துமீனாட்சியின் இரங்கல்",
+            date: "29 மார்ச், 2026",
+            image: "/item_1774940548683_muthu_Meenatchi.jpg",
+
+            content: `அன்பால் வெல்லும் அற்புதக் கலையால் அனைவர் உள்ளம் கவர்ந்தவர் நீரே!
+இரக்க குணத்தில் இறைவனை வென்ற இன்முகம் கொண்ட இனியவர் நீர்!
+தமிழ் பற்றை அனைவர் எண்ணத்தில் விதைத்தீர்.
+உங்கள் சிந்தனையில் உதித்த சிந்தனை துளிகளை சுமந்த காகிதங்களும் கண் கலங்கி காத்திருக்கிறது...
+உங்களோடு வார்த்தைகளை பகிர்ந்து கொண்ட வழிநடை நண்பர்களோ இன்று பாஷை இன்றி பரிதவிக்கின்றனர்.
+உங்களின் கை பிடித்து எழுத கற்றவர்கள் இன்று கண்ணீரோடு உங்களுக்காக வரையும் கவிதை மடல்கள்.
+நீங்கள் விதிகளில் இருந்து விடை பெற்றீர் ஆனால் எங்கள் விழிகளில் அல்ல—இருந்து அல்ல!
+
+இப்படிக்கு,
+முத்து மீனாட்சி`,
+            englishTranslation: `You are the one who captured everyone’s heart with the wonderful art of winning through love!
+You are the sweet person with a pleasant face who surpassed even the Divine through your compassionate nature!
+You sowed the passion for the Tamil language in everyone’s thoughts.
+Even the papers that carried the drops of thought born from your intellect are waiting with tearful eyes...
+The walking friends who used to share words with you are now struggling, lost for words.
+These are the poetic letters drawn for you today, with tears, by those who learned to write by holding your hand.
+You have taken leave from the rules of fate/life, but not from our eyes—not from within us!
+
+Yours,
+Muthu Meenatchi`,
+          }
+        ,
+          {
+            id: "item_1774941974770",
+            title: "மகள் அகல்யாவின் இரங்கல்",
+            date: "24 மார்ச், 2026",
+            image: "/item_1774941974770_agal-img.jpg",
+            audioFile: "/item_1774941974770_agal-audio.m4a",
+            content: `சிறிய கிராமத்தில் இருந்து கொண்டு பெரிய பெரிய காரியங்களை நிறைவேற்றிய பெரியப்பாவிற்கு
+
+ஊர் அறியா என்னை 
+உலகம் சுற்ற வைத்த உன்னத பயணி
+
+தன் குடும்பம் தன் வீடு என இராமல்
+பாருக்கே இடமளிக்கும் பாரதி இல்லத்தை கட்டியவர்
+
+முற்போக்கு சிந்தனையை முதலில் ஊட்டியவர்
+
+என்றும் என் வழிகாட்டும் ஒளி விளக்கு
+
+என் கோடை விடுமுறைக் கொண்டாட்டம் நீங்கள் 
+
+விடுமுறை முடிந்து ஊருக்கு அழாமல் சென்றதே இல்லை காரணம் உங்களது அப்பழுக்கற்ற அன்பு
+
+சுயநலம் துளியும் கலக்காத பேரன்புக்கார்
+
+நக்கலும் நகைச்சுவையும் பேச்சில் நடனமாடும்
+
+அன்பும் அக்கறையும் செயலில் அதிகம் இருக்கும்
+
+நேற்று கேட்ட செய்தி ஒரு கெட்ட கனவாக இருந்திடக்கூடாதா என்றே கண்ணீர் விடுகிறேன்
+
+உங்களுக்கு நல்லவங்க கையால் நல்ல காபி தர காத்திருக்கிறேன் 
+
+எழுந்து வாருங்கள் பெரியப்பா! 😭
+
+தொலைத்து விட்டோம் நம் வீட்டு கவிக்குயிலை
+தவற விட்டு விட்டோம் நம் முத்தான சொத்தை
+நம் மீன் தொட்டிக்குள்ளே மீன் என நம்பி இருந்து விட்ட விண்மீனை 
+
+இழந்து தவிக்கிறோம்
+வருந்தி வாடுகிறோம்
+
+உங்கள் அன்பு மகள், 
+அகல்யா`,
+            englishTranslation: `To my Periyappa, who achieved great things while living in a small village.
+
+To the noble traveler who took me,
+once unknown even to my own village,
+and made me travel the world.
+
+He did not live just for "his family" or "his house";
+He built the "Bharathi Illam" (Bharathi Home),
+A place that offered space and a heart for the whole world.
+
+He was the first to sow the seeds of progressive thoughts in me.
+
+You are forever my guiding light.
+
+You were the very definition of my summer holiday celebrations.
+I have never returned home after a vacation without crying;
+Such was the weight of your stainless, pure love.
+
+A man of great love, without a single drop of selfishness.
+
+Sarcasm and humor would dance in your speech,
+While love and care were always abundant in your actions.
+
+I weep, wishing that the news I heard yesterday
+Was nothing but a bad dream.
+
+I am waiting here to give you a good cup of coffee,
+Made by the hands of the good people.
+Please wake up and come back, Periyappa! 😭
+
+We have lost the "Poetic Nightingale" of our home.
+We have let slip away our pearl-like treasure.
+We lived believing the "Star" was just a "fish" inside our little tank.
+
+We are lost in this grief,
+Withered by this sorrow.
+
+Your loving daughter,
+Agalya`,
+          }
         ],
       },
     ],
