@@ -12,6 +12,8 @@ export interface WritingItem {
 export interface SubCategory {
   id: string;
   title: string;
+  description?: string;
+  image?: string;
   items: WritingItem[];
 }
 
@@ -2667,7 +2669,6 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
         id: "press-poems",
         title: "கவிதைகள்",
         items: [
-          { id: "pp1", title: "கவிதை 1", date: "28 ஜூன் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
         ],
       },
     ],
@@ -2682,6 +2683,21 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
       {
         id: "ninaivu",
         title: "நினைவு துணுக்குகள்",
+        description: `
+        அத்தானை குறித்த நினைவலைகளில் நீந்தினால் 
+        கரை சேரவே முடியாது.
+        அவ்வளவு நிகழ்ச்சிகள் நடந்துள்ளன.
+        எண்ணி எண்ணி பார்க்க ஏராள நினைவுகள். 
+        நம்மை இப்போது பார்த்தால் 
+        போதும்… போதும் அழுத அழுகை போதுமென 
+        நம்மை எழுப்பி வேறு ஏதாவது கிண்டலாக சொல்லியிருப்பார். 
+        எல்லாரையும் கொண்டாடியகொண்டாட்டக்காரர்.
+        அவரைப்போல  மற்றவர்களையும் இந்த வாழ்வையும் 
+        நாம் கொண்டாடுவதே அவருக்கான 
+        சிறந்த அஞ்சலியாக இருக்கும். 
+        - கொழுந்தியா,
+          அனு கந்தன்`,
+        image: "/ninaivu_cover.jpg",
         items: [
           {
             id: "item_1775007527540",
@@ -2701,7 +2717,7 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
           },
           {
             id: "item_1774966328444",
-            title: "பூ.. பூ",
+            title: "பூ... ப்பூ..",
             date: "2001",
             image: "/item_1774966328444_poo...pooo.jpg",
             audioFile: "/item_1774966328444_poo_poo.mp3",
@@ -2788,7 +2804,7 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
 `,
 
           }
-        ,
+          ,
           {
             id: "item_1775009017339",
             title: "வெளியூர் பயணங்கள்",
@@ -2824,9 +2840,9 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
 வரை போய்விட்டோம். அதற்கு அத்தான் “ஏம்லே இந்த
 வரத்து வர்றீங்க போய் தொலைங்களே” என்று கூறினார்.
 எங்கள் களைப்பு பறந்து போனது.`,
-            
+
           }
-        ,
+          ,
           {
             id: "item_1775009400444",
             title: "கொண்டாட்டக்காரருக்கு நினைவு அஞ்சலி",
@@ -2835,7 +2851,7 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
             audioFile: "/item_1775009400444_celebration_maker.mp3",
             content: `யார் பணகுடிக்கு வந்தாலும் ஒரு வேன் பிடித்து ஆஞ்சனேயர் கோவிலாக இருந்தாலும் சரி அல்லது எங்கே சுற்றுலா சென்றாலும்சரி  அனைவரையும் கூட்டிட்டு போய் சந்தோஷப்படுத்தி பின் ஹோட்டலுக்கும் அழைத்து போய் சாப்பாடு வாங்கி கொடுத்து அதன் பின் தான் வீட்டுக்கு வருவார்கள். தன் பணம் என்று எப்போதுமே அவர்கள் நினைத்ததே இல்லை. அவர்களைப் பொறுத்தவரை எல்லோரும்  ஒன்றுதான். எனக்கு அவர்கள் அத்தான் இல்லை  இன்னொரு தந்தை. அவரை இழந்து தவிக்கிறேன்.
                அத்தானை குறித்த நினைவலைகளில் நீந்தினால் கரை சேரவே முடியாது.அவ்வளவு நிகழ்ச்சிகள் நடந்துள்ளன.எண்ணி எண்ணி பார்க்க ஏராள நினைவுகள். நம்மை இப்போது பார்த்தால் போதும்… போதும் அழுத அழுகை போதுமென நம்மை எழுப்பி வேறு ஏதாவது கிண்டலாக சொல்லியிருப்பார். எல்லாரையும் கொண்டாடியகொண்டாட்டக்காரர்.அவரைப்போல  மற்றவர்களையும் இந்த வாழ்வையும் நாம் கொண்டாடுவதே அவருக்கான சிறந்த அஞ்சலியாக இருக்கும்.`,
-            
+
           }
         ],
       },
@@ -2844,13 +2860,56 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
         title: "புகைப்படங்கள்",
         items: [
 
-        ],
-      },
-      {
-        id: "bharathi",
-        title: "பாரதி இல்ல திறப்பு விழா",
-        items: [
-          { id: "b1", title: "பாரதி இல்ல திறப்பு விழா", date: "1 ஜூலை 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
+
+          {
+            id: "item_1775018682207",
+            title: "படிப்பின் மூலம் தன்னை உருவேற்றுபவர். எழுத்தின் மூலம் உலகை/ உறவை மெருகேற்றுபவர்",
+
+            image: "/item_1775018682207_Periyappa_and_reading.jpg",
+
+
+
+          }
+          ,
+          {
+            id: "item_1775023355276",
+            title: "தொட்டுத் தொடரும் பந்தம்",
+
+            image: "/item_1775023355276_Family_Tree.jpg",
+
+
+
+          }
+          ,
+          {
+            id: "item_1775023887632",
+            title: "திரு. சிவகாமிநாதனின் இரங்கல்",
+            date: "28 மார்ச் 2026",
+            image: "/item_1775023887632_SivagamiNathan.jpeg",
+
+
+
+          }
+          ,
+          {
+            id: "item_1775024076761",
+            title: "திரு. பழனிவேல் ராஜனின் இரங்கல்",
+            date: "28 மார்ச் 2026",
+            image: "/item_1775024076761_Pazhanivel_Rajan.jpeg",
+
+
+
+          }
+          ,
+          {
+            id: "item_1775024266657",
+            title: "திருமதி புஷ்பா தாண்டவராயனின் இரங்கல்",
+            date: "28 மார்ச் 2026",
+            image: "/item_1775024266657_Pushpa.jpeg",
+
+
+
+          }
         ],
       },
       {
@@ -2863,8 +2922,17 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
             date: "10 ஜூலை 2025",
             audioFile: "",
             image: "/Ramki-letter.png"
-          },
-          { id: "l2", title: "கடிதம் 2", date: "20 ஜூலை 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
+          }
+          ,
+          {
+            id: "item_1775014361801",
+            title: "பாரதி இல்ல திறப்பு விழா",
+            date: "12 செப்டம்பர் 1991",
+            image: "/item_1775014361801_Bharathi_Illam.png",
+
+
+
+          }
         ],
       },
     ],
@@ -2894,6 +2962,36 @@ Youth looks forward; old age looks backward. How is it that you alone are able t
 — P. Muthukumar
 Manager, Indian Overseas Bank`,
       }
+      ,
+      {
+        id: "item_1775022872627",
+        title: "கொறிக்க - புத்தக விமர்சனம்",
+
+        image: "/item_1775022872627_Rani-Review.png",
+
+        content: `பணகுடி எங்கள் நூலகத்தில் "ராணி" ஆசிரியர் அ.மா. சாமி தொகுத்த "கொறிக்க" என்ற நூலைக் காண நேர்ந்தது. மூன்று பேரக் குழந்தைகள் (ஒரே பிரசவத்தில் பிறந்தவர்கள்) பராமரிப்பு, வீட்டு வேலைகள், தொலைக்காட்சி சீரியல்களில் சிக்கியிருக்கும் எனக்கு
+
+கனமான நூலாக இருந்தாலும், சுவையான விஷயமாக இருந்ததாலும் சரி, படிப்பது சிரமமாக இருந்தது. முன்னுரையில் தொகுப்பாளர் அ.மா. சாமி எங்கள் சிரமங்களை உணர்ந்தது போல், "கையில் எடுத்தால் எளிமையாகப் படிக்கவும், எந்த இடத்தில் விட்டோம் என நினைவு வைக்க வேண்டியது இல்லை. எந்தப் பக்கத்திலிருந்தும் படிக்கலாம். பயணத்தில் படிக்கலாம்" எனக் குறிப்பிட்டுள்ளதைப் பார்த்து மகிழ்ந்தேன். படித்தேன். சுவையான நிகழ்வுகளை மட்டுமல்ல, சாதாரண நிகழ்வுகளைக் கூட சுவாரஸ்யமாகப் பதிவு செய்துள்ளார்.
+
+"நான் தாடியை ஒட்ட மழிக்கவும் இல்லை; நீண்டு வளரக்கவும் இல்லை. இளந்தாடி வைத்திருக்கிறேன். மழித்தலும் நீட்டலும் வேண்டாம் என்று வள்ளுவர் சொன்ன 'திருக்குறள் தாடி'தானென்று ஆதித்தனார் சொன்னதை பதிவு செய்துள்ளார். 
+
+ஜனநாயகத்தில் ஆட்சி மாற்றத்தின் அவசியத்தை "தோசை கருகாமல் இருக்க தோசையைத் திருப்பிப் போட வேண்டும்" என்று 1967 தேர்தலில் அவரின் பிரசாரத்தைக் குறிப்பிட்டுள்ளார். 
+
+எல்லாவற்றிற்கும் மேலாக பெரியாரின் முதல் மனைவி நாகம்மாள் இறந்த போது பெரியார் எழுதியதை 'இரங்கல் இலக்கியத்தின் இமயம் இது' என குறிப்பிட்டு வெளியிட்டுள்ளார்.
+
+துக்கப்படுவதா? மகிழ்ச்சியடைவதா? அவர் மறைவு எனக்கு லாபமா? நஷ்டமா? அவர் தான் எனக்குத் துணையாக இருந்தார். நான் துணையாக இருந்தேனா என்பது கேள்விக்குறி தான். நான் போதித்த அளவு,  நூற்றில் ஒரு பங்கு வீதமாவது நாகம்மாள் விஷயத்தில் நடந்து கொண்டேன் என சொல்லிக் கொள்ள எனக்கு முழு யோக்கியதை இல்லை. நாகம்மாள் மறைவை நான் எவ்வளவு மகிழ்ச்சி காரியத்திற்கும் லாபமான காரியத்திற்கும் பயன்படுத்திக் கொள்கிறேனோ, அந்த மாதிரி என் மறைவையோ எனது நலிவையோ நாகம்மாள் பயன்படுத்திக் கொள்ள மாட்டாள் என்பது என் நிச்சயம்." பெரியாரின சுயவிமர்சனம் வெளியான ஆண்டு 1933 ஆகும். பொழுது போக்கிற்குத் தொகுக்கப்பட்ட நூலில் அகப்பட்ட வைரக்கல் ஆகும்.இந்த நிகழ்வைப் படித்துப் பார்த்து பெரியாருக்குள் இருக்கும் சிறப்பைத் தெரிந்து கொள்ளலாம்`,
+        englishTranslation: `I happened to find the book 'Korikka' (to munch/nibble), compiled by A. Ma. Sami, the editor of 'Rani' magazine, at our Panagudi library. As someone caught up in the care of triplets (born in a single birth), household chores, and television serials, reading felt like a difficult task even if the book was substantial or the subject matter interesting.
+
+However, in the preface, compiler A. Ma. Sami seemed to understand our difficulties. I was delighted to read his note: 'This is easy to read once picked up; there’s no need to remember where you left off. You can read it from any page. You can even read it while traveling.' I read it. He has recorded not just interesting events, but even ordinary occurrences in a fascinating way.
+
+He has recorded Adithanar’s words about his beard, citing that it followed Valluvar's 'Thirukkural beard' principle—neither letting it grow long out of joy nor shaving it off completely. Regarding the necessity of a change in government in a democracy, he mentions the 1967 election campaign slogan: 'To keep a Dosa from burning, it must be flipped over.'
+
+Above all, he has highlighted what Periyar wrote when his first wife, Nagammal, passed away, describing it as the 'Himalayas of Elegiac Literature.'
+
+Periyar wrote: 'Should I grieve or be happy? Is her passing a gain or a loss for me? She was the one who was a support to me. Whether I was a support to her remains a question mark. I do not have the full merit to say that I lived at least one part in a hundred of what I preached, in my life with Nagammal. I am certain of this: however much I use Nagammal's death for a happy or profitable cause, she would not have used my death or my decline in such a way.'
+
+This self-criticism by Periyar was published in the year 1933. It is a diamond found in a book compiled for leisure. By reading this incident, one can understand the greatness within Periyar.`,
+      }
     ],
   },
   {
@@ -2901,12 +2999,96 @@ Manager, Indian Overseas Bank`,
     number: "3",
     title: "வெற்றி பேச்சுகள்",
     icon: "🎤",
-    description: "அவரின் சிறந்த பேச்சுகள்",
+    description: "அவர் எழுதி பிறர் பேசிய சிறந்த பேச்சுகள்",
     items: [
-      { id: "s1", title: "வெற்றி பேச்சு 1", date: "8 ஜனவரி 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-      { id: "s2", title: "வெற்றி பேச்சு 2", date: "15 ஜனவரி 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-      { id: "s3", title: "வெற்றி பேச்சு 3", date: "22 ஜனவரி 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-      { id: "s4", title: "வெற்றி பேச்சு 4", date: "1 பிப்ரவரி 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
+
+      {
+        id: "item_1775031773575",
+        title: "என் கனவு - ஓர் வளர்ந்த இந்தியா",
+        date: "2007",
+        image: "/item_1775031773575_Vetham.png",
+        audioFile: "/item_1775031773575_vetham-audio.mp3",
+        content: `என் கனவு - ஓர் வளர்ந்த இந்தியா
+நம் இந்தியா ஒரு பாரம்பரியமிக்கப் பழம்பெரும் தேசம். இது ஒரு ஞான பூமியாகும். நம்மைப் பெருமையும் பெருமிதமும் கொள்ளச் செய்யும் நம் தேசம் பொருளாதார ரீதியிலும் ஓர் வளர்ந்த நாடாக உலக அரங்கில் செம்மாந்து வலம்வர வேண்டும் என்பது இந்தியர் ஒவ்வொருவரின் கனவு மற்றும் விருப்பமாக இருப்பதில் வியப்பு ஒன்றுமில்லை. நம் கனவு நனவாகத் தடையாக இருக்கும் தடைக்கற்களை அடையாளம் கண்டு அகற்றவும், முன்னேற்றப் பாதையில் வீறு நடைபோடவும் என்னென்ன வழிமுறைகள் உள்ளன என்பதைக் காண்போம்.
+
+முன்னேற்றத்திற்கான தடை:
+‘பழம்பெருமை’ என்னும் போதை நம்மை விரைவாகச் செயல்பட விடாமல் தடுக்கும் பெருந்தடை. புதிய சிந்தனைகள், மாற்றங்கள் இவற்றைப் பரிசீலிக்கவும் தேவைப்பட்டால் சுவீகரிக்கவும் வேண்டியது காலத்தின் கட்டாயம். ஆனால் நம்மிடம் மண்டிக் கிடக்கும் பழமைவாத மனமோ அதற்கு ஒத்து வருவதில்லை. சிலருக்கோ ‘நம்மால் எதுவுமே முடியாது’ என்ற அழுகுணி மனப்பான்மை. ஆக்கப்பூர்வமான சிந்தனைகள், எண்ணங்கள் அவையே நம் தேசத்தை வளமாக்கும்.
+
+விழிப்புணர்வு இன்றைய தேவை:
+யாரெல்லாம் அடிமைகளாக இருக்கிறோம் என்பதை உணர்ந்து கொண்டார்களோ, அவர்கள் விடுதலைக்காகப் போராடத் தொடங்கினார்கள். நாமும் நம் பலவீனத்தைத் தெரிந்துகொள்ள வேண்டும். அதனை அகற்றி நம்மை வலிமைமிக்கவர்களாக மாற்றிக் கொள்ள வேண்டும்.
+
+கனவு நனவாக:
+கனவு நனவாக வேண்டும் என்றால் முதலில் விழித்தெழ வேண்டும். ‘நல்ல பொழுதையெல்லாம் தூங்கிக் கெடுத்தவர்கள் நாட்டை கெடுத்ததுடன் தாமும் கெட்டார்’ என்று சொல்லும் பட்டுக்கோட்டையார். ‘விழித்துக் கொண்டோரெல்லாம் பிழைத்துக் கொண்டார்கள்’ என்று பாதை காட்டுகிறார் பாரதி. ‘கனவு மெய்ப்பட காரியத்தில் உறுதி வேண்டும்’ என்று முழங்குகிறார். தங்கத்தைத் தோண்டும் போது ஒரு அவுன்ஸ் தங்கத்தை அடையத் டன் டன்னாக மண்ணை அகற்றியே ஆக வேண்டும். மன உறுதி, முனைப்பு, கடின உழைப்பு இவையே இன்றைய தேவை.
+
+வலுவான இந்தியா:
+உலகமயமாக்கம் நமக்கு பல்வேறு மறைமுக அச்சுறுத்தல்களைத் தடைகளை ஏற்படுத்தியுள்ளது. இந்தியா இவற்றிலிருந்து தப்பிக்க முடியாது. அவற்றை தீரமுடன் சந்திக்கும் ஆற்றல் வலிமை நமக்கு வேண்டும். வளர்ந்த நாடுகளின் நிர்ப்பந்தங்களுக்கு அடிபணியாமல் நிமிர்ந்து நிற்க நாம் நமது இறையாண்மையை நிலைநிறுத்தச் சுயசார்புள்ள பாதுகாப்பு வசதிகளைப் பெருக்கிக் கொள்ள வேண்டும். ஏவுகணைகளும் பாதுகாப்பு கருவிகளும் நம்மைப் பாதுகாக்கவே தவிர பிறரை பயமுறுத்த அல்ல. பஞ்சசீலக் கொள்கை கண்ட நம் பாரத தேசத்திற்கு மேலாதிக்க எண்ணமோ மற்றவர் மண்ணைக் கவரும் நோக்கமோ கிடையாது.
+
+வளமான இந்தியா:
+பட்டினிச் சாவு, சிசு மரணம், குடிநீர் வசதியற்ற கிராமங்கள், மருத்துவ வசதி கிட்டாத ஏழைகள் இவை மீதான கவனம் கூர்மையாக்கப்பட வேண்டும். வறுமை அகற்றப்படாத வரை அர்த்தமுள்ள வளர்ச்சி சாத்தியமில்லை. நாட்டின் ஒரு மூலையில் இருக்கும் வறுமை கூட நாடு முழுவதும் இருக்கும் வளமைக்குப் பெரும் அச்சுறுத்தலாகும்.
+
+விவசாயத்தில் புரட்சி:
+இந்தியா அடிப்படையில் ஒரு வளர்ந்த நாடு. அதன் முன்னேற்றத்தில் விவசாயத்தின் பங்கு இன்றியமையாதது. இந்திய விவசாயி கடனாளியாக வாழ்ந்து, கடனாளியாக மறைந்து போகும் நிலை மாற்றப்பட வேண்டும். இயற்கையின் சூதாட்டக் களமாக இருக்கும் இந்திய விவசாயம் நவீன தொழில்நுட்பங்களால் மாற்றப்பட வேண்டும். நிலங்கள் மேலும் மேலும் துண்டாடப்படுவதைத் தடுக்க வேண்டும். பாசன வசதிகளைப் பெருக்கி புதிய விளைச்சல் நிலங்கள் உருவாக்கப்பட வேண்டும். காலாவதியாகிப் போன சாகுபடி முறைகளைக் கைவிட்டு புதிய நவீன முறைகளைக் கடைப்பிடிக்க விவசாயிகளுக்கு ஊக்கம் கொடுக்க வேண்டும். விளைபொருட்களைச் சேமிக்கவும், பதப்படுத்தவும், பாதுகாக்கவும், கட்டுப்படியான விலையில் கிடைக்கவும் உரிய நடவடிக்கைகள் எடுக்கப்பட வேண்டும். பசுமைப் புரட்சியும், வெண்மைப் புரட்சியும் நிகழ்ந்தால் மட்டும் போதாது. அதன் பலன்கள் விவசாயிகளுக்குச் சென்றடைகிறதா என்று கண்காணிக்க வேண்டும்.
+
+தொழில் புரட்சி:
+தொழில்துறையில் வளர்ச்சி அடையாமல் நம்மால் முன்னேற்றப் பாதையில் விரைந்து செல்ல இயலாது. நவீன தொழில்நுட்பங்களைப் பயன்படுத்தத் தயக்கம் காட்டக்கூடாது. அதே சமயத்தில் சுற்றுச்சூழல் குறித்த அக்கறையும் தேவை. நமது தேசத்தில் மூல வளங்கள், தொழில்நுட்பங்கள், தொழில்துறை அடித்தளம் ஆகியவை இருந்தாலும் அவை இன்னும் வலுப்படுத்தப்பட வேண்டும். விவசாயம் சார்ந்த தொழில்துறைகள் மீது இன்னும் அதிக அக்கறை காட்டப்பட வேண்டும். பெருந்தொழிற்சாலைகள் உருவாக்குவதால் சிறு தொழில்கள் நசிந்து விடாமல் பார்த்துக் கொள்ள வேண்டும். நமது உற்பத்திப் பொருட்கள் சர்வதேசத் தரத்துடன் திகழக் கவனம் செலுத்தப்பட வேண்டும்.
+
+உத்தரவாதப்படுத்தப்பட்ட ஆரோக்கியம்:
+ஆரோக்கிய நலவாழ்வே நாட்டின் ஆதார உயிர்நாடி என்பதை உணர்ந்து, பாதுகாக்கப்பட்ட குடிநீர், சுற்றுச்சூழல் பாதுகாப்பு போன்றவற்றில் அக்கறை காட்டப்பட வேண்டும். இதைப் புறக்கணித்துவிட்டு வளர்ந்த இந்தியா என்பது சாத்தியமில்லை.
+
+வளர்த்தெடுக்கப்பட வேண்டியவைகள்:
+வளர்ச்சிப் பாதை ராஜபாட்டையாக அமைய உள்கட்டமைப்பு சிறப்பாக அமைய வேண்டும். விரைவான போக்குவரத்திற்கு ஏற்ற சிறப்பான சாலை வசதிகள், தங்குதடையற்ற சீரான மின் விநியோகம், தொலைத்தொடர்பு வசதி, துறைமுகம் போன்றவற்றில் கவனம் காட்டப்பட வேண்டும்.
+
+அனைவருக்கும் கல்வி:
+வளர்ந்த இந்தியா என்ற கனவு நனவாக, கல்வி வணிகமயமாவதைத் தடுத்து நிறுத்தித் தரமான கல்வி அனைவருக்கும் கிடைக்கச் செய்ய வேண்டும்.
+
+உழைப்போம் உயர்வோம்:
+வெறும் திட்டமிடல் மட்டும் நமது லட்சியப் பயணத்திற்கு உதவாது. 
+ஓங்கி ஒலிப்பதால் மட்டும் நம்மால் ஓர் அங்குலம் கூட உயர முடியாது. 
+திட்டங்களைச் செயல்படுத்தத் திடசித்தமும் கடின உழைப்பும் அர்ப்பணிப்பு மனப்பான்மையும் தேவை. வளர்ந்த இந்தியாவை நிர்மாணிப்பதில் நம் ஒவ்வொருவருக்கும் பங்கு இருக்கிறது என்பதை உணர்ந்து செயல்பட்டால் கனவு நனவாவது உறுதி. நினைப்பவன் அல்ல, நடப்பவனால்தான் சென்றடைய முடியும்.
+
+-சி. வேதநாயகம்,
+ பதினொன்றாம் வகுப்பு,
+ திரு இருதய மேல்நிலைப்பள்ளி,
+ பணகுடி 627109,
+ நெல்லை மாவட்டம்.
+`,
+
+        englishTranslation: `My Dream - A Developed India
+Our India is a tradition-rich, ancient nation; it is a land of wisdom. It is no surprise that it is the dream and desire of every Indian that our nation, which fills us with pride and dignity, should stand tall on the global stage as an economically developed country. Let us explore the ways to identify and remove the stumbling blocks that hinder the realization of our dream and to stride forward on the path of progress.
+
+Barriers to Progress:
+The intoxication of ‘ancient glory’ is a major obstacle that prevents us from acting swiftly. It is the necessity of time to examine new thoughts and changes and, if required, to adopt them. However, our deep-rooted conservative mindset does not cooperate with this. Some suffer from a defeatist attitude that 'we cannot achieve anything.' Constructive thoughts and ideas are what will make our nation prosperous.
+
+Awareness - The Need of the Hour:
+Only those who realized they were enslaved began to fight for freedom. Similarly, we must recognize our weaknesses. We must remove them and transform ourselves into a strong people.
+
+Making the Dream a Reality:
+To make a dream come true, one must first wake up. As Pattukkottaiyar said, "Those who wasted good times in sleep ruined both the country and themselves." Bharathi shows the way, saying, "All those who woke up survived." He proclaims, "To make dreams come true, one needs determination in action." When mining for gold, one must remove tons of soil to obtain a single ounce of gold. Determination, focus, and hard work are the needs of the hour.
+
+A Strong India:
+Globalization has posed various indirect threats and obstacles to us. India cannot escape these. We need the strength and capability to face them with courage. To stand tall without yielding to the pressures of developed nations, we must increase our self-reliant defense facilities to uphold our sovereignty. Missiles and defense equipment are for our protection, not to intimidate others. Our Bharat, which follows the Panchsheel principles, has no intent of dominance or seizing others' lands.
+
+A Prosperous India:
+Attention must be sharpened toward starvation deaths, infant mortality, villages without drinking water facilities, and the poor who lack access to medical facilities. Meaningful development is not possible until poverty is eradicated. Even poverty in one corner of the country is a major threat to the prosperity of the entire nation.
+
+Revolution in Agriculture:
+India is fundamentally a developing country. The role of agriculture is indispensable in its progress. The situation where an Indian farmer lives and dies in debt must be changed. Indian agriculture, which currently serves as a gamble with nature, must be transformed with modern technologies. The further fragmentation of land must be prevented. By increasing irrigation facilities, new cultivable lands should be created. Outdated cultivation methods must be abandoned, and farmers should be encouraged to adopt new, modern techniques. Proper measures must be taken to store, process, and protect produce, and to ensure they are available at affordable prices. It is not enough for the Green Revolution and White Revolution to occur; it must be monitored whether their benefits actually reach the farmers.
+
+Industrial Revolution:
+Without growth in the industrial sector, we cannot move quickly on the path of progress. We should not hesitate to use modern technologies. At the same time, concern for the environment is also necessary. Although our nation possesses raw resources, technologies, and an industrial foundation, they need to be further strengthened. More attention should be paid to agro-based industries. While establishing large-scale industries, we must ensure that small-scale industries do not perish. Attention must be paid to ensuring our manufactured products meet international quality standards.
+
+Guaranteed Health:
+Recognizing that a healthy life is the lifeblood of the nation, care must be taken regarding protected drinking water and environmental protection. A developed India is not possible if these are neglected.
+
+Things to be Developed:
+For the path of growth to become a royal road, infrastructure must be excellent. Attention must be paid to high-quality road facilities for rapid transport, uninterrupted and steady power supply, telecommunication facilities, and ports.
+
+Education for All:
+To realize the dream of a developed India, the commercialization of education must be stopped, and quality education must be made accessible to everyone.
+
+Let Us Work and Rise:
+Mere planning alone will not help our ideal journey. We cannot rise even an inch just by shouting loudly. Firm determination, hard work, and a spirit of dedication are required to implement plans. If we act with the realization that each of us has a role in building a developed India, the dream is sure to come true. It is not the one who merely thinks, but the one who walks who can reach the destination.`,
+      }
     ],
   },
   {
@@ -2916,9 +3098,112 @@ Manager, Indian Overseas Bank`,
     icon: "🌸",
     description: "அவரின் ஹைக்கூ கவிதைகள்",
     items: [
-      { id: "h1", title: "ஹைக்கூ 1", date: "10 பிப்ரவரி 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-      { id: "h2", title: "ஹைக்கூ 2", date: "20 பிப்ரவரி 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-      { id: "h3", title: "ஹைக்கூ 3", date: "1 மார்ச் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
+
+      {
+        id: "item_1775025100145",
+        title: "சுற்றங்கள் அரவணைக்கிறார்களா? அமுக்குகிறார்களா? சிறப்பா? சிறையா? பதில் சொல்லுங்கள் பூக்களே... புன்னகைத்து மழுப்பாதீர்கள்... ",
+
+        image: "/item_1775025100145_IMG-20250122-WA0000.jpg",
+
+
+
+      }
+      ,
+      {
+        id: "item_1775026054943",
+        title: "பெருசை தலையில் வைத்து கொண்டாடுதே இந்த சின்னப் பூக்கள்...👌  சிறப்பானதை  தலையில் வைத்து கொண்டாடுதோ  இந்த நரைத்த பூக்கள்....",
+
+        image: "/item_1775026054943_IMG-20250604-WA0002.jpg",
+
+
+
+      }
+      ,
+      {
+        id: "item_1775026153539",
+        title: "Though the flowers kept inside are not (having good smell and good look) beauty but sweety to Lord Vinayagar... ",
+
+        image: "/item_1775026153539_IMG-20251013-WA0001.jpg",
+
+
+
+      }
+      ,
+      {
+        id: "item_1775026244213",
+        title: "வெள்ளை துப்பாக்கிகளுக்கு அஞ்சாமல் சிரிக்கிறதே இந்த மஞ்சள் ஈரான்.. ",
+
+        image: "/item_1775026244213_IMG-20260325-WA0020.jpg",
+
+
+
+      }
+      ,
+      {
+        id: "item_1775026303697",
+        title: "இரத்தத்தின் இரத்தமான உடன்பிறப்புகளுக்கு தலைமைப்பூ கொடுக்கும் செய்தி என்னவோ? ",
+
+        image: "/item_1775026303697_IMG-20260325-WA0018.jpg",
+
+
+
+      }
+      ,
+      {
+        id: "item_1775026374635",
+        title: "மேலே இருக்கிறவன் பார்த்துக்கிடுவான் என்ற நம்பிக்கையில் உடன்பிறப்\"பூ\"க்கள்.🙏 ",
+
+        image: "/item_1775026374635_IMG-20260325-WA0017.jpg",
+
+
+
+      }
+      ,
+      {
+        id: "item_1775026483235",
+        title: "விரிகதிராய் வருக! விழிப்புணர்வு தருக!!🙏👍 ",
+
+        image: "/item_1775026483235_IMG-20260325-WA0015.jpg",
+
+
+
+      }
+      ,
+      {
+        id: "item_1775026542985",
+        title: "கால சக்கரம் சுழல்வது கடவுளின் அரு்ளால்🙏 ",
+
+        image: "/item_1775026542985_IMG-20260325-WA0025.jpg",
+
+
+
+      }
+      ,
+      {
+        id: "item_1775026673805",
+        title: "ஜொலிக்க,ஜெயிக்க...உதிரிகளும் உதவக்கூடும் என்கிறதோ இந்த மஞ்சள் பூ... மையபூ... ",
+
+        image: "/item_1775026673805_IMG-20260325-WA0028.jpg",
+
+
+
+      }
+      ,
+      {
+        id: "item_1775026970307",
+        title: "மலருக்குள் ஒளிந்திருக்கும் பூதம்  இறை பிரசன்னத்தைக் கண்டு அஞ்சி அலறுகிறதோ! மலர்களோ பக்தி மயக்கத்தில்..👍👌 ",
+        image: "/item_1775026970307_IMG-20250618-WA0000.jpg",
+      }
+      ,
+      {
+        id: "item_1775027056664",
+        title: "நாடி  நரம்புகளில் பின்னிக்கிடப்பது கர்மயோகமா? பக்தி யோகமா?👌 ",
+
+        image: "/item_1775027056664_IMG-20260324-WA0005.jpg",
+
+
+
+      }
     ],
   },
 ];

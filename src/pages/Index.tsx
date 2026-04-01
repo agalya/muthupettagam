@@ -60,11 +60,11 @@ const Index = () => {
     const articles: any[] = [];
     categories.forEach(cat => {
       if (cat.items) {
-        cat.items.forEach(item => articles.push({...item, categoryId: cat.id, categoryTitle: cat.title}));
+        cat.items.forEach(item => articles.push({ ...item, categoryId: cat.id, categoryTitle: cat.title }));
       }
       if (cat.subCategories) {
         cat.subCategories.forEach(sub => {
-          sub.items.forEach(item => articles.push({...item, categoryId: cat.id, categoryTitle: cat.title, subCategoryTitle: sub.title}));
+          sub.items.forEach(item => articles.push({ ...item, categoryId: cat.id, categoryTitle: cat.title, subCategoryTitle: sub.title }));
         })
       }
     });
@@ -130,7 +130,7 @@ const Index = () => {
           </h1>
           <div className="w-20 h-1 gradient-gold mx-auto mb-6 rounded-full" />
           <p className="font-tamil-body text-white/70 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
-            எழுத்தாளர், கவிஞர், விமர்சகர் — காலத்தால் அழியாத! காலனால் களவு கொள்ள முடியாத! கருத்து கருவூலங்கள்
+            எழுத்தாளர், கவிஞர், விமர்சகர் — காலத்தால் அழியாத... காலனால் களவு கொள்ள முடியாத... கருத்து கருவூலங்கள்
           </p>
 
           <div className="mt-8 max-w-md mx-auto relative group">
@@ -141,7 +141,7 @@ const Index = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="கட்டுரைகளைத் தேடுக..."
+              placeholder="கட்டுரைகளைத் தேடிட..."
               className="w-full bg-white/10 border border-white/20 text-white placeholder-white/50 rounded-full pl-11 pr-14 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-md transition-all"
             />
             <div className="absolute inset-y-0 right-1 pr-2 flex items-center">
@@ -187,7 +187,7 @@ const Index = () => {
                           <div className="mb-5 flex flex-wrap gap-3">
                             <TextToSpeech text={item.content} audioFile={item.audioFile} />
                             {item.englishTranslation && (
-                              <button 
+                              <button
                                 onClick={() => document.getElementById(`search-translation-${item.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
                                 className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
                               >
@@ -220,12 +220,12 @@ const Index = () => {
                                 <Languages className="w-5 h-5" />
                                 English Translation
                               </h4>
-                              <TextToSpeech 
-                                text={item.englishTranslation} 
-                                audioFile={item.englishAudioFile} 
-                                lang="en-US" 
-                                labelPlay="Listen" 
-                                labelStop="Stop" 
+                              <TextToSpeech
+                                text={item.englishTranslation}
+                                audioFile={item.englishAudioFile}
+                                lang="en-US"
+                                labelPlay="Listen"
+                                labelStop="Stop"
                               />
                             </div>
                             <p className="font-sans text-sm md:text-base text-foreground/90 whitespace-pre-wrap leading-relaxed">

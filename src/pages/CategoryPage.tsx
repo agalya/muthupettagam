@@ -1,5 +1,6 @@
+import { useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { categories } from "@/data/categories";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,12 +9,57 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TextToSpeech from "@/components/TextToSpeech";
 import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
 import { downloadArticlePdf } from "@/lib/downloadArticlePdf";
-import { Languages } from "lucide-react";
+import { Languages, X, ChevronLeft, ChevronRight, Download } from "lucide-react";
 import ZipDownloadButton from "@/components/ZipDownloadButton";
 
 const CategoryPage = () => {
   const { id } = useParams<{ id: string }>();
   const category = categories.find((c) => c.id === id);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const allImages = useMemo(() => {
+    const imgs: { src: string, title?: string, id: string, originalItem?: any }[] = [];
+    categories.forEach(cat => {
+      if (cat.items) {
+        cat.items.forEach(item => {
+          if (item.image) imgs.push({ src: item.image, title: item.title, id: item.id, originalItem: item });
+        });
+      }
+      if (cat.subCategories) {
+        cat.subCategories.forEach(sub => {
+          if (sub.image) imgs.push({ src: sub.image, title: sub.title, id: sub.id, originalItem: sub });
+          sub.items.forEach(item => {
+            if (item.image) imgs.push({ src: item.image, title: item.title, id: item.id, originalItem: item });
+          });
+        });
+      }
+    });
+    // Remove duplicates by src and sort so newest uploads are at the top
+    const uniqueImgs = Array.from(new Map(imgs.map(img => [img.src, img])).values());
+    return uniqueImgs.sort((a, b) => {
+      const getTimestamp = (id: string) => {
+        const match = id.match(/\d{13}/);
+        return match ? parseInt(match[0], 10) : 0;
+      };
+      return getTimestamp(b.id) - getTimestamp(a.id);
+    });
+  }, []);
+
+  const currentGalleryImages = useMemo(() => {
+    if (category?.id === "haiku") {
+      const imgs = (category?.items || []).filter(item => item.image).map(item => ({
+        src: item.image!,
+        title: item.title || item.content,
+        id: item.id,
+        originalItem: item
+      }));
+      return imgs.sort((a, b) => {
+        const getT = (id: string) => { const m = id.match(/\d{13}/); return m ? parseInt(m[0],10) : 0; };
+        return getT(b.id) - getT(a.id);
+      });
+    }
+    return allImages;
+  }, [category, allImages]);
 
   if (!category) {
     return (
@@ -88,7 +134,7 @@ const CategoryPage = () => {
                     <span className="flex items-center justify-center gap-2">
                       {sub.title}
                       <span className="text-xs font-tamil-body font-normal opacity-80 bg-foreground/10 px-2.5 py-0.5 rounded-full">
-                        {sub.items.length}
+                        {sub.id === "photos" ? currentGalleryImages.length : sub.items.length}
                       </span>
                     </span>
                   </TabsTrigger>
@@ -104,10 +150,54 @@ const CategoryPage = () => {
                   transition={{ duration: 0.4 }}
                   className="max-w-4xl mx-auto"
                 >
-                  <Accordion type="multiple" className="space-y-4">
-                    {sub.items.map((item) => (
-                      <AccordionItem
-                        key={item.id}
+                  {(sub.image || sub.description) && (
+                    <div className="mb-8 p-6 rounded-2xl bg-card/60 backdrop-blur border border-border/50 shadow-sm flex flex-col md:flex-row gap-6">
+                      {sub.image && (
+                        <div className="w-full md:w-1/3 flex-shrink-0">
+                          <img 
+                            src={sub.image} 
+                            alt={sub.title} 
+                            className="w-full h-auto rounded-xl object-cover aspect-[4/3] shadow-sm"
+                          />
+                        </div>
+                      )}
+                      {sub.description && (
+                        <div className="flex-1 flex flex-col justify-center">
+                          <h3 className="font-tamil-heading text-xl font-bold text-primary mb-3">{sub.title}</h3>
+                          <p className="font-tamil-body text-foreground/80 leading-relaxed whitespace-pre-wrap text-sm md:text-base">
+                            {sub.description}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  {sub.id === "photos" ? (
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pb-8">
+                      {currentGalleryImages.map((img, idx) => (
+                        <div 
+                          key={`${img.id}-${idx}`} 
+                          className="rounded-xl overflow-hidden border border-border/50 shadow-sm aspect-square bg-muted/30 group relative cursor-pointer"
+                          onClick={() => setSelectedIndex(idx)}
+                        >
+                          <img 
+                            src={img.src} 
+                            alt={img.title || "Photo"} 
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p className="text-white font-tamil-body p-4 text-sm md:text-base line-clamp-2">
+                              {img.title}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <Accordion type="multiple" className="space-y-4">
+                      {sub.items.map((item) => (
+                        <AccordionItem
+                          key={item.id}
                         value={item.id}
                         className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
                       >
@@ -171,12 +261,38 @@ const CategoryPage = () => {
                       </AccordionItem>
                     ))}
                   </Accordion>
+                  )}
                 </motion.div>
               </TabsContent>
             ))}
           </Tabs>
         ) : category.items ? (
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            {category.id === "haiku" ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-8 px-4 md:px-0">
+                {currentGalleryImages.map((img, idx) => (
+                  <div
+                    key={`${img.id}-${idx}`}
+                    className="flex flex-col rounded-2xl overflow-hidden border border-border/60 shadow-md bg-card group cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    onClick={() => setSelectedIndex(idx)}
+                  >
+                    <div className="overflow-hidden">
+                      <img
+                        src={img.src}
+                        alt={img.title || "Haiku"}
+                        className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="px-4 py-4 flex-1 flex items-center justify-center border-t border-border/40 bg-card">
+                      <p className="font-tamil-body text-sm md:text-base text-foreground text-center leading-relaxed italic">
+                        {img.title}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
             <Accordion type="multiple" className="space-y-3">
             {category.items.map((item, i) => (
               <motion.div
@@ -250,9 +366,91 @@ const CategoryPage = () => {
               </motion.div>
             ))}
           </Accordion>
+          )}
           </div>
         ) : null}
       </div>
+
+      {/* Fullscreen Image Modal */}
+      <AnimatePresence>
+        {selectedIndex !== null && currentGalleryImages[selectedIndex] && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm"
+            onClick={() => setSelectedIndex(null)}
+          >
+            <div className="absolute top-6 right-6 flex items-center gap-3 z-20">
+              <button
+                className="text-white/70 hover:text-white transition-colors bg-black/40 p-2 rounded-full backdrop-blur-md"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (currentGalleryImages[selectedIndex].originalItem) {
+                    downloadArticlePdf(currentGalleryImages[selectedIndex].originalItem).catch((err) => console.error("PDF download failed:", err));
+                  }
+                }}
+                title="Download PDF"
+              >
+                <Download className="w-6 h-6" />
+              </button>
+              <button
+                className="text-white/70 hover:text-white transition-colors bg-black/40 p-2 rounded-full backdrop-blur-md"
+                onClick={() => setSelectedIndex(null)}
+                title="Close"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {currentGalleryImages.length > 1 && (
+              <>
+                <button
+                  className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-all bg-black/40 hover:bg-black/80 p-3 rounded-full backdrop-blur-md z-20 hover:scale-110"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedIndex((selectedIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length);
+                  }}
+                >
+                  <ChevronLeft className="w-8 h-8" />
+                </button>
+                <button
+                  className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-all bg-black/40 hover:bg-black/80 p-3 rounded-full backdrop-blur-md z-20 hover:scale-110"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedIndex((selectedIndex + 1) % currentGalleryImages.length);
+                  }}
+                >
+                  <ChevronRight className="w-8 h-8" />
+                </button>
+              </>
+            )}
+
+            <motion.div
+              key={currentGalleryImages[selectedIndex].src}
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative max-w-6xl w-full max-h-[90vh] flex flex-col items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={currentGalleryImages[selectedIndex].src}
+                alt={currentGalleryImages[selectedIndex].title || "Full size photo"}
+                className="max-w-full max-h-[80vh] object-contain rounded-t-lg shadow-2xl"
+              />
+              {currentGalleryImages[selectedIndex].title && (
+                <div className="w-full bg-black/80 backdrop-blur-sm px-6 py-4 rounded-b-lg border-t border-white/10">
+                  <p className="text-white font-tamil-heading text-base md:text-xl font-medium text-center leading-relaxed italic">
+                    {currentGalleryImages[selectedIndex].title}
+                  </p>
+                </div>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </div>

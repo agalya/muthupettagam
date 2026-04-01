@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { UploadCloud, Loader2 } from "lucide-react";
 
 const MAX_IMAGE_SIZE = 8 * 1024 * 1024; // 8MB
-const MAX_AUDIO_SIZE = 10 * 1024 * 1024; // 10MB
+const MAX_AUDIO_SIZE = 20 * 1024 * 1024; // 20MB
 
 export default function Upload() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,7 +45,7 @@ export default function Upload() {
     const file = e.target.files?.[0];
     if (file) {
       if (file.size > MAX_AUDIO_SIZE) {
-        alert("Audio exceeds the maximum allowed size of 10MB.");
+        alert("Audio exceeds the maximum allowed size of 20MB.");
         e.target.value = "";
         return;
       }
@@ -62,11 +62,14 @@ export default function Upload() {
     });
   };
 
+  const isPhotoUpload = subCategoryId === "photos" || categoryId === "haiku";
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!categoryId) return alert("Please select a Category");
     if (hasSubCategories && !subCategoryId) return alert("Please select a Subcategory");
     if (!title.trim()) return alert("Please enter a Title");
+    if (isPhotoUpload && !imageFile) return alert("Please select an Image to upload");
 
     setIsSubmitting(true);
 
@@ -181,47 +184,55 @@ export default function Upload() {
           </div>
 
           <div className="space-y-3">
-            <Label>Title (தலைப்பு) *</Label>
-            <Input required value={title} onChange={e => setTitle(e.target.value)} placeholder="Entry Title" />
+            <Label>{isPhotoUpload ? "Caption / Title (தலைப்பு) *" : "Title (தலைப்பு) *"}</Label>
+            <Input required value={title} onChange={e => setTitle(e.target.value)} placeholder={isPhotoUpload ? "Enter Caption" : "Entry Title"} />
           </div>
 
-          <div className="space-y-3">
-            <Label>Date (தேதி)</Label>
-            <Input value={date} onChange={e => setDate(e.target.value)} placeholder="DD Month YYYY" />
-            <p className="text-xs text-muted-foreground font-tamil-body">Ex: 15 அக்டோபர் 2024</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 rounded-xl bg-muted/40 border border-border/50">
+          {!isPhotoUpload && (
             <div className="space-y-3">
-              <Label>Image File (Max: 8MB)</Label>
-              <Input type="file" accept="image/*" onChange={handleImageChange} className="bg-background" />
+              <Label>Date (தேதி)</Label>
+              <Input value={date} onChange={e => setDate(e.target.value)} placeholder="DD Month YYYY" />
+              <p className="text-xs text-muted-foreground font-tamil-body">Ex: 15 அக்டோபர் 2024</p>
+            </div>
+          )}
+
+          <div className={`grid grid-cols-1 ${!isPhotoUpload ? 'md:grid-cols-2' : ''} gap-6 p-4 rounded-xl bg-muted/40 border border-border/50`}>
+            <div className="space-y-3">
+              <Label>Image File {isPhotoUpload ? "* (Max: 8MB)" : "(Max: 8MB)"}</Label>
+              <Input type="file" accept="image/*" onChange={handleImageChange} className="bg-background" required={isPhotoUpload} />
             </div>
 
-            <div className="space-y-3">
-              <Label>Audio File (Max: 10MB)</Label>
-              <Input type="file" accept="audio/*" onChange={handleAudioChange} className="bg-background" />
-            </div>
+            {!isPhotoUpload && (
+              <div className="space-y-3">
+                <Label>Audio File (Max: 20MB)</Label>
+                <Input type="file" accept="audio/*" onChange={handleAudioChange} className="bg-background" />
+              </div>
+            )}
           </div>
 
-          <div className="space-y-3">
-            <Label>Tamil Content (தமிழ் உரை)</Label>
-            <Textarea 
-              value={tamilText} 
-              onChange={e => setTamilText(e.target.value)} 
-              placeholder="Enter the primary Tamil content here..."
-              className="min-h-[150px] font-sans text-base leading-relaxed"
-            />
-          </div>
+          {!isPhotoUpload && (
+            <>
+              <div className="space-y-3">
+                <Label>Tamil Content (தமிழ் உரை)</Label>
+                <Textarea 
+                  value={tamilText} 
+                  onChange={e => setTamilText(e.target.value)} 
+                  placeholder="Enter the primary Tamil content here..."
+                  className="min-h-[150px] font-sans text-base leading-relaxed"
+                />
+              </div>
 
-          <div className="space-y-3">
-            <Label>English Translation</Label>
-            <Textarea 
-              value={englishText} 
-              onChange={e => setEnglishText(e.target.value)} 
-              placeholder="Enter the English translation here..."
-              className="min-h-[150px] font-sans text-base leading-relaxed"
-            />
-          </div>
+              <div className="space-y-3">
+                <Label>English Translation</Label>
+                <Textarea 
+                  value={englishText} 
+                  onChange={e => setEnglishText(e.target.value)} 
+                  placeholder="Enter the English translation here..."
+                  className="min-h-[150px] font-sans text-base leading-relaxed"
+                />
+              </div>
+            </>
+          )}
 
           <div className="pt-4 border-t border-border/50">
             <Button type="submit" className="w-full md:w-auto px-10 py-6 text-lg rounded-full shadow-lg hover:translate-y-[-2px] transition-transform" disabled={isSubmitting}>
@@ -233,7 +244,7 @@ export default function Upload() {
               ) : (
                 <>
                   <UploadCloud className="w-5 h-5 mr-2" />
-                  Publish Article 
+                  {isPhotoUpload ? (categoryId === "haiku" ? "Upload Haiku" : "Upload Photo") : "Publish Article"}
                 </>
               )}
             </Button>
