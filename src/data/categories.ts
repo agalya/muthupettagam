@@ -242,6 +242,7 @@ On behalf of Tiriveni Office Colleagues
             id: "hv6", title: "சதாபிஷேக வாழ்த்து - [நாயகன்: திருமிகு இரா. வேதநாயகம், நாயகி: திருமதி.நவநீத கிருஷ்ணம்மாள்]",
             date: "28 மார்ச் 2007",
             audioFile: "/sadha.mp3",
+            image: "/Vethanayagam_thaatha.jpg",
             englishTranslation: `
             If domestic life possesses love and virtue, that itself is its character and its reward.
     
@@ -354,6 +355,7 @@ On behalf of Tiriveni Office Colleagues
             id: "hv5",
             title: "மணிவிழா வாழ்த்து - [நாயகன்: திருமிகு.A.S பிச்சையா, நாயகி: திருமதி.P.சங்கர வடிவு]",
             date: "01 செப்டம்பர் 2007",
+            image: "/sankara_athai-img.jpg",
             audioFile: "/sankara_athai.opus",
             englishTranslation: `If domestic life possesses love and virtue,
 that itself is its character and its reward." (Couplet from Thirukkural)
@@ -1226,6 +1228,92 @@ Medical Reportகளை
         title: "வாழ்த்து மடல்கள்",
         items: [
           {
+            id: "item_1774963004046",
+            title: "திருமண வாழ்த்து",
+            date: "18 ஜனவரி 1981",
+            image: "/item_1774963004046_ES_Murugan.png",
+
+            content: `மன்றல் வாழ்த்து
+
+மணமகன் : முத்துக்குமார்
+மணமகள் : வேலம்மாள்
+மணநாள் : 18.01.1981
+
+“அன்பும் அறனும் உடைத்தாயின் இல்வாழ்க்கை
+பண்பும் பயனும் அது”
+
+கூடுகின்ற மணமிரண்டில்
+கொட்டுகின்ற மேளமதில்
+கட்டுகின்ற தாலி வாழ்க!
+
+சாடுகின்ற அருவியதில்
+சாந்தமுடன் நனைந்து வர
+சாந்தியதில் நீங்கள் வாழ்க!
+
+மாடு மனை வாசலுடன்
+மரம் செடிகள் செல்வமென
+மகிழ்வோடு நீங்கள் வாழ்க!
+
+பாடுகின்ற புலவனிவன்
+பாட்டெழுதி வாழ்த்தி வர
+பாடலென நீங்கள் வாழ்க!
+
+நாடதனின் வாழ்வுதனில்
+நம் வாழ்வும் இருப்பதனால்
+நமக்கிருவர் என்றே வாழ்க!
+
+கோடு இவன் வரையவில்லை
+கோட்டினையும் தாண்டவில்லை
+கொள்கையதாய் நீங்கள் வாழ்க!
+
+என்னப்பன் முருகனவன்
+என் வாயில் பாடிவர
+எழுதுகின்றேன் வாழ்க வாழ்க!
+
+பொன்னப்பர் மகனான
+பொறுமையப்பர் முத்துக்குமார்
+பல்லாண்டு வாழ்க வாழ்க!
+
+- E.S முருகன்,
+  பணகுடி`,
+            englishTranslation: `“If home life possesses love and virtue,
+That is its grace and fruit.” (This is a famous Thirukkural couplet)
+
+In the joining of two hearts,
+To the beat of the drums,
+Long live the holy thread being tied!
+
+In the cascading waterfall,
+May you soak in peacefulness,
+May you live with tranquility!
+
+With cattle and a house with a front yard,
+And wealth like trees and plants,
+May you live with joy!
+
+This poet who sings,
+Writes a song to bless you,
+May you live as a perfect song!
+
+In the life of this country,
+Since our lives also exist,
+May you live by the motto “two for us”! (This refers to family planning or mutual support)
+
+He has not drawn a limiting line,
+Nor has he crossed the line set for him,
+May you live adhering to this principle!
+
+May my father, Lord Murugan,
+Sing within my mouth,
+As I write this blessing: Long live! Long live!
+
+Muthukumar, the son of Ponnappar,
+Who is the epitome of patience,
+May you live for many, many years!
+
+- E.S Murugan`,
+          },
+          {
             id: "fv2",
             title: "மணிவிழா வாழ்த்து [விழா நாயகர்: பொன். முத்துக்குமார் : விழா நாயகி: மு. வேலம்மாள் அண்ணி]",
             date: "25 செப்டம்பர் 2015",
@@ -1441,9 +1529,10 @@ We, who are always blessed by them, wish them a healthy life today.
           {
             id: "fi1", title: "சித்தப்பா இராமலிங்கம் அவர்களின் இரங்கல்",
             date: "24 மார்ச் 2026",
-            audioFile: "",
-            image: "/perumalpuram_thaatha_periyappa.jpg",
-            englishTranslation: `I have no words to express my grief. 
+            audioFile: "/Perumalpuram Thatha Erangal Audio.mp3",
+            image: "/perumalpuram_thaatha.png",
+            englishTranslation: `
+            I have no words to express my grief. 
             O God you are so cruel to take a graceful soul at an early age`,
             content: `
             வானத்து அமரன் வந்தான் காண்,
@@ -1553,9 +1642,110 @@ P. Dhanalakshmi Somasundaram.`,
                         `
           },
           {
+            id: "item_1774940432499",
+            title: "அத்தான் சோமசுந்தரத்தின் இரங்கல்",
+            date: "31 மார்ச், 2026",
+            image: "/item_1774940432499_maranthai_mama_img.jpg",
+            audioFile: "/maranthai_mama.mp3",
+
+            content: `என் அருமை மைத்துனனே...
+"அத்தான்"
+என்று
+அன்பு பொங்க அழைக்கும்
+உன் குரலுக்காக
+ஏங்கிக் கொண்டிருக்கிறேன்!
+
+நீ
+பொறுமையின் சிகரம்
+அன்பின் கடல்
+பாசத்தில் விரிந்த வானம்
+பண்பில் உயர்ந்த மனிதன்...
+
+உறவுகளுடன் கூடுவதிலும்
+உறவுகளை பேணுவதிலும் — தான்
+உனக்கு சந்தோஷம்!
+எங்களுக்கு பார்க்க பார்க்க
+பரவசம்!
+
+விருந்தோம்பலில்
+உன்னை மிஞ்ச யாருமில்லை!
+"வந்தவருக்கு
+என்ன பிடிக்கும்?" என்று
+பார்த்து பார்த்து உபசரிப்பதில்
+உனக்கு பேரானந்தம்!
+
+பதவிகளை நாடாமல்
+பொறுப்புகளை
+எங்களிடம் வழங்கி
+தலைமையை கற்றுத்தந்தாய்
+உடனிருந்து...
+
+இன்று இளந்தலைமுறை
+வெற்றியோடு
+பயணிக்கின்றது என்றால்
+உனது வழிகாட்டுதலே காரணம்!
+
+உன் அன்பு என்றும்
+பிரகாசிக்கிறது.
+உன் மதிப்பு நாள்தோறும்
+உயர்கிறது
+உன் நினைவு
+எங்கள் மூச்சோடு கலந்து
+உயிரோடு உள்ளது!
+
+என்றும் அன்புடன்
+உன் அத்தான்
+கோ. சோமசுந்தரம்.`,
+            englishTranslation: `My dear brother-in-law...
+I am longing
+For your voice
+That used to call out "Athaan" Overflowing with love!
+
+You were:
+The peak of patience,
+The ocean of love,
+The sky expanded with affection,
+A man of supreme character...
+
+In gathering with relatives
+And in nurturing those relationships—
+That is where your joy lay!
+For us, watching you
+Was sheer delight!
+
+In hospitality (Virunthompalam),
+There is no one to surpass you!
+"What would
+Our guest like?"
+Taking such meticulous care in hosting
+Brought you the greatest happiness!
+
+Without seeking titles (positions of power),
+You handed over responsibilities
+To us, and
+Taught us leadership
+By being right beside us...
+
+If today the younger generation
+Travels with success,
+It is because of your guidance!
+
+Your love shines
+Forever.
+Your worth increases
+With every passing day.
+Your memory
+Is mingled with our breath
+And remains alive!
+
+Always with love,
+Your Athaan,
+G. Somasundaram.`,
+          },
+          {
             id: "fi2", title: "தங்கை சங்கீதா இனியனின் இரங்கல்",
             date: "28 மார்ச் 2026",
-            audioFile: "/babuththai-audio.mp3",
+            audioFile: "/Babu Ka_ Audio_ Essay & Song.mp3",
             image: "/babuththai-hw.jpg",
             englishTranslation: `You are the 'Resting Stone' (Sumai Thaangi) who voluntarily bears the burdens of others.
 Has anyone ever seen you set down your own burden?
@@ -2135,108 +2325,6 @@ Your loving daughter,
 Jothimani Ponnappan.`,
           }
           ,
-
-          {
-            id: "item_1774940432499",
-            title: "அத்தான் சோமசுந்தரத்தின் இரங்கல்",
-            date: "31 மார்ச், 2026",
-            image: "/item_1774940432499_maranthai_mama_img.jpg",
-
-            content: `என் அருமை மைத்துனனே...
-"அத்தான்"
-என்று
-அன்பு பொங்க அழைக்கும்
-உன் குரலுக்காக
-ஏங்கிக் கொண்டிருக்கிறேன்!
-
-நீ
-பொறுமையின் சிகரம்
-அன்பின் கடல்
-பாசத்தில் விரிந்த வானம்
-பண்பில் உயர்ந்த மனிதன்...
-
-உறவுகளுடன் கூடுவதிலும்
-உறவுகளை பேணுவதிலும் — தான்
-உனக்கு சந்தோஷம்!
-எங்களுக்கு பார்க்க பார்க்க
-பரவசம்!
-
-விருந்தோம்பலில்
-உன்னை மிஞ்ச யாருமில்லை!
-"வந்தவருக்கு
-என்ன பிடிக்கும்?" என்று
-பார்த்து பார்த்து உபசரிப்பதில்
-உனக்கு பேரானந்தம்!
-
-பதவிகளை நாடாமல்
-பொறுப்புகளை
-எங்களிடம் வழங்கி
-தலைமையை கற்றுத்தந்தாய்
-உடனிருந்து...
-
-இன்று இளந்தலைமுறை
-வெற்றியோடு
-பயணிக்கின்றது என்றால்
-உனது வழிகாட்டுதலே காரணம்!
-
-உன் அன்பு என்றும்
-பிரகாசிக்கிறது.
-உன் மதிப்பு நாள்தோறும்
-உயர்கிறது
-உன் நினைவு
-எங்கள் மூச்சோடு கலந்து
-உயிரோடு உள்ளது!
-
-என்றும் அன்புடன்
-உன் அத்தான்
-கோ. சோமசுந்தரம்.`,
-            englishTranslation: `My dear brother-in-law...
-I am longing
-For your voice
-That used to call out "Athaan" Overflowing with love!
-
-You were:
-The peak of patience,
-The ocean of love,
-The sky expanded with affection,
-A man of supreme character...
-
-In gathering with relatives
-And in nurturing those relationships—
-That is where your joy lay!
-For us, watching you
-Was sheer delight!
-
-In hospitality (Virunthompalam),
-There is no one to surpass you!
-"What would
-Our guest like?"
-Taking such meticulous care in hosting
-Brought you the greatest happiness!
-
-Without seeking titles (positions of power),
-You handed over responsibilities
-To us, and
-Taught us leadership
-By being right beside us...
-
-If today the younger generation
-Travels with success,
-It is because of your guidance!
-
-Your love shines
-Forever.
-Your worth increases
-With every passing day.
-Your memory
-Is mingled with our breath
-And remains alive!
-
-Always with love,
-Your Athaan,
-G. Somasundaram.`,
-          }
-          ,
           {
             id: "item_1774940548683",
             title: "மகள் முத்துமீனாட்சியின் இரங்கல்",
@@ -2264,13 +2352,13 @@ You have taken leave from the rules of fate/life, but not from our eyes—not fr
 Yours,
 Muthu Meenatchi`,
           }
-        ,
+          ,
           {
             id: "item_1774941974770",
             title: "மகள் அகல்யாவின் இரங்கல்",
             date: "24 மார்ச், 2026",
-            image: "/item_1774941974770_agal-img.jpg",
-            audioFile: "/item_1774941974770_agal-audio.m4a",
+            image: "/agal.jpg",
+            audioFile: "/agal-audio.m4a",
             content: `சிறிய கிராமத்தில் இருந்து கொண்டு பெரிய பெரிய காரியங்களை நிறைவேற்றிய பெரியப்பாவிற்கு
 
 ஊர் அறியா என்னை 
@@ -2290,7 +2378,6 @@ Muthu Meenatchi`,
 சுயநலம் துளியும் கலக்காத பேரன்புக்கார்
 
 நக்கலும் நகைச்சுவையும் பேச்சில் நடனமாடும்
-
 அன்பும் அக்கறையும் செயலில் அதிகம் இருக்கும்
 
 நேற்று கேட்ட செய்தி ஒரு கெட்ட கனவாக இருந்திடக்கூடாதா என்றே கண்ணீர் விடுகிறேன்
@@ -2305,6 +2392,13 @@ Muthu Meenatchi`,
 
 இழந்து தவிக்கிறோம்
 வருந்தி வாடுகிறோம்
+
+வெறும் அறிவாளிகள் நம்மை சுயநலமி ஆக்குகிறார்கள்
+வெறும் அன்பானவர்கள் நம்மை உணர்ச்சி மிகுந்த மனிதனாக்குகிறார்கள்
+உங்களைப்போன்ற அன்பான அறிவாளிகளே நம்மை படைப்பாளிகளாக்கி
+புத்துலகைப் படைக்க வைக்கிறார்கள்!
+
+உங்கள் வழிகாட்டுதலின் படி புத்துலகை படைக்க விரும்பும்
 
 உங்கள் அன்பு மகள், 
 அகல்யா`,
@@ -2345,11 +2439,461 @@ We lived believing the "Star" was just a "fish" inside our little tank.
 We are lost in this grief,
 Withered by this sorrow.
 
+Logic alone confines us to the ego;
+Emotion alone leaves us at the mercy of the storm.
+But the union of Heart and Mind—the path you tread—
+Ignites the Creator within us
+To fashion a brand new dawn
+
+Seeking to build that new world under your guidance!
+
 Your loving daughter,
 Agalya`,
           }
         ],
       },
+    ],
+  },
+
+  {
+    id: "press",
+    number: "5",
+    title: "பத்திரிக்கை நாளிதழ்களில் அவர் எடுத்த அவதாரங்கள்",
+    icon: "📰",
+    description: "பத்திரிக்கைகளில் அவரின் படைப்புகள்",
+    subCategories: [
+      {
+        id: "articles",
+        title: "கட்டுரைகள்",
+        items: [
+          {
+            id: "item_1774959564631",
+            title: "எனது வெட்டி வேலை",
+            date: "09 நவம்பர் 2025",
+            image: "/item_1774959564631_enadhu_vetti_velai.jpg",
+
+            content: `கல்யாணம் ஆன புதிதில் மனைவியிடம் என் அம்மா, ‘அவனுக்கு வெந்நீர்கூட வைக்கத் தெரியாது. பார்த்துக்கோ அம்மா’ என்றார்.
+
+இந்தக் காலமாக இருந்தால், ‘நல்லாத்தான் வளர்த்திருக்கீங்க பிள்ளையை’ என்று நேரிலேயே சொல்லி இருப்பார் என் மனைவி. ஆனால், அன்று ‘இதில் என்ன பெருமை?’ என்பது போலப் பார்த்தார். நான் வங்கி வேலைக்குப் போகும் பெருமையில் அடுப்படிப் பக்கமே செல்வதில்லை. எல்லாம் கைக்கு வந்துவிடும். ஆனால், பணி ஓய்வுக்குப் பிறகு, என் மனைவிக்கும் உடல்நலம் குன்றியதால் ஏதாவது உதவலாமே என்று நினைத்தேன். பந்தி பரிமாறும் வேலையில் இலைக்கு அப்பளம் போடுவதுதான் எளிய வேலை. அது போலத் துலக்கி வைக்கப்பட்ட பாத்திரங்களை அடுக்கும் வேலையைச் செய்யத் தலைப்பட்டேன்.
+
+பாராட்டு கிடைத்திருக்கும் என்றுதானே நினைக்கிறீர்கள். அதுதான் இல்லை. ‘அது அதை அதற்குரிய இடத்தில் வைக்க வேண்டும். ஏனோதானோ எனச் செய்வதாக இருந்தால் செய்ய வேண்டாம். ஒட்டிக்கு ரெட்டி வேலை (ஒன்றுக்கு இரண்டு வேலை) வெட்டிவேலை’ என்கிற அர்ச்சனை காதில் விழுந்தாலும் ‘போற்றுவோர் போற்றட்டும்; தூற்றுவோர் தூற்றட்டும்; எது வரினும் நில்லேன். என் கடன் பணி செய்து கிடப்பதே’ எனத் தொடர்கிறது இந்த அணிலின் பணி. வீட்டுவேலைகளைப் பகிராவிட்டாலும் கொஞ்சமாவது பங்கேற்பது மனநிறைவு அளிக்கத்தான் செய்கிறது. என்னைவிட இன்றைய இளைஞர்கள் முதிர்ச்சியோடு முன்னணியில் இருப்பது குற்றவுணர்வை உருவாக்குகிறது.
+
+— பொன்.முத்துக்குமார், பணகுடி.`,
+            englishTranslation: `My ‘Useless Work!’
+
+When I was newly married, my mother told my wife, "He doesn't even know how to boil water. Take care of him, dear."
+
+If it were today’s times, my wife would have replied right to her face, "Well, you certainly raised your son well!" But back then, she just gave a look that seemed to say, "Is this something to be proud of?" Caught up in the pride of my bank job, I never even stepped toward the kitchen. Everything was served right to my hand. However, after retirement, as my wife’s health declined, I thought I should help out in some way. Just as serving appalam (papadum) on a leaf is the easiest job at a feast, I took up the task of arranging the washed vessels.
+
+You probably think I received praise, don't you? Not at all. "Everything must be kept in its proper place. If you're going to do it half-heartedly, don't do it at all. This is double the work for me—just 'useless work' (vetti-velai)," she scolded. Despite these "offerings" falling on my ears, I think to myself: "Let those who praise, praise; let those who slender, slander; I shall not stop regardless of what comes. My duty is simply to serve." And so, this "squirrel’s service" (small contribution) continues. Even if I don't share all the housework, participating even a little brings a sense of contentment. Seeing today’s youth being far more mature and proactive than I was creates a slight sense of guilt in me.
+
+— Pon. Muthukumar, Panagudi.`,
+          },
+          {
+            id: "item_1774959061571",
+            title: "அப்பாவின் பணப்பாதை டெக்னிக்... வசதியாக வாழும் நங்கள்",
+            date: "04 ஜனவரி 2026",
+            image: "/item_1774959061571_Engal_Veetu_FM_-_thaatha-img.png",
+
+            content: `எங்கள் வீட்டு எஃப்.எம்.(அதாங்க நிதி அமைச்சர்) என்
+அப்பாதான்.வீட்டில் அவருக்கென்று தனி அறை.அறை முழுக்க வீட்டுக்
+கணக்கு நோட்டுக்களால் நிறைந்திருக்கும்.பொங்கல்,
+தீபாவளி பண்டிகை வருவதற்கு முன் அம்மாவோடு
+முதல் சுற்று பட்ஜெட் உரையாடல்.போன பண்டிகைக்கு எவ்வளவு செலவானது என்பதை கணக்கு நோட்டை எடுத்துப்பார்த்து சொல்லி
+'அதற்குள் முடித்து விடலாமா?"
+என் உரையாடலை ஆரம்பிப்பார்."விலைவாசி எல்லாம் உயர்ந்திருக்கிறது.
+பழங்கணக்கை எல்லாம் ஒதுக்கி வையுங்க"அம்மா எதிர்க்கட்சி தலைவர் போல்
+கறார்காட்டுவார்.பின்னர் நிதி
+ஒதுக்கீடு யாருக்குமே திருப்தி
+தராத வகையில் அளிக்கப்படும்.பொதுவாக நிதி அமைச்சர் என்றால் கடுத்தமானவராகத்தான்
+இருப்பார்கள்.காசை கையாள்பவர் இல்லையா?
+காசை கரியாக்க விடுவார்களா?
+மின் கட்டண ரசீது, சொத்து வரி ரசீது,குடிநீர் கட்டணமரசீது
+எல்லாம் முறையாக ஃபைல்
+செய்யப்பட்டிருக்கும்.பிள்ளைகளின் பணி நியமன ஆணைகள்,மாறுதல் ஆணைகள் அவரால் பத்திரப்படுத்தப்படும்.ஆயுள் காப்பீடு தவணை தேதிகளை
+நினைவுபடுத்துவார்.தன்னுடைய கல்யாண செலவையும்,
+பிள்ளைகளின் கல்யாண செலவையும் கணக்குநோட்டுக்களை வைத்துக்கொண்டு ஒப்பிட்டுப்பேசுவார்.நேரு காலத்தையும்,மோடி காலத்தையும் நம்ம எஃப் எம்
+ஒப்பிடுவதில்லையா...அதே மாதிரி..
+எங்கள் நகர் பணகுடி யில் இருக்கும்வார்டுகளின் எண்ணிக்கை, பஞ்சாயத்து தலைவர்களின் பட்டியல்,தேர்தல் பிரச்சார துண்டு பிரசுரங்கள் எல்லாம்
+தொகுத்து வைத்திருப்பார்.
+மகன்கள்,
+மருமகள்கள், மகள்கள்,மருமகள்கள்,பேரன்,பேத்திகள்,ஜாதகங்கள்,கல்வி சான்றிதழ்,பிறப்பு சான்றிதழ்
+நகல்கள் எல்லாம் பாதுகாத்து
+வைத்திருந்த அவரின் அருமையை ஒவ்வொன்றையும் தேடி சலிக்கும் போது உணர்ந்து
+நெகிழ்கிறோம்.Finance Minister மட்டுமல்ல..Perfect 
+Field Manager ம் கூட..
+
+- பொன். முத்துக்குமார்`,
+            englishTranslation: `Our Home's F.M. (That is, the Finance Minister)
+
+My father is the Finance Minister of our home. He has a dedicated room for himself, filled entirely with household account ledgers. Before festivals like Pongal or Diwali, the "First Round" of budget negotiations would begin with my mother. He would open the ledger, look at how much was spent during the previous festival, and start the conversation by asking, "Can we finish everything within that same amount?"
+
+Mother, acting like a strict Leader of the Opposition, would retort, "Prices have all gone up! Set aside those old accounts." Then, the financial allocation would be granted in a way that—as is typical—satisfied no one! Generally, Finance Ministers are perceived as stern figures. After all, they handle the cash, don't they? Would they ever allow money to be burnt away?
+
+Electricity bills, property tax receipts, water tax receipts—everything was systematically filed. The children's appointment orders and transfer orders were safely preserved by him. He would remind everyone of their Life Insurance (LIC) premium due dates. Using his account books, he would compare the expenses of his own wedding with the wedding expenses of his children. Just as our national F.M.s compare the Nehru era to the Modi era, he did the same!
+
+He even kept a collection of the number of wards in our town Panagudi, lists of Panchayat presidents, and election campaign flyers. Today, as we grow weary searching for documents, we feel deeply moved realizing his value—how he protected copies of horoscopes, educational certificates, and birth certificates for his sons, daughters, daughters-in-law, and grandchildren.
+
+He wasn't just a Finance Minister... he was a Perfect Field Manager too.`,
+          },
+          {
+            id: "a-maamiyar",
+            title: "சிறுமிபோல் விளையாடும் மாமியார் (ஆயிரத்தில் ஒருவர்) - மருமகளாக அவதாரம்",
+            date: "14 மார்ச் 2026",
+            image: "/article-1.jpeg",
+            englishTranslation: `Many might be surprised if I say the most unforgettable woman in my life is my mother-in-law. I am originally from Rajapalayam. However, it was my mother-in-law, Sundari, who transformed Panagudi Thalavaipuram into my second maternal home. During Pongal and Diwali, she would collect money from my father-in-law for purchasing clothes, entrust it to me (the eldest daughter-in-law), make a list, allocate funds for each person, and function just like a finance minister. She possessed the maturity to simply accept things without any criticism about the color being wrong or the budget being exceeded. She was an expert at delegating work to everyone in the house according to their respective capacities.
+
+After completing the chores, she would play the traditional dice game (Thaayam) with family members just like a young girl, enthusiastically dropping the dice with loud exclamations, shining as the hero of the game. She would warmly welcome the postman who came searching for our house in the hot sun by offering him buttermilk or refreshing drinks. During festive days, she would send us all to the movies while staying back to cook meals for us. Occasionally, yielding to her son's insistence, she would join us for a movie. Many people like Parvathi, Thayammal, and Sellathayi would eagerly volunteer to assist her. When my father-in-law brought half a kilo of halwa from Tirunelveli, she would delightfully distribute it to everyone, much like Jesus sharing the bread. Being blessed with her—the very embodiment of generosity and kindness—as a mother-in-law is a great fortune. Within our family circle, being introduced as "Sundari's son and daughter-in-law" instills a sense of immense pride. How can I not praise her, simply because I haven't been able to become exactly like her?
+
+- Velammal Muthukumar,
+  Panagudi, Tirunelveli.`,
+            content: "என் வாழ்க்கையில் மறக்க முடியாத பெண்மணி என் மாமியார் என்றால் பலரும் ஆச்சரியப்படக்கூடும். நான் ராஜபாளையத்தைச் சேர்ந்தவள். என் இரண்டாவது தாய்வீடாக பணகுடி, தளவாய்புரத்தை மாற்றியவர் என் மாமியார் சுந்தரி. பொங்கல், தீபாவளிக்குத் துணி எடுக்க என் மாமனாரிடம் இருந்து பணத்தை வாங்கி, மூத்த மருமகளான என்னிடம் கொடுத்து, பட்டியல் போட்டு, ஆளாளுக்கு நிதி ஒதுக்கி ஒரு நிதி அமைச்சர்போலச் செயல்படுவார். நிறம் சரியில்லை, ஒதுக்கிய நிதிக்குள் முடிக்கவில்லை என்கிற விமர்சனம் ஏதுமின்றி அப்படியே ஏற்றுக்கொள்ளும் பக்குவம் உடையவர். வீட்டில் உள்ள அனைவருக்கும் அவரவர் சக்திக்கேற்ப வேலை பங்கீடு செய்வதில் நிபுணர்.\n\nவேலைகளை முடித்த பின்னர் குடும்ப உறுப்பினர்களோடு சேர்ந்து சிறுமி போல் தாயக்கட்டம் ஆடுவதோடு, விருத்தங்களாகப் போட்டுக் காய்களைக் கொத்தி ஆட்ட நாயகியாக ஜொலிப்பார். வெயிலில் வீடு தேடி வரும் தபால்காரருக்கு மோரோ நீராகாரமோ கொடுத்து உபசரிப்பார். விழாக்காலங்களில் எங்கள் எல்லாரையும் திரைப்படத்துக்கு அனுப்பிவிட்டு எங்களுக்கு உணவு சமைத்து வைப்பார். சிலநேரம் மகனின் வற்புறுத்தலுக்கு இணங்கி எங்களோடு படம் பார்க்க வருவார். அவருக்கு உதவ பார்வதி, தாயம்மாள், செல்லத்தாயி எனப் பலர் முன்வருவர். நெல்லைக்குச் சென்று மாமனார் வாங்கிவரும் அரை கிலோ அல்வாவை, ஏசு அப்பத்தைப் பங்கிட்டுக் கொடுத்தது போல எல்லாருக்கும் கொடுத்து மகிழ்வார். தாராளம், தயை இவற்றின் உருவமாகத் திகழ்ந்த அவரை மாமியாராகப் பெற்றது பெரும்பேறு. எங்கள் உறவினர் வட்டத்தில், 'சுந்தரி மகன் - மருமகள்' என அறிமுகம் ஆகும்போது பெருமிதம் உண்டாகும். அவரைப்போல ஆக முடியவில்லை என்பதற்காக அவரைச் சிலாகிக்காமல் இருக்க முடியுமா?\n\n- வேலம்மாள் முத்துக்குமார்,\nபணகுடி, திருநெல்வேலி."
+          },
+          {
+            id: "item_1774958201143",
+            title: "எங்கள் வீட்டு F.M என் அப்பா பிரம்மநாயகம்தான் - ஒரு மகளாக அவதாரம்",
+            date: "20 மார்ச் 2026",
+            image: "/item_1774958201143_brahma.png",
+
+            content: `நான் திருமணம் ஆகி கணவர் மகனோடு தூத்துக்குடியில் வசித்து வருகிறேன். என் தந்தை திரு S. பிரம்மநாயகம் ஆசிரியர் (ஓய்வு) அவர்கள் தான் சிறந்த F.M (Finance Minister) என்பேன். பொதுவாக நிதி அமைச்சர் என்றால் கணக்கு வழக்குகளில் கெட்டிக்காரராகவும் செலவு செய்வதில் கொஞ்சம் கருத்தமானவர்களாகவும் இருப்பார். விரும்புவதையெல்லாம் செய்ய மாட்டார்கள்; தேவையானதை மட்டும் தான் செய்வார்கள். அப்படிப்பட்டவர் தான் என் அப்பா.
+
+‘பணம் இருந்தால் மணக்க வேண்டும்; பயன்பட வேண்டும்’ என நினைப்பவன் நான். என் அப்பாவோ "ஆற்றில் போட்டாலும் அளந்து போட வேண்டும்" என்று நினைப்பவர், செயல்படுபவர். மாதாந்திர பட்ஜெட்டுக்காக குடும்ப உறுப்பினர்கள் (அம்மா, அண்ணன், நான்) அனைவரும் அவர் முன் ஆஜராக வேண்டும். சம்பளப் பணம் மேஜை மீது வைக்கப்பட்டிருக்கும். பலசரக்கு, பால், ஷாப்பிங், மருத்துவம், பயணச் செலவு, எதிர்பாராத செலவு என வகை வகையாக பிரிக்கப்பட்ட செலவுகளுக்கு அதிகபட்ச உத்தேச ஒதுக்கீடு குறித்து விவாதிக்கப்பட்டு கவர்களில் ஒதுக்கி வைக்கப்படும். வரவு செலவுகளை யார் பார்ப்பது என்பது கூட்டத்தில் முடிவு செய்யப்பட்ட பின் உழக்கு மாவில் ஊருக்கெல்லாம் சாப்பாடு போடுவதில் எனக்கு கட்டாது என நான் ஜகாவாங்கி விடுவேன். அம்மா, அண்ணன் யாராவது துணிச்சலாக முன்வருவார்.
+
+அப்போது அப்பா பட்ஜெட்டுக்குள் செலவுகளை நிறுத்துபவர்களுக்கு இன்சென்டிவ் வழங்கப்படும் என்பார். இன்சென்டிவ் கிடைக்கும் என்பதால் சிக்கனமாக பட்ஜெட் செயல்படுத்தப்படும். செலவாளியாக இருப்பதற்கு தைரியம் இருக்க வேண்டியதில்லை. சிக்கனமாக இருக்கத்தான் துணிச்சல் கூடுதலாக எல்லாம் வேண்டும் என்பார் அப்பா.
+
+அப்பா பணியாற்றிய பள்ளி மூன்று கிலோமீட்டர் தூரத்தில் இருந்த போதும், சைக்கிளில் தான் செல்வார். டி.வி.எஸ்-50 கூட வாங்காமல் இருக்கும் அவரிடம் வண்டி வாங்க வேண்டும் எங்களுக்கு என்று கேட்க தயக்கமாக இருக்கும்.
+
+பட்ஜெட் ஆயத்த கூட்டம், இடை இடையே அப்ரைசல் கூட்டம், ரிவியூ கூட்டம் என குடும்ப உறுப்பினர்கள் அடிக்கடி கலந்து பேசுவோம். கார்ப்பரேட் கம்பெனிகள் தோற்றுது போங்கள்.
+
+சரி... ரொம்ப சிக்கனமாக இருந்தீர்கள்.. சொத்து எவ்வளவு சேர்த்து இருப்பீர்கள் என்று கேட்கத் தோன்றுகிறதா? அப்பாவிடமே கேட்போம்.
+
+"கடன் இல்லாமல் இருக்கிறோமே... அது போதாதா?" என்கிறார் அப்பா.
+
+நல்ல எஃப்.எம் (F.M) தானே எங்கள் அப்பா.
+
+	 - K. மகராசி பிரம்மநாயகம்`,
+            englishTranslation: `I am married and living in Thoothukudi with my husband and son. I would say my father, Mr. S. Brahmanayagam, a retired teacher, was the best "Finance Minister." Generally, a Finance Minister is expected to be sharp with accounts and very prudent when it comes to spending. They won't engage in wasteful expenses; they only do what is necessary. My father was exactly like that.
+
+I am someone who believes that ‘if there is money, it should be spent and be useful.’ However, my father is someone who thinks and acts by the proverb: "Even when throwing it into the river, one must measure it." For the monthly budget, all family members (Mother, Brother, and I) had to appear before him. The salary money would be placed on the table. We would discuss and allocate estimated amounts into separate covers for groceries, milk, shopping, medical, travel, and unforeseen expenses.
+
+When deciding who would manage the accounts, I would say it wouldn't suit me as I'd end up spending it all on feeding others, and I’d just take five hundred rupees. Mother or Brother would then courageously step forward.
+
+At that time, Father would say that an "incentive" would be given to those who kept expenses within the budget. Because of that incentive, the budget was implemented very economically. Father used to say, "It doesn't take courage to be a spendthrift; it takes extra courage and discipline to be frugal."
+
+Even though the school where my father worked was three kilometers away, he would only go by bicycle. Since he lived without even buying a TVS-50 (moped), we felt very hesitant to ask him to buy a vehicle for us.
+
+We family members would frequently meet for "Budget Preparatory Meetings," "Appraisal Meetings" in between, and "Review Meetings." Corporate companies, take a back seat!
+
+Alright... you might feel like asking, "You were so frugal... how much property/wealth have you accumulated?" Let's ask Father himself.
+
+"We are living without any debt... isn't that enough?" says Father.
+
+Isn't my father a great F.M. (Finance Minister)?
+
+		- K. Maharasi Brahmanayagam`,
+          }
+
+
+          ,
+          {
+            id: "item_1774960278802",
+            title: "வாஞ்சை மிக்க வாகைக்குளம் பெரியம்மா! (ஆயிரத்தில் ஒருவர்) - ஒரு மகளாக அவதாரம்",
+            date: "08 பிப்ரவரி 2026",
+            image: "/item_1774960278802_kannadi_paati.jpg",
+
+            content: `என் கணவரின் அத்தைதான் வாகைக்குளம் பெரியம்மா. இப்படி ஏதாவது எழுதுகிறபோதுதான் முத்தம்மாள் என்கிற அவரது பெயர் நினைவுக்கு வரும். மற்றபடி அவர் எப்போதும் எனக்கு 'வாகைக்குளம் பெரியம்மா' தான். பிள்ளைகளுக்கு அவர் 'கண்ணாடி பாட்டி'. அதிகாலையில் வீட்டு வாசலில் வந்துவிழும் செய்தித்தாளை நகர்த்திவிட்டு வீட்டைப் பெருக்குவோம், செய்தித்தாள் ஆண்களுக்கானது என்கிற எண்ணத்தோடு. ஆனால், பெரியம்மா அதிகாலை வேளையில் கண்ணாடி போட்டுக்கொண்டு நாளிதழ் படிக்கும் அழகே தனிதான்.
+
+உடல் நலக்குறைவு, பிரசவம் போன்று மருத்துவமனையில் சேர்த்துப் பார்க்க வேண்டியது வந்தால் எங்கள் உறவு வட்டத்தின் முதல் தேர்வு வாகை பெரியம்மாதான். மெத்தப்படித்தவர்கள்கூட மருத்துவர்களிடம் பேசத் தயங்கும்போது தயக்கம் ஏதுமின்றித் தெளிவாகப் பேசி உண்மை நிலவரத்தை அறிந்துகொள்வார். அடுத்த முறை மருத்துவமனைக்குச் சென்றால் மருத்துவரே, "அந்தக் கண்ணாடி பெரியம்மா எங்கே?" எனத் தேடுவார்.
+
+நோயாளிகளைக் கவனிப்பதில் பெரியம்மாவுக்கு நிகர் பெரியம்மாவே! நேரத்துக்கு மருந்து மாத்திரை தருவது, கஞ்சி வைத்துக் கொடுப்பது, கனிகள் உரித்து வைப்பது என அனைத்தையும் அவரே செய்வார். வீட்டில் தேங்காய் துருவிய உடன் அதன் மணம் மாறுவதற்குள் கொண்டு வந்து தருவதும், அப்பளம் பொரித்தவுடன் சூடாகத் தன் தம்பியின் (என் மாமனார்) அறைக்குக் கொண்டு செல்வதும் அவரது வாடிக்கை. தயிர் கடையும் போது திரண்டு வரும் வெண்ணெய்யைப் பக்குவமாக எடுத்து, சுற்றி இருக்கும் பிள்ளைகளுக்கு உண்ணத் தருவார்.
+
+இஞ்சி காபியும் சுக்கு காபியும் அவர் கை பட்டதால் அமிர்தம் ஆகிவிடும் என் கணவருக்கு. "அன்பைக் கலந்து தருவதால் அமிர்தமாகிவிட்டது" என்பார் என் கணவர் எங்களை வெறுப்பேற்றும் விதமாக. "எங்கள் அத்தை மட்டும் கொஞ்சம் படித்திருந்தால் சட்டமன்ற உறுப்பினராகி இருப்பார்" என வருந்துவார். அந்த நாளிலேயே மாதர் சங்கம், பஞ்சாயத்து யூனியன் நியமன உறுப்பினர் போன்ற பொறுப்புகளை வகித்தவர் பெரியம்மா. இனிய சொற்களும், தேவையானபோதெல்லாம் உதவும் உள்ளமும் அவரது அடையாளங்கள்!
+
+— வேலம்மாள் முத்துக்குமார், பணகுடி.
+`,
+            englishTranslation: `The Affectionate Vagaikulam Periyamma! (One in a Thousand)
+
+Vagaikulam Periyamma is my husband's aunt. It is only when writing something like this that her actual name, Muttamman, comes to mind; otherwise, she is always "Vagaikulam Periyamma" to me. To the children, she is "Kannadi Paatti" (Grandmother with Glasses). Usually, we sweep the porch by pushing aside the morning newspaper, thinking it’s meant for the men. But the sight of Periyamma wearing her glasses and reading the daily news early in the morning was truly special.
+
+Whenever someone in our family circle needed hospital care for illness or childbirth, Vagaikulam Periyamma was the first choice. Even when highly educated people hesitated to talk to doctors, she would speak clearly and without hesitation to understand the true medical situation. Often, when we visited the hospital next, the doctor himself would ask, "Where is that grandmother with the glasses?"
+
+In caring for the sick, she was unparalleled! Giving medicines on time, preparing porridge, peeling fruits—she did it all herself. It was her habit to bring freshly grated coconut before its aroma faded and to take hot, freshly fried appalams to her brother’s (my father-in-law) room. While churning curd, she would skillfully gather the fresh butter and feed it to the children gathered around her.
+
+To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar (Amirtham). "It became nectar because she mixed it with love," he would say, teasing us. He would often lament, "If only my aunt had been a bit more educated, she would have become a Member of the Legislative Assembly (MLA)." Even back in those days, she held responsibilities such as being a nominated member of the Women's Association and the Panchayat Union. Kind words and a heart that helped whenever needed were her true identities!
+
+— Velammal Muthukumar, Panagudi.`,
+          }
+        ],
+      },
+      {
+        id: "cartoons",
+        title: "கருத்துச் சித்திரங்கள்",
+        items: [
+          {
+            id: "item_1774960938675",
+            title: "நம்பிக்கை",
+            image: "/item_1774960938675_karuthu.jpg",
+          }
+        ],
+      },
+      {
+        id: "punch",
+        title: "'பஞ்ச்'சோந்தி பராக்",
+        items: [
+
+
+          {
+            id: "item_1774961681961",
+            title: "மத்திய அரசு திட்டங்கள்",
+
+            image: "/item_1774961681961_central_govt_policy.jpg",
+
+
+
+          }
+          ,
+          {
+            id: "item_1774961732994",
+            title: "மீனவர் பிரச்சனைகள்",
+
+            image: "/item_1774961732994_fisherman_issue.jpg",
+
+
+
+          }
+        ],
+      },
+      {
+        id: "press-poems",
+        title: "கவிதைகள்",
+        items: [
+          { id: "pp1", title: "கவிதை 1", date: "28 ஜூன் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
+        ],
+      },
+    ],
+  },
+  {
+    id: "memories",
+    number: "6",
+    title: "நினைவு பெட்டகம்",
+    icon: "📦",
+    description: "அவரின் அரிய நினைவுகள்",
+    subCategories: [
+      {
+        id: "ninaivu",
+        title: "நினைவு துணுக்குகள்",
+        items: [
+          {
+            id: "item_1775007527540",
+            title: "நல்ல காபி",
+            date: "2001",
+            image: "/item_1775007527540_nalla_coffee.png",
+            audioFile: "/item_1775007527540_nalla_coffee.mp3",
+            content: `வீட்டுக்குள் நுழைந்த அத்தான் “வேலம்மா…. காபி
+போடு” என்று கேட்க, தளவாய்புரத்தில் இருந்து தானே
+வர்றீங்க. அத்தை காபி கொடுத்திருப்பார்களே என்று
+அக்கா சொன்னார். “நல்ல காபி கேட்டேன் என அத்தான்
+சொல்ல வேலமக்கா குஷியாகி உற்சாகத்துடனும்
+பெருமையுடனும் காபி போட செல்லும்போது அத்தான்
+“நல்லவங்க கையால் காபி குடிச்சாச்சு. இப்ப ஒரு நல்ல
+காபி போடு “ என சொல்ல சிரிப்பலைகள் வீடு முழுவதும்
+பரவியது.`
+          },
+          {
+            id: "item_1774966328444",
+            title: "பூ.. பூ",
+            date: "2001",
+            image: "/item_1774966328444_poo...pooo.jpg",
+            audioFile: "/item_1774966328444_poo_poo.mp3",
+            content: `பணகுடியில் கீழத்தெருவில் கமலாத்தா பேத்தி பெரியவளாகி இருந்தாள். நான் அவளைப் பார்த்துவிட்டு வீட்டுக்கு வந்தேன். அப்போது வேலம்மாள் அக்கா என்னிடம் அந்த பெண்ணுக்கு என்ன வாங்கிட்டு போனாய் என கேட்டார்கள். அதற்கு நான் ரொம்ப பெருமையாக பூ வாங்கி கொடுத்து பார்த்து விட்டு வந்தேன் என்று சொன்னேன். அதற்கு அத்தான் 'பூ பூ' என்று ஊதி தள்ளி விட்டார்கள் உங்கள் எல்லோருக்கும் ஒரே சிரிப்பு.`,
+
+          }
+          ,
+
+          {
+            id: "item_1774967665207",
+            title: "ஜாடை பேச்சு",
+            date: "",
+            image: "/item_1774967665207_jaadai_pechu.jpeg",
+            audioFile: "/item_1774967665207_jaadai_pechu.mp3",
+            content: `கல்யாண வீட்டிலோ அல்லது ஊருக்கு பஸ்ஸில் சென்று கொண்டிருக்கும் போது யாராவது ஜிப்பா போட்ட நபரை பார்த்துவிட்டு பாபநாச சித்தப்பா வந்துள்ளார்கள் என்றும். ஒரு பெண் கண்ணாடி அணிந்து சீரியஸாக முகத்தை வைத்திருந்தால் அங்க பாரு சத்யா வந்திருக்கிறாள் என்றும். கைகளை பின்னால் கட்டிக்கொண்டு நடந்த பெண்ணை பார்த்தால் பெருமாள்புரம் அண்ணி வந்து விட்டார்கள் என்றும் சொல்வார்கள். அதே மாதிரி சூப்பர் சிங்கர் பார்த்துக் கொண்டிருக்கும் போதும் பாடுபவனை பார்த்து முத்து மகன் பாட வந்து விட்டான் என்று பார்க்க வர சொல்வார்கள். அந்த இளம் பாடகன் தென் திருப்பேரை முத்து மகன் ஜாடையில் இருப்பான். டிவி சீரியலில் ஒரு பெண்மணி மெதுவாகவும் ரொம்ப அசதியாகவும் பேசி நடிப்பாள் அவளைப் பார்த்து ஆயாசக்காரி வந்து விட்டாள் என்றும் சொல்வார்கள். நாங்களும் அதை பார்த்தும் கேட்டும் ரசிப்போம்.`,
+
+          }
+          ,
+          {
+            id: "item_1774969152241",
+            title: "Little Hearts <3",
+            date: "2001",
+            image: "/item_1774969152241_little_hearts.png",
+            audioFile: "/item_1774969152241_little_hearts.mp3",
+            content: `ஒரு தடவை பிரேமா திருச்சிக்கு வந்திருந்தாள், அந்த சமயம் அத்தான், அக்கா, சதீஷ், அரசியும் வந்திருந்தார்கள். அப்போது கடைக்கு போய் வந்த அத்தான் little hearts biscuit  வாங்கிவந்தார்கள். இனிப்பு என்றால் கேட்கவா வேண்டும் அத்தானுக்கு.அனைவருக்கும் ஒவ்வொரு பிஸ்கட் கொடுத்துவிட்டு மீதியிருந்த பிஸ்கட் அனைத்தையும் அவரே சாப்பிட்டு முடித்துவிட்டார். அதற்கு பிரேமா  ஒரே ஒரு பிஸ்கட் மட்டும் எனக்கு  கொடுத்துவிட்டுமீதியை அவுங்களே சாப்பிட்டுட்டாங்களே என்று சொன்னாள். அதை கேட்ட அத்தான்  எப்போது கடைக்கு போனாலும் பிரேமாவுக்காக தனியாக  LITTLE HEARTS பிஸ்கட் பாக்கெட் வாங்கி வந்து கொடுத்துவிட்டு “இந்தாம்மா உனக்கு முழுசா வாங்கி கொடுத்துவிட்டேன்“என்பார், பிரேமா வெட்கபட்டுக்கொண்டே சிரிப்பாள். இப்போதுவரை அதை சொல்லிக்கொண்டிருக்கிறாள்.
+`,
+          },
+          {
+            id: "item_1774966651026",
+            title: "இட்லி தயிர்",
+            date: "2004",
+            image: "/item_1774966651026_idly_thayir.jpg",
+            audioFile: "/item_1774966651026_idli_thayir.mp3",
+            content: `ஒரு கல்யாணத்தில் அனைவரும் காலையில் டிபன் சாப்பிட்டுக் கொண்டிருந்தார்கள். மாப்பிள்ளை வீட்டில் அனைவருக்கும் நாங்கள் பரிமாறிக் கொண்டிருந்தோம். மாப்பிள்ளை வீட்டில் கடைசி இட்லிக்கு தயிர் ஊற்றி சாப்பிடும் பழக்கம் இருந்தது. அப்போது ஒருவர் எனக்கு ஏன் இட்லிக்கு தயிர் ஊற்றவில்லை என்று அத்தானிடம் கேட்டார். அதற்கு அத்தான் ‘நீங்கள் சாப்பிடுவது கடைசி இட்லியா என்று எனக்கு எப்படி தெரியும்' என்று சொன்னதும் அவரே சிரித்துவிட்டார்.`,
+
+          }
+          ,
+          {
+            id: "item_1774968339390",
+            title: "பட்டம் சூட்டுபவர்",
+
+            image: "/item_1774968339390_pattam_sootubavar.png",
+            audioFile: "/item_1774968339390_pattam.mp3",
+            content: `மாறாந்தை அத்தாத்தையை குந்தவை நாச்சியார் என்று கூறும்பொழுது நாங்கள் அப்பொழுது நீங்கள் அருள்மொழி வர்மனா என்று கேட்போம். அகல்யா அப்பாவை இளைய தலைமுறையின் எழுச்சி நாயகன் என்றும் சதீஷ்க்கு தாயுமானவன் என்றும் பக்தி பாடல்களைப் பாடும் கலாக்கா லதா அக்காவை சூலமங்கலம் சகோதரிகள் என்றும் கன்னத்தில் கை வைத்து தலையை சாய்த்து யோசிக்கும் துள்சி தளிர்க்கு சிந்தனை சிற்பி என்றும் பட்டம் சூட்டி மகிழ்ந்தவர்.`,
+
+          },
+          {
+            id: "item_1775006800237",
+            title: "வாழ்த்துக்கள்",
+            date: "2026",
+            image: "/item_1775006800237_vaazhthukkal.png",
+            audioFile: "/item_1775006800237_Vaazhthu.mp3",
+            content: `1.எங்களுக்கு(அனு – கந்தனுக்கு):
+
+அப்பாவி போன்ற அறிவாளிக்கும், அறிவாளி போன்ற
+அப்பாவிக்கும் நல்வாழ்த்துக்கள்.
+
+மலைக்கோட்டை ஏறியது பற்றி…
+
+களிப்புக்கு பதிலாக களைப்பு தெரிகிறதே……
+
+2.அகல்யா-வீராவுக்கு
+
+வீரா ஒவ்வொருவருக்கும்;
+அகல்யா எல்லாருக்கும்.
+
+நேரு….இந்திரா..
+கந்தசாமி…அகல்யா…வெல்க அகல்....
+
+அகல்யா வீரா இமயமலைப் பயணம் குறித்து:
+
+வியந்துபார்க்கிறோம்; மகிழ்ந்து போகிறோம்… நாம்
+சிற்றெறும்பு என உணர்ந்து கொள்கிறோம்…
+மலை மலைக்கவும் வைக்கிறது. மகிழவும் வைக்கிறது…
+
+3.குமார் - ப்ரியாவுக்கு
+நலமும்[டாக்டர்] வளமும் [பேங்கர்] பெருகட்டும்; இல்வாழ்க்கை
+இனிக்கட்டும்.
+
+4. குரு - ஜோதிக்கு
+முன்மாதிரி தம்பதிகள்….குரு,,,ஜோதி மாதிரி .
+வயதானவர்கள் தான் குரு ஆக வேண்டுமா……
+எங்கள் பாலகுரு வாழ்க.
+`,
+
+          }
+        ,
+          {
+            id: "item_1775009017339",
+            title: "வெளியூர் பயணங்கள்",
+            date: "2012",
+            image: "/item_1775009017339_veliyoor_payanangal.png",
+            audioFile: "/item_1775009017339_veliyoor_payanangal.aac",
+            content: `வெளியூர் பயணங்கள் என்றாலே குஷி தான் மொழி
+தெரியாத வெளி மாநிலம் என்றால் அங்கு நிகழும்
+திண்டாட்டங்களையெல்லாம் கொண்டாட்டமாக மாற்றி
+விடுவார் அத்தான்.
+டெல்லி சென்ற போது வழி தெரியாமல்
+டிரைவரிடம் கேட்ட போது அவர் இந்தியில் விரிவாக
+வேகமாக சொல்வதை முழுவதுமாக கேட்டுவிட்டு இதை
+அப்படியே சற்று தள்ளி நின்ற அரசி மாப்பிள்ளையிடம்
+சொல்ல சொல்லி கை காட்டினார்கள்.அந்த டிரைவர்
+அலுப்புடன் எங்களைப் பார்த்தார். எங்களுக்கெல்லாம்
+ஒரே சிரிப்பு,
+
+அதே மாதிரி கோவா பயணத்தின் போது
+உணவு தேடி தேடி அலைந்து கடைசியாக ஒரு
+உணவகத்தை அடைந்தோம். அங்கு வந்த சர்வரிடம்
+இட்லி..,தோசை.. என நாங்கள் சொல்ல அவன்
+தாலிகளை [சாப்பாடு] பட்டியலிட்டுக்கொண்டிருந்தான்.
+அவனிடம் எந்த தாலியையாவது கொண்டு வந்து வை.
+என அத்தான் கூறினார்கள். பசியில் இருந்த நாங்கள்
+அனைவரும் பசியையே மறந்தோம்.
+நாங்கள் பாம்பே சென்றிருக்கும்போது மின்சார
+ரயிலில் பக்கத்து ஊரிலிருந்து வந்தோம். Train
+நின்றவுடன். எங்களை இறங்க கூடவிடாமல் தள்ளிவிட்டு
+பயணிகள் உள்ளே ஏற ஆரம்பித்துவிட்டார்கள்.front
+வாசலில் நின்ற நாங்கள் அவர்கள் தள்ளுன
+தள்ளுமுள்ளுவில் நாங்கள் அனைவரும் back வாசல்
+வரை போய்விட்டோம். அதற்கு அத்தான் “ஏம்லே இந்த
+வரத்து வர்றீங்க போய் தொலைங்களே” என்று கூறினார்.
+எங்கள் களைப்பு பறந்து போனது.`,
+            
+          }
+        ,
+          {
+            id: "item_1775009400444",
+            title: "கொண்டாட்டக்காரருக்கு நினைவு அஞ்சலி",
+            date: "2026",
+            image: "/item_1775009400444_celebration_maker.png",
+            audioFile: "/item_1775009400444_celebration_maker.mp3",
+            content: `யார் பணகுடிக்கு வந்தாலும் ஒரு வேன் பிடித்து ஆஞ்சனேயர் கோவிலாக இருந்தாலும் சரி அல்லது எங்கே சுற்றுலா சென்றாலும்சரி  அனைவரையும் கூட்டிட்டு போய் சந்தோஷப்படுத்தி பின் ஹோட்டலுக்கும் அழைத்து போய் சாப்பாடு வாங்கி கொடுத்து அதன் பின் தான் வீட்டுக்கு வருவார்கள். தன் பணம் என்று எப்போதுமே அவர்கள் நினைத்ததே இல்லை. அவர்களைப் பொறுத்தவரை எல்லோரும்  ஒன்றுதான். எனக்கு அவர்கள் அத்தான் இல்லை  இன்னொரு தந்தை. அவரை இழந்து தவிக்கிறேன்.
+               அத்தானை குறித்த நினைவலைகளில் நீந்தினால் கரை சேரவே முடியாது.அவ்வளவு நிகழ்ச்சிகள் நடந்துள்ளன.எண்ணி எண்ணி பார்க்க ஏராள நினைவுகள். நம்மை இப்போது பார்த்தால் போதும்… போதும் அழுத அழுகை போதுமென நம்மை எழுப்பி வேறு ஏதாவது கிண்டலாக சொல்லியிருப்பார். எல்லாரையும் கொண்டாடியகொண்டாட்டக்காரர்.அவரைப்போல  மற்றவர்களையும் இந்த வாழ்வையும் நாம் கொண்டாடுவதே அவருக்கான சிறந்த அஞ்சலியாக இருக்கும்.`,
+            
+          }
+        ],
+      },
+      {
+        id: "photos",
+        title: "புகைப்படங்கள்",
+        items: [
+
+        ],
+      },
+      {
+        id: "bharathi",
+        title: "பாரதி இல்ல திறப்பு விழா",
+        items: [
+          { id: "b1", title: "பாரதி இல்ல திறப்பு விழா", date: "1 ஜூலை 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
+        ],
+      },
+      {
+        id: "letters",
+        title: "கடிதங்கள்",
+        items: [
+          {
+            id: "l1",
+            title: "மகன் ராம்கிக்கு கடிதம்",
+            date: "10 ஜூலை 2025",
+            audioFile: "",
+            image: "/Ramki-letter.png"
+          },
+          { id: "l2", title: "கடிதம் 2", date: "20 ஜூலை 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
+        ],
+      },
+    ],
+  },
+  {
+    id: "book-reviews",
+    number: "7",
+    title: "புத்தக விமர்சனங்கள்",
+    icon: "📚",
+    description: "அவரின் புத்தக விமர்சனங்கள்/அணிந்துரைகள்",
+    items: [
+
+      {
+        id: "item_1774963889570",
+        title: "கவிஞர் E.S. முருகன் எழுதிய சிறு துளி நூலுக்கு எழுதிய அணிந்துரை. ",
+
+        image: "/item_1774963889570_book_review.jpg",
+
+        content: `இளமை முன்னால் பார்க்கிறது முதுமை பின்னால் பார்க்கிறது உங்களால் மட்டும் எப்படி எல்லாவற்றையும் பார்க்க முடிகிறது, அடிப்பதற்கு எளிதானது மட்டுமே ஆபத்தானதற்கு பதிலாக அடிபட்டு சரிகிறது. யதார்த்தம் தரும் வருத்தம், ஆதங்கம் உங்கள் கவிதைகளில் பின்னிக் கிடக்கிறது. “பூ மனசுக்காரன் எல்லாம் புண்பட்டுக் கொண்டே தான் திரிய வேண்டும்” என்பது சாபமாக இருந்தாலும் நல்ல கவிதைகள் கிடைக்கிறதே! அறிவு ஜீவிகள் அதிகாரங்களுக்கு சேவை செய்கிறார்கள். கவிஞர்கள் தான் கொந்தளிக்கிறார்கள். நல்ல மனசு, வளமான கற்பனை முட்டி மோதும் துணிச்சல் அழகு நடை எல்லாம் இருக்கிறது தோழர் E.S. முருகனின் கவிதைகளில்.
+
+— P. முத்துக்குமார்
+இந்தியன் ஓவர்சீஸ் வங்கி மேலாளர்`,
+        englishTranslation: `Foreword
+
+Youth looks forward; old age looks backward. How is it that you alone are able to see everything? What is easy to strike down falls as a victim instead of being dangerous. The sorrow and anguish brought by reality are woven throughout your poems. Although it feels like a curse that "those with a flower-like heart must wander while constantly being wounded," it is because of that pain that we receive such good poetry! Intellectuals serve those in power, but it is the poets who seethe with rage [against injustice]. A good heart, fertile imagination, the courage to clash against obstacles, and a beautiful style of prose—all of these are present in the poems of Comrade E.S. Murugan.
+
+— P. Muthukumar
+Manager, Indian Overseas Bank`,
+      }
     ],
   },
   {
@@ -2375,95 +2919,6 @@ Agalya`,
       { id: "h1", title: "ஹைக்கூ 1", date: "10 பிப்ரவரி 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
       { id: "h2", title: "ஹைக்கூ 2", date: "20 பிப்ரவரி 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
       { id: "h3", title: "ஹைக்கூ 3", date: "1 மார்ச் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-    ],
-  },
-  {
-    id: "press",
-    number: "5",
-    title: "பத்திரிக்கை நாழிதள்களில் அவர் எடுத்த அவதாரங்கள்",
-    icon: "📰",
-    description: "பத்திரிக்கைகளில் அவரின் படைப்புகள்",
-    subCategories: [
-      {
-        id: "articles",
-        title: "கட்டுரைகள்",
-        items: [
-          {
-            id: "a-maamiyar",
-            title: "சிறுமிபோல் விளையாடும் மாமியார் (ஆயிரத்தில் ஒருவர்)",
-            date: "14 மார்ச் 2026",
-            image: "/article-1.jpeg",
-            englishTranslation: `Many might be surprised if I say the most unforgettable woman in my life is my mother-in-law. I am originally from Rajapalayam. However, it was my mother-in-law, Sundari, who transformed Panagudi Thalavaipuram into my second maternal home. During Pongal and Diwali, she would collect money from my father-in-law for purchasing clothes, entrust it to me (the eldest daughter-in-law), make a list, allocate funds for each person, and function just like a finance minister. She possessed the maturity to simply accept things without any criticism about the color being wrong or the budget being exceeded. She was an expert at delegating work to everyone in the house according to their respective capacities.
-
-After completing the chores, she would play the traditional dice game (Thaayam) with family members just like a young girl, enthusiastically dropping the dice with loud exclamations, shining as the hero of the game. She would warmly welcome the postman who came searching for our house in the hot sun by offering him buttermilk or refreshing drinks. During festive days, she would send us all to the movies while staying back to cook meals for us. Occasionally, yielding to her son's insistence, she would join us for a movie. Many people like Parvathi, Thayammal, and Sellathayi would eagerly volunteer to assist her. When my father-in-law brought half a kilo of halwa from Tirunelveli, she would delightfully distribute it to everyone, much like Jesus sharing the bread. Being blessed with her—the very embodiment of generosity and kindness—as a mother-in-law is a great fortune. Within our family circle, being introduced as "Sundari's son and daughter-in-law" instills a sense of immense pride. How can I not praise her, simply because I haven't been able to become exactly like her?
-
-- Velammal Muthukumar,
-  Panagudi, Tirunelveli.`,
-            content: "என் வாழ்க்கையில் மறக்க முடியாத பெண்மணி என் மாமியார் என்றால் பலரும் ஆச்சரியப்படக்கூடும். நான் ராஜபாளையத்தைச் சேர்ந்தவள். என் இரண்டாவது தாய்வீடாக பணகுடி, தளவாய்புரத்தை மாற்றியவர் என் மாமியார் சுந்தரி. பொங்கல், தீபாவளிக்குத் துணி எடுக்க என் மாமனாரிடம் இருந்து பணத்தை வாங்கி, மூத்த மருமகளான என்னிடம் கொடுத்து, பட்டியல் போட்டு, ஆளாளுக்கு நிதி ஒதுக்கி ஒரு நிதி அமைச்சர்போலச் செயல்படுவார். நிறம் சரியில்லை, ஒதுக்கிய நிதிக்குள் முடிக்கவில்லை என்கிற விமர்சனம் ஏதுமின்றி அப்படியே ஏற்றுக்கொள்ளும் பக்குவம் உடையவர். வீட்டில் உள்ள அனைவருக்கும் அவரவர் சக்திக்கேற்ப வேலை பங்கீடு செய்வதில் நிபுணர்.\n\nவேலைகளை முடித்த பின்னர் குடும்ப உறுப்பினர்களோடு சேர்ந்து சிறுமி போல் தாயக்கட்டம் ஆடுவதோடு, விருத்தங்களாகப் போட்டுக் காய்களைக் கொத்தி ஆட்ட நாயகியாக ஜொலிப்பார். வெயிலில் வீடு தேடி வரும் தபால்காரருக்கு மோரோ நீராகாரமோ கொடுத்து உபசரிப்பார். விழாக்காலங்களில் எங்கள் எல்லாரையும் திரைப்படத்துக்கு அனுப்பிவிட்டு எங்களுக்கு உணவு சமைத்து வைப்பார். சிலநேரம் மகனின் வற்புறுத்தலுக்கு இணங்கி எங்களோடு படம் பார்க்க வருவார். அவருக்கு உதவ பார்வதி, தாயம்மாள், செல்லத்தாயி எனப் பலர் முன்வருவர். நெல்லைக்குச் சென்று மாமனார் வாங்கிவரும் அரை கிலோ அல்வாவை, ஏசு அப்பத்தைப் பங்கிட்டுக் கொடுத்தது போல எல்லாருக்கும் கொடுத்து மகிழ்வார். தாராளம், தயை இவற்றின் உருவமாகத் திகழ்ந்த அவரை மாமியாராகப் பெற்றது பெரும்பேறு. எங்கள் உறவினர் வட்டத்தில், 'சுந்தரி மகன் - மருமகள்' என அறிமுகம் ஆகும்போது பெருமிதம் உண்டாகும். அவரைப்போல ஆக முடியவில்லை என்பதற்காக அவரைச் சிலாகிக்காமல் இருக்க முடியுமா?\n\n- வேலம்மாள் முத்துக்குமார்,\nபணகுடி, திருநெல்வேலி."
-          },
-          { id: "a1", title: "கட்டுரை 1", date: "5 ஏப்ரல் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-          { id: "a2", title: "கட்டுரை 2", date: "12 ஏப்ரல் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-          { id: "a3", title: "கட்டுரை 3", date: "3 மே 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-          { id: "a4", title: "கட்டுரை 4", date: "18 மே 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-          { id: "a5", title: "கட்டுரை 5", date: "25 மே 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-        ],
-      },
-      {
-        id: "cartoons",
-        title: "கருத்துச் சித்திரங்கள்",
-        items: [
-          { id: "c1", title: "கருத்துச் சித்திரம் 1", date: "1 ஜூன் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-        ],
-      },
-      {
-        id: "punch",
-        title: "'பஞ்ச்'சோந்தி பராக்",
-        items: [
-          { id: "p1", title: "பஞ்ச்சோந்தி பராக் 1", date: "15 ஜூன் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-        ],
-      },
-      {
-        id: "press-poems",
-        title: "கவிதைகள்",
-        items: [
-          { id: "pp1", title: "கவிதை 1", date: "28 ஜூன் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-        ],
-      },
-    ],
-  },
-  {
-    id: "memories",
-    number: "6",
-    title: "நினைவு பெட்டகம்",
-    icon: "📦",
-    description: "அவரின் அரிய நினைவுகள்",
-    subCategories: [
-      {
-        id: "bharathi",
-        title: "பாரதி இல்ல திறப்பு விழா",
-        items: [
-          { id: "b1", title: "பாரதி இல்ல திறப்பு விழா", date: "1 ஜூலை 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-        ],
-      },
-      {
-        id: "letters",
-        title: "கடிதங்கள்",
-        items: [
-          { id: "l1", title: "கடிதம் 1", date: "10 ஜூலை 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-          { id: "l2", title: "கடிதம் 2", date: "20 ஜூலை 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-        ],
-      },
-    ],
-  },
-  {
-    id: "book-reviews",
-    number: "7",
-    title: "புத்தக விமர்சனங்கள்",
-    icon: "📚",
-    description: "அவரின் புத்தக விமர்சனங்கள்",
-    items: [
-      { id: "br1", title: "புத்தக விமர்சனம் 1", date: "5 ஆகஸ்ட் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
-      { id: "br2", title: "புத்தக விமர்சனம் 2", date: "15 ஆகஸ்ட் 2025", audioFile: "", englishTranslation: "Will be uploaded soon...", content: "விரைவில் பதிவேற்றப்படும்..." },
     ],
   },
 ];

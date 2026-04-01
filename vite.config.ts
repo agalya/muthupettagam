@@ -83,7 +83,7 @@ function uploadArticlePlugin() {
               const newItemString = `${prefix}\n          {
             id: "${newItem.id}",
             title: ${JSON.stringify(newItem.title)},
-            date: ${JSON.stringify(newItem.date)},
+            ${newItem.date ? `date: ${JSON.stringify(newItem.date)},` : ""}
             ${newItem.image ? `image: "${newItem.image}",` : ""}
             ${newItem.audioFile ? `audioFile: "${newItem.audioFile}",` : ""}
             ${newItem.content ? `content: \`${newItem.content.replace(/`/g, "\\`")}\`,` : ""}

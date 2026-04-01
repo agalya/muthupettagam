@@ -21,13 +21,7 @@ export default function Upload() {
   const [title, setTitle] = useState("");
   const [tamilText, setTamilText] = useState("");
   const [englishText, setEnglishText] = useState("");
-  const [date, setDate] = useState(
-    new Intl.DateTimeFormat("ta-IN", {
-      day: "2-digit",
-      month: "long",
-      year: "numeric"
-    }).format(new Date())
-  );
+  const [date, setDate] = useState("");
 
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [audioFile, setAudioFile] = useState<File | null>(null);
@@ -73,7 +67,6 @@ export default function Upload() {
     if (!categoryId) return alert("Please select a Category");
     if (hasSubCategories && !subCategoryId) return alert("Please select a Subcategory");
     if (!title.trim()) return alert("Please enter a Title");
-    if (!tamilText.trim()) return alert("Please enter the Tamil Content");
 
     setIsSubmitting(true);
 
@@ -211,9 +204,8 @@ export default function Upload() {
           </div>
 
           <div className="space-y-3">
-            <Label>Tamil Content (தமிழ் உரை) *</Label>
+            <Label>Tamil Content (தமிழ் உரை)</Label>
             <Textarea 
-              required
               value={tamilText} 
               onChange={e => setTamilText(e.target.value)} 
               placeholder="Enter the primary Tamil content here..."
