@@ -10,6 +10,7 @@ import TextToSpeech from "@/components/TextToSpeech";
 import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
 import { downloadArticlePdf } from "@/lib/downloadArticlePdf";
 import ZipDownloadButton from "@/components/ZipDownloadButton";
+import { features } from "@/config/site";
 
 import img1 from "@/assets/periyappaAndPeriyamma.jpeg";
 import img2 from "@/assets/periyappaAndSiddhu.jpeg";
@@ -130,7 +131,7 @@ const Index = () => {
           </h1>
           <div className="w-20 h-1 gradient-gold mx-auto mb-6 rounded-full" />
           <p className="font-tamil-body text-white/70 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
-            எழுத்தாளர், கவிஞர், விமர்சகர் — காலத்தால் அழியாத... காலனால் களவு கொள்ள முடியாத... கருத்து கருவூலங்கள்
+            எழுத்தாளர், கவிஞர், விமர்சகர் — காலத்தால் அழியாத... காலனால் களவு கொள்ள முடியாத... கருத்துக் கருவூலங்கள்
           </p>
 
           <div className="mt-8 max-w-md mx-auto relative group">
@@ -195,7 +196,7 @@ const Index = () => {
                                 <span>English Translation</span>
                               </button>
                             )}
-                            {item.englishTranslation && (
+                            {features.enableDownloadIndividualPdf && item.englishTranslation && (
                               <button
                                 onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
                                 className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
@@ -246,7 +247,7 @@ const Index = () => {
       ) : (
         <section className="container mx-auto px-4 -mt-8 relative z-10 pb-16">
           <div className="flex justify-center mb-8">
-            <ZipDownloadButton categories={categories} isAll={true} />
+            {features.enableDownloadAllZip && <ZipDownloadButton categories={categories} isAll={true} />}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {categories.map((category, index) => (

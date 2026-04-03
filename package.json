@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "package": "npm run build && powershell -Command \"Remove-Item -Path muthupettagam_website\\dist -Recurse -Force -ErrorAction SilentlyContinue; Copy-Item -Path dist -Destination muthupettagam_website -Recurse\"",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",

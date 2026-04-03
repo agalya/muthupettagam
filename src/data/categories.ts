@@ -1221,7 +1221,7 @@ Medical Reportகளை
   {
     id: "poems-for-him",
     number: "2",
-    title: "அவரை நினைத்து கவிதைகள்",
+    title: "அவரை நினைத்துக் கவிதைகள்",
     icon: "💐",
     description: "அவரை நினைவு கூர்ந்து எழுதப்பட்ட கவிதைகள்",
     subCategories: [
@@ -2331,6 +2331,7 @@ Jothimani Ponnappan.`,
             id: "item_1774940548683",
             title: "மகள் முத்துமீனாட்சியின் இரங்கல்",
             date: "29 மார்ச், 2026",
+            audioFile: "/muthumeenatchi.opus",
             image: "/item_1774940548683_muthu_Meenatchi.jpg",
 
             content: `அன்பால் வெல்லும் அற்புதக் கலையால் அனைவர் உள்ளம் கவர்ந்தவர் நீரே!
@@ -2464,6 +2465,279 @@ Agalya`,
     icon: "📰",
     description: "பத்திரிக்கைகளில் அவரின் படைப்புகள்",
     subCategories: [
+      {
+        id: "vasantham",
+        title: "வசந்தம்",
+        description: "தம்பி கந்தனின் வசந்தம் பத்திரிக்கையில் வெளியான அண்ணனின் எழுத்துக்கள்",
+        image: "/cover.png",
+        items: [
+
+          {
+            id: "item_1775141232195",
+            title: "இலட்சிய இளைஞனே! நீ எங்கே?",
+            date: "ஜூன் 1985",
+            image: "/item_1775141232195_june-vsantham-img.png",
+            audioFile: "/item_1775141232195_june-vasantham-audio.m4a",
+            content: `இலட்சிய இளைஞனே! நீ எங்கே?
+		பொன். முத்துக்குமார்
+
+பேருந்து நிலையத்தில் பருந்து நோட்டமோ!
+வேலைக்கான கஜினி வேட்டையோ!
+கூடிக் குடித்துக் கும்மாளம் இடுகிறாயோ!
+புகைத்துப் புகைத்து யாகம் நடத்துகிறாயோ!
+இல்லை
+விரக்தியின் விளிம்பில் நிற்கிறாயோ!
+சலித்து சலித்து சாம்பிப் போனாயோ!
+மனதில் உள்ள மிரட்சியை மறைக்க
+போடுவது தான் மிரட்டல் வேஷமோ!
+இந்திய இருட்டுக்கு; அரசியல் புரட்டுக்கு
+கிழட்டு இளைஞனே! நீதான் பூரண பொறுப்பு!
+இருபதில் உனக்கு அறுபதின் தளர்ச்சி!
+இளைஞன் பங்கேற்காத இயக்கம்;
+இதயம் ஏற்காத சுவாசம்:
+ஆனால் உனக்கு
+அமிதாப் விஷயத்தில் அமோக ஞானம்?
+பஞ்சாப் விஷயத்தில் ஞான சூன்யம்!
+கிரிக்கெட் கேட்பதில் தனியொரு மயக்கம்
+சகமனிதன் சங்கடம் தீர்க்க பெரிதும் தயக்கம்
+உன் போர்த்தவம் கலைக்க பல மேனகை நர்த்தனம்.
+உன்னை முடக்க எத்தனை தடைகள்!
+உன்னை மயக்க எத்தனை வலைகள்!
+உன்னின் தோளில் எத்தனை சிலுவைகள்!
+இருபதில் கூட நீ எழ முடியாததற்கு காரணம்
+இயலாமை அல்ல; மனம் இல்லாமை
+தீட்சண்ய பார்வையோடு, தீர்க்கமான முடிவோடு
+கிளர்ந்து எழு; கிளர்ச்சி செய்
+சங்கமிக்கும் உணர்வுகளால் சங்கம் சேர்!
+சகமனிதன் சங்கடம் தீர்!
+புறப்படு! புரட்சி செய்!
+பொங்கு! தடைகளைப் பொடிப் பொடியாக்கு!
+விழிப்புடன் இருந்தால் தான் நீ
+விடியலைக் காண்பாய்!`,
+            englishTranslation: `O Idealistic Youth! Where are you?
+				— Pon. Muthukumar
+
+Are you casting a vulture’s gaze at the bus station?
+Or are you on a "Ghazni-style" hunt for the maid?
+Are you gathering to drink and making a raucous?
+Are you performing a "ritual" of endless smoking?
+No—
+Are you standing on the edge of frustration?
+Have you become shriveled and weary with boredom?
+Is that threatening persona you put on
+just a mask to hide the fear in your heart?
+For the darkness of India; for the political deceptions—
+O aged youth! You are entirely responsible!
+At twenty, you have the exhaustion of a sixty-year-old!
+A movement in which youth do not participate
+is like a breath that the heart does not accept.
+But for you—
+There is immense knowledge regarding Amitabh (Bachchan)?
+Yet in the matter of Punjab, your knowledge is zero!
+There is a peculiar intoxication in listening to Cricket,
+but a great hesitation to solve a fellow human's distress.
+Many "Menaka" dances exist to break your meditative penance.
+How many obstacles there are to paralyze you!
+How many nets there are to entice you!
+How many crosses are upon your shoulders!
+The reason you cannot rise even at twenty
+is not inability; it is a lack of will.
+With a piercing gaze and a firm decision,
+Rise up; start a rebellion!
+Join a union with merging emotions!
+Solve the distress of your fellow man!
+Set out! Lead a revolution!
+Surge forth! Shatter the obstacles into dust!
+Only if you remain awake
+will you witness the dawn!`,
+          }
+          ,
+          {
+            id: "item_1775142064886",
+            title: "ஒரு கொடியில் இரு மலர்கள் -  ஒரு பட்டம் புலம்புகிறது",
+            date: "ஆகஸ்ட் 1985",
+            image: "/item_1775142064886_Aug_1985.png",
+            audioFile: "/item_1775142064886_August_Vasantham_1985.m4a",
+            content: `ஒரு கொடியில் இரு மலர்கள்
+ஒரு பட்டம் புலம்புகிறது
+	பொன். முத்துக்குமார்
+
+ஓ! எங்கள் வீட்டு மாமரமே!
+என் சின்ன வயது விளையாட்டு மைதானமே!
+இருபத்தி ஈராண்டு பந்தமே!
+
+நீ
+காய்த்து எமக்கு கனி கொடுத்தாய்!
+தலை சாய்த்தும் எனக்கு கல்விக் கண் கொடுத்ததாய்
+உன்னைப் பலி கொடுத்தது என்னை சீராட்டிய
+என் அப்பாவும் ஒரு சிறுதொண்டரே!
+
+ஆனால்
+உன்னை உயிர்ப்பிக்க நான் சிவபிரானும் அல்ல!
+மீண்டும் உயிர்த்தெழ நீ ஏசுபிரானும் அல்ல!
+எங்கள் வறுமைக்குப் பலியான தருவே!
+சமயத்தில் உதவிய சஞ்சீவி மருந்தே!
+உன்னை என் நினைவுகளால் கௌவிக்கிறேன்!
+நீ காய்த்தும் பலன் தந்தாய்! மடிந்ததும் பயன் பட்டாய்!
+படித்தும் நான் பயன் படவில்லையே இங்கு!`,
+            englishTranslation: `O! The mango tree of our house!
+The playground of my childhood!
+A bond of twenty-two years!
+
+You—
+You bore fruit and gave us sweetness!
+By bowing your head, you gave me the eyes of education;
+My father, who nurtured me,
+Was also a Siruthondar (a selfless devotee) for sacrificing you!
+
+But—
+I am no Lord Shiva to bring you back to life!
+Nor are you Lord Jesus to rise again!
+O tree, who fell victim to our poverty!
+O Sanjeevi medicine, who helped us in our time of need!
+
+I honor you with my memories!
+You gave us fruit while you lived; you served us even in your death!
+But despite my education, I remain of no use here!`,
+          }
+          ,
+          {
+            id: "item_1775142830758",
+            title: "கண்மூடிப் பழக்கம் இன்னும் கண்மூடிப் போகலையோ!",
+            date: "செப்டம்பர் 1985",
+            image: "/item_1775142830758_sept_1985.png",
+            audioFile: "/item_1775142830758_September_Vasantham-1985.m4a",
+            content: `கண்மூடிப் பழக்கம் இன்னும்
+கண்மூடிப் போகலையோ!
+
+மோசமான முன்னுதாரணமாகி விட்ட
+நேசமிக்க நாயுடம்மாவின் நாயகியே!
+உங்கள் முடிவு பலர்கண்களை பனிக்கச் செய்கிறது
+என்னால் என்னவோ உங்களை கோபிக்கவே முடிகிறது!
+மகோன்னதமானது உங்கள் அன்பு என்பதை
+நீங்கள் மரணித்துத்தானா நிரூபிக்க வேண்டும்?
+காலாவதியாகி விட்ட உடன் கட்டை ஏறுதலை
+உயிர்ப்பிக்கவா நீங்கள் உயிரை மாய்த்தீர்கள்!
+ஒரு அறிவு ஜீவியின் மனைவியா நீங்கள்!
+“உணர்ச்சிப் பூர்வமானவர்களே பெண்கள்
+அவர்களுக்கு ஏது அறிவார்ந்த பார்வை?”
+அற்ப கணிப்புக்கு நீங்களா உதாரணமாகிறது!
+ஒரு விஞ்ஞானியின் துணைவி நீங்கள்!
+அஞ்ஞானத்திற்கும் போய் விட்டீர்களே துணை!
+சாதனை செய்து சரித்திர நாயகி ஆகாது
+பிராணனை விட்டு புராண நாயகி ஆகிவிட்டீர்களே!
+படித்து வைத்திருந்தீர்களே மருத்துவத்தை!
+பின்பற்ற மறந்து போனீர்களே டாக்டர்
+சௌந்திரத்தை!
+
+டாக்டர்! டாக்டர்!
+சாவை விரட்ட வேண்டிய நீங்களா...
+சாவை வலிந்து வரவழைப்பது!
+“பிரிவாற்றாமை கொடுமை தான்
+அதற்கு மருந்து சாவுதான்”
+சபித்தது உங்களை எந்தச் சாத்தான்?
+ஓ!
+கண்மூடிப் பழக்கம் இன்னும் கண்மூடிப் போகலையோ!
+
+— பொன். முத்துக்குமார்`,
+            englishTranslation: `Has the blind practice still not
+closed its eyes (vanished)!
+
+O heroine of the beloved Nayudamma,
+who has now become a terrible example!
+Your end makes many eyes well up with tears,
+but somehow, I can only feel angry with you!
+To prove that your love was sublime,
+did you have to prove it by dying?
+Did you take your own life to revive
+the long-expired practice of Sati (self-immolation)?
+Are you the wife of an intellectual!
+“Women are merely emotional beings,
+where is the rational perspective for them?”
+Should you be the example for such a base estimation!
+You are the partner of a scientist!
+Yet you became a partner to ignorance!
+Instead of achieving and becoming a heroine of history,
+you gave up your life and became a heroine of mythology!
+You had studied medicine!
+But you forgot to follow it, Doctor
+Soundirathai!
+
+Doctor! Doctor!
+Should it be you, who is meant to chase death away...
+that invites death upon yourself?
+“The pain of separation is indeed cruel,
+and the only medicine for it is death.”
+Which devil cursed you with this thought?
+Oh!
+Has the blind practice still not closed its eyes!
+
+— Pon. Muthukumar`,
+          }
+          ,
+          {
+            id: "item_1775143091436",
+            title: "நாங்கள்",
+            date: "ஏப்ரல் 1986",
+            image: "/item_1775143091436_April_1986.png",
+            audioFile: "/item_1775143091436_April_Vasantham_1986.m4a",
+            content: `நாங்கள்
+— பொன் முத்துக்குமார்
+
+எங்கள் சௌகரியங்களுக்காக
+பெற்றவர்களையே மறப்பவர்கள்!
+ஏற்படும் கணநேர அசௌகரியத்துக்காக
+உலக சமாதான யாத்திரையைக்கூட
+சபிப்பவர்கள்!
+
+விடுதலைக்காக போராடத்துணியாது
+ஜாமீனில் வெளிவரத் துடிப்பவர்கள்!
+எந்தப் போராட்டத்தையும் பார்த்து (?)
+எரிந்து விழுபவர்கள்; சலித்துக்கொள்பவர்கள்!
+
+பாதையை சுலபமாக மறந்துவிட்டு
+போதை சுவாரஸ்யத்தில் திளைப்பவர்கள்!
+எங்களுக்காக சங்கடப்படுவோரையும்
+சந்தேகத்தோடு தான் பார்ப்பவர்கள்!
+
+தோழனே! ஓ நக்சல்பாரி தோழனே!
+பார்வையில்லாத எங்களுக்காக வீணாய்
+உதிரம் சிந்தி ஏன் சித்திரம் எழுதுகிறாய்?
+நாங்கள் ஆயத்தமாவதற்குள்
+அவசரப்பட்டு ஆயுதமேந்தி ஏன் அழிந்து
+போகிறாய்?
+
+தோழனே! ஓ நக்சல்பாரி தோழனே!`,
+            englishTranslation: `We
+— Pon. Muthukumar
+
+For our own comforts,
+We are those who forget even our parents!
+For a moment’s inconvenience,
+We are those who would curse even
+a world peace pilgrimage!
+
+Without the courage to fight for liberation,
+We are those yearning only to get out on bail!
+Looking at any struggle (?),
+We are those who get irritated and weary!
+
+Having easily forgotten the path,
+We are those who revel in the thrill of intoxication!
+Even those who feel distressed for our sake,
+We are those who look upon them only with suspicion!
+
+O comrade! Oh, Naxalbari comrade!
+For us, who lack vision, why do you
+wastefully shed blood to paint a picture?
+Before we could even get prepared,
+why do you take up arms in haste and
+perish?
+
+O comrade! Oh, Naxalbari comrade!`,
+          }
+        ],
+      },
       {
         id: "articles",
         title: "கட்டுரைகள்",
@@ -2664,13 +2938,8 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
 
           }
         ],
-      },
-      {
-        id: "press-poems",
-        title: "கவிதைகள்",
-        items: [
-        ],
-      },
+      }
+
     ],
   },
   {
@@ -2847,7 +3116,7 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
             id: "item_1775009400444",
             title: "கொண்டாட்டக்காரருக்கு நினைவு அஞ்சலி",
             date: "2026",
-            image: "/item_1775009400444_celebration_maker.png",
+            image: "/celebration_maker.png",
             audioFile: "/item_1775009400444_celebration_maker.mp3",
             content: `யார் பணகுடிக்கு வந்தாலும் ஒரு வேன் பிடித்து ஆஞ்சனேயர் கோவிலாக இருந்தாலும் சரி அல்லது எங்கே சுற்றுலா சென்றாலும்சரி  அனைவரையும் கூட்டிட்டு போய் சந்தோஷப்படுத்தி பின் ஹோட்டலுக்கும் அழைத்து போய் சாப்பாடு வாங்கி கொடுத்து அதன் பின் தான் வீட்டுக்கு வருவார்கள். தன் பணம் என்று எப்போதுமே அவர்கள் நினைத்ததே இல்லை. அவர்களைப் பொறுத்தவரை எல்லோரும்  ஒன்றுதான். எனக்கு அவர்கள் அத்தான் இல்லை  இன்னொரு தந்தை. அவரை இழந்து தவிக்கிறேன்.
                அத்தானை குறித்த நினைவலைகளில் நீந்தினால் கரை சேரவே முடியாது.அவ்வளவு நிகழ்ச்சிகள் நடந்துள்ளன.எண்ணி எண்ணி பார்க்க ஏராள நினைவுகள். நம்மை இப்போது பார்த்தால் போதும்… போதும் அழுத அழுகை போதுமென நம்மை எழுப்பி வேறு ஏதாவது கிண்டலாக சொல்லியிருப்பார். எல்லாரையும் கொண்டாடியகொண்டாட்டக்காரர்.அவரைப்போல  மற்றவர்களையும் இந்த வாழ்வையும் நாம் கொண்டாடுவதே அவருக்கான சிறந்த அஞ்சலியாக இருக்கும்.`,
@@ -2948,7 +3217,7 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
       {
         id: "item_1774963889570",
         title: "கவிஞர் E.S. முருகன் எழுதிய சிறு துளி நூலுக்கு எழுதிய அணிந்துரை. ",
-
+        date: "2021",
         image: "/item_1774963889570_book_review.jpg",
 
         content: `இளமை முன்னால் பார்க்கிறது முதுமை பின்னால் பார்க்கிறது உங்களால் மட்டும் எப்படி எல்லாவற்றையும் பார்க்க முடிகிறது, அடிப்பதற்கு எளிதானது மட்டுமே ஆபத்தானதற்கு பதிலாக அடிபட்டு சரிகிறது. யதார்த்தம் தரும் வருத்தம், ஆதங்கம் உங்கள் கவிதைகளில் பின்னிக் கிடக்கிறது. “பூ மனசுக்காரன் எல்லாம் புண்பட்டுக் கொண்டே தான் திரிய வேண்டும்” என்பது சாபமாக இருந்தாலும் நல்ல கவிதைகள் கிடைக்கிறதே! அறிவு ஜீவிகள் அதிகாரங்களுக்கு சேவை செய்கிறார்கள். கவிஞர்கள் தான் கொந்தளிக்கிறார்கள். நல்ல மனசு, வளமான கற்பனை முட்டி மோதும் துணிச்சல் அழகு நடை எல்லாம் இருக்கிறது தோழர் E.S. முருகனின் கவிதைகளில்.
@@ -2966,7 +3235,7 @@ Manager, Indian Overseas Bank`,
       {
         id: "item_1775022872627",
         title: "கொறிக்க - புத்தக விமர்சனம்",
-
+        date: "2024",
         image: "/item_1775022872627_Rani-Review.png",
 
         content: `பணகுடி எங்கள் நூலகத்தில் "ராணி" ஆசிரியர் அ.மா. சாமி தொகுத்த "கொறிக்க" என்ற நூலைக் காண நேர்ந்தது. மூன்று பேரக் குழந்தைகள் (ஒரே பிரசவத்தில் பிறந்தவர்கள்) பராமரிப்பு, வீட்டு வேலைகள், தொலைக்காட்சி சீரியல்களில் சிக்கியிருக்கும் எனக்கு
@@ -3088,6 +3357,463 @@ To realize the dream of a developed India, the commercialization of education mu
 
 Let Us Work and Rise:
 Mere planning alone will not help our ideal journey. We cannot rise even an inch just by shouting loudly. Firm determination, hard work, and a spirit of dedication are required to implement plans. If we act with the realization that each of us has a role in building a developed India, the dream is sure to come true. It is not the one who merely thinks, but the one who walks who can reach the destination.`,
+      },
+      {
+        id: "item_1775112083673",
+        title: "பாரதி கண்ட பாரதம்",
+        date: "2008",
+        image: "/item_1775112083673_bharathikandabharatham_img.png",
+        audioFile: "/item_1775112083673_bharathi_kanda_bharatham_-_agal.m4a",
+        content: `ஞானத்திலே... பரமோனத்திலே...
+மானத்திலே... அன்னதானத்திலே...
+கானத்திலே... அமுதாக நிறைந்த...
+கவிதையிலே... உயர் நாடு...
+இதுதான் நம் பாரதி கண்ட பாரதம்.
+
+ஞானம் என்கிற போது விஞ்ஞானத்திலும், பரமோனத்திலே என்கிற போது ஆன்மீகத்திலும், மானத்திலே என்கிற போது வீரத்திலும், அன்னதானத்திலே என்கிற போது மானுட நேயத்திலும், கானத்திலே என்கிற போது இசையிலும், கவிதையிலே என்கிற போது இலக்கியத்திலும் சிறந்து விளங்க வேண்டும் பாரதம் என்கிற கனவு பாரதியிடம் இருந்தது. அதுதான் பாரதி கண்ட பாரதம்.
+
+பாரதி கண்ட பாரதத்தில் ஜாதி-மத பேதங்களுக்கு இடமில்லை.
+
+"வேதியர் ஆயினும் ஒன்றே"
+"வேறு குலத்தவர் ஆயினும் ஒன்றே"
+
+எல்லோரும் ஓர் குலம்
+எல்லோரும் ஓரினம்
+எல்லோரும் ஓர் நிறை
+எல்லோரும் இந்நாட்டு மன்னர்
+
+என்ற முழக்கம் பாரதத்தை ஒரு பரிபூரண, சுதந்திர, ஜனநாயக சோஷலிச குடியரசாக திகழ வேண்டும் என்று பறைசாற்றுகிறது
+
+செப்பும் மொழி பதினெட்டு உடையாள் எனிலும்
+சிந்தனை ஒன்றுடையாள்
+
+பல்வேறு மொழி, மதம் ஆகியவைகளைக் கொண்ட பாரதத்தின் பன்முகத்தன்மையை அங்கீகரிக்கவும், அதன் ஊடாக ஒற்றுமை காண வேண்டும் என்பது பாரதியின் விருப்பம்.
+
+"வேற்றுமையில் ஒற்றுமை"
+"Unity in Diversity"
+
+பாரதத்தின் சுவாசம்!
+நல்லிணக்கம்தான் பாரதத்தின் கவசம்!
+
+பெண் அடிமை தீருமட்டும்
+பேசும் திருநாட்டில்
+மண் அடிமை தீர்தல் முயற்கொம்பே
+என பாரதியின் சீடர் முழங்குகிறார்.
+
+அதனால் தான் பாரதியார்,
+"வீட்டுக்குள்ளே பெண்ணைப் பூட்டி வைப்போம் என்ற விந்தை மனிதர் தலைகவிழ்ந்தார்"
+ஆணுக்கிங்கு பெண் இளைப்பில்லை காண் என முழங்கி, 
+பாரதம் என்பது பெண் உரிமை பேணும் தேசமாகத் திகழ வேண்டும் என்கிறார்.
+
+வளர்ச்சி என்பது சமச்சீரானதாகவும், மானுட நேசம் கொண்டதாகவும் திகழ வேண்டும். சக மனிதனை கீழே தள்ளி விட்டு, அவனை மிதித்துக் கொண்டு வெற்றி இலக்கை நோக்கி ஓடும் கொடூரத்தைப் பாரதி அங்கீகரிக்கவில்லை.
+
+"தனி ஒரு மனிதனுக்கு உணவில்லை எனில் ஜகத்தினை அழித்திடுவோம்." 
+நாட்டில் ஒரு மூலையில் இருக்கும் வறுமைகூட நாட்டின் பெரும் பகுதியில் இருக்கும் செழுமையை புரட்டிப் போட்டுவிடும் என்ற எச்சரிக்கையை மனதில் கொள்ள வேண்டும். எனவேதான் பாரதி வளர்ச்சி, முன்னேற்றம் ஒருங்கிணைந்த சமச்சீர் வளர்ச்சியாக இருக்க வேண்டும் என்று எண்ணினார்.
+
+பாரதி கண்ட பாரதத்தில் வெளிநாட்டு வர்த்தகத்திற்கு முக்கிய இடம் உண்டு. 
+"சேதுவை மேடுறுத்தி வீதி சமைப்போம்" என வழியும் கண்டார். 
+"வங்கத்தில் ஓடி வரும் நீரின் மிகுதியால் மையத்து நாடுகளுக்கு பயிர் செய்வோம்." 
+
+பாரதி கண்ட பாரதத்தின் இரு கண்களாக ஆன்மீகமும் விஞ்ஞானமும் விளங்கியது.
+ஆன்மீகம் மன அமைதிக்கு
+விஞ்ஞானம் தேச வளர்ச்சிக்கு...
+வானை அளப்போம் கடல் மீனை அளப்போம்
+சந்திர மண்டலத்தியல் கண்டு தெளிவோம்
+பாரதி கண்ட பாரதத்தில்
+அறிவியலுக்கு மட்டுமல்ல;
+ஆன்மீகத்திற்கும் இடம் உண்டு.
+யாரையும் அச்சுறுத்தாத பாரதம்
+யாருக்கும் அஞ்சாத பாரதம்
+அதுதான் பாரதி கண்ட பாரதம்.
+"பகைவனுக்கருள்வாய் நெஞ்சே"
+என்றதும்
+"அச்சமில்லை அச்சமில்லை
+உச்சி மீது வான் இடிந்து வீழுகின்ற போதிலும்
+அச்சமில்லை அச்சமில்லை"
+என்று முழங்கியதும் நம் பாரதி தானே!
+
+வளர்ச்சி, முன்னேற்றம் என்ற வேகத்தில் நாம் இயந்திரமாகி விடக்கூடாது. மனிதனை மனிதனாகப் ஆக்கும் கலை இலக்கியம் பேணும் தேசமாக பாரதம் திகழ விழைந்தான் பாரதி.
+
+"காவியம் செய்வோம்
+கலை வளர்ப்போம்
+ஓவியம் செய்வோம்"
+
+தொலைத் தொடர்பு புரட்சியின் விளை நிலமாக பாரதம் திகழ பாரதி கனவு கண்டான். 
+
+"காசி நகர்ப் புலவன் பேசும் உரை தான் 
+காஞ்சியில் கேட்பதற்கோர் கருவி செய்வோம்"
+
+வீரமும், ஈரமும் கொண்ட நம் முண்டாசுக்கவிஞன் காண விரும்பும் பாரதம் பல்வேறு தளங்களில் தடம் பதித்துள்ளது. இன்னும் சில விஷயங்களில் தடம் புரண்டுள்ளது தடுமாறி நிற்கிறது. 
+
+சுயச் சார்பு கொண்ட வீர தேசமாக,
+தேவைப்படுவோற்கு உதவும் நேச தேசமாக
+பாரதம் திகழ வேண்டும்
+
+மக்கள் கவிஞன்,  இளைய சமுதாயத்தின் நம்பிக்கை நட்சத்திரமாம் நம் பாரதியின் கவிதைகளை "பாரதம் எப்படி இருக்க வேண்டும்" என்பதற்கான வழிகாட்டு நெறிமுறைகளாய் கொள்வோம்.
+
+பாரதியின் பெயரால் பல்கலைக்கழகம் கண்டோம்; 
+பாரதிக்கு சிலை வடித்தோம். 
+பல சிறப்புக்கள் செய்தோம். 
+ஆனால் அவர் விரும்பிய வண்ணம் "நவபாரதம்" படைத்தோமா?
+
+பாரதியின் கனவுகளை நனவாக்க சபதம் ஏற்போம். 
+செயல்படுவோம். 
+செய்து முடிப்போம்; 
+வென்று காட்டுவோம்.`,
+        englishTranslation: `In wisdom… in spirituality…
+In honor… in charity…
+In music… overflowing with nectar…
+In poetry… a higher nation…
+This is the India that Bharathi envisioned.
+When Bharathi spoke of wisdom, he meant science;
+When he spoke of spirituality, he meant the soul;
+When he spoke of honor, he meant valor;
+When he spoke of charity, he meant human compassion;
+When he spoke of music, he meant art;
+When he spoke of poetry, he meant literature.
+India, in his dream, must excel in all these.
+That is the India Bharathi saw.
+In Bharathi’s India, there is no place for caste or religious divisions.
+“Even if one is a Brahmin, he is the same.
+Even if one belongs to another caste, he is the same.”
+All are one community,
+All are one race,
+All are one fullness,
+All are kings of this land.
+This clarion call declares that India must stand as a complete, free, democratic, socialist republic.
+Even if she speaks eighteen languages,
+Her thought is one.
+Bharathi wanted India to embrace diversity of language and religion, yet find unity through it.
+“Unity in Diversity” —
+That is India’s breath!
+Harmony is India’s shield!
+Until women’s slavery ends,
+Until the bondage of land is broken,
+India must strive — so proclaimed Bharathi’s disciples.
+That is why Bharathi thundered:
+“The strange man who locks up women inside the house has lost his head.”
+“There is no rest for women here as long as men deny them equality.”
+India must be a nation that protects women’s rights.
+Development must be balanced and humane. Bharathi rejected the cruelty of trampling others to reach success.
+“If even one man goes hungry, we will destroy the whole world.”
+He warned that poverty in one corner of the nation can overturn prosperity elsewhere. Hence, progress must be inclusive and equitable.
+In Bharathi’s India, foreign trade has its place:
+“We shall build bridges and roads.”
+“With the abundance of river waters, we shall cultivate crops for central nations.”
+The two eyes of Bharathi’s India are spirituality and science.
+Spirituality for peace of mind,
+Science for national growth.
+“We shall measure the sky, measure the fish in the sea,
+We shall explore the moon’s realm.”
+In Bharathi’s India, there is room not only for science but also for spirituality.
+India must be a nation that threatens none, and fears none.
+“Show mercy even to your enemy, O heart.”
+And he roared:
+“No fear, no fear,
+Even if the sky falls upon our heads,
+No fear, no fear.”
+In the rush of progress, we must not become machines. India must remain a land that nurtures art and literature — the essence of humanity.
+“We shall compose epics,
+We shall foster art,
+We shall paint.”
+Bharathi dreamed of India as the land of telecommunication revolution:
+“The speech of a poet in Kashi
+Shall be heard in Kanchipuram through a device we create.”
+The turbaned poet, with valor and tenderness, envisioned India across many dimensions. In some, India has advanced; in others, it still falters.
+India must be a self-reliant nation of valor,
+A compassionate nation that helps those in need.
+Let us take Bharathi’s poems — the guiding star of the youth — as the blueprint for how India should be.
+We have built universities in his name,
+We have sculpted statues for him,
+We have honored him in many ways.
+But have we built the “New India” he desired?
+Let us vow to make Bharathi’s dreams come true.
+Let us act.
+Let us accomplish.
+Let us triumph.`,
+      }
+      ,
+      {
+        id: "item_1775117627084",
+        title: "விளம்பரங்கள் நம்முள் விதைக்கும் விஷக் சிந்தனைகள்",
+        date: "2004",
+        image: "/item_1775117627084_Advt_img-1.jpg",
+        audioFile: "/item_1775117627084_periyappa-_vilambarangal_nammul.m4a",
+        content: `விளம்பரங்கள் நம்முள் விதைக்கும் விஷக் சிந்தனைகள். 
+விளம்பரங்கள் நுகர்வோர் சுயசிந்தனைக்கு வைக்கப்பட்ட தடை. 
+அது நுகர்வோர் மேலாண்மைக்குக் கட்டப்பட்ட பாடை.
+
+இது பொருளாதார ரீதியில் விளம்பரங்கள் ஏற்படுத்தும் விளைவு. ஆனால் எல்லாவற்றுக்கும் மேலாக, 
+விளம்பரங்கள் கலாசாரத்தளத்தில் வைக்கிறதே வேட்டு, அதுதான் நம்மைப் பதைபதைக்க வைக்கிறது, பயமுறுத்துகிறது. 
+விளம்பரங்கள் பொருட்களை நம்மிடம் விற்கவில்லை.
+நம்மைதான் பொருட்களுக்கு விற்றுவிடுகின்றன. 
+
+விளம்பரங்கள் நம்மைக்கவர காரணங்கள் 
+துல்லியமான படபிடிப்பு, கச்சிதமான கதை அமைப்பு, 
+கவனத்தை ஈர்க்கும் சொற்ச்செட்டு, "புதுசு கண்ணா புதுசு" என்றும் மீண்டும் மீண்டும் ஒளிபரப்புவதால் 
+மனதில் தாக்கத்தை ஏற்படுத்திகிறது. 
+விளம்பரங்கள் தொழில் நூட்ப ரீதியில் கண்ணையும் கருத்தையும் கவரிகிறது.
+
+ஆனால் அது நம்மைக் கருத்துக் குருடர்கள் ஆக்குவதுதான் கவலைத் தெரிகிறது. 
+ஒரு தொலைக்காட்சி தொடரைவிட இடையிடையே வந்துபோகும் கவர்ச்சி விளம்பரங்கள்தான் பிஞ்சு உள்ளங்களைக் கவிப்பிடிக்கிறது. 
+பாடத்தில் ஃபேய்லா, Don't care என்கிற இளம்பெண் தன் சரும்மத்தில் கரும்புள்ளி என்றால் கலங்கிப் போகிறாள்.
+
+விளம்பரங்கள் காட்டும் நவையுக மங்கையிவள். 
+படிப்பைவிட மேனி  எழில்தான் ஒரு பெண்ணுக்கு முக்கியம். இது ஒரு விஷக் கருத்து.
+
+பாலில் விஷம் கலக்கும் பாதகம். புது வீடு, புது கார், புது மனைவி என்று உயிரும் உணர்வும் கொண்ட பெண்ணை 
+நுகர்வுப் பொருளாகப் படைத்துக் காட்டுகிறதே ஒரு விளம்பரம். 
+அது பெண் பற்றிய புதிய சிந்தனைகளைப் பின்னோக்கி தள்ளும் அபாயம் அல்லவா?
+
+பதைப்பதைக்கிறாள் அம்மா.
+ஒரு குறிப்பிட்ட குரியல் சோப் வாங்காவிட்டால் ஏற்படும் விளைவுகள் குறித்து ஆம், 
+அலர்ஜி வந்து விடுமாம். பரு வந்து விடுமாம். 
+கல்யாணமே ஆகாதே என்று கலங்கிப் போயிறாள் அந்த அம்மா 
+
+கல்யாணம் தான் ஒரு பெண்ணின் உச்சபச்ச இலக்கு, காலாவதி ஆக வேண்டிய கட்டுப் பெட்டிக் கருத்து இது 
+அது வண்ண படமாக சத்தமின்றி நம் நெஞ்சுக்குள் வந்து விழும் விளம்பர விஷ வித்து 
+
+பட்டங்கள் ஆள்வதும் சட்டங்கள் செய்வதும் பாரினில் பெண்களே நடத்த வந்தோம் என பாரதி முழங்குகிறாள். 
+
+ஆனால் உங்கள் மகனின் உயர்க்கல்விக்கும் உங்கள் மகளின் திருமணத்திற்கும் இதோ தருகிறோம் கடன் என்கிறது வங்கி விளம்பரங்கள் 
+
+"மகனை மேலே மேலே படிக்க வையுங்கள் 
+மகளை உடனே கட்டிக் கொடுங்கள்" 
+
+இந்த விளம்பரங்கள் பாரதியின் கனவை சிதைக்கும் கொடுமை இல்லையா? 
+
+"அண்டை வீட்டார் பொறாமை அதுதான் நம் பெருமை" என்று போதிக்கிறது ஒரு TV கம்பேனி விளம்பரம்.
+அண்டை அயலாரை நேசி என்கிறது வேதம் 
+
+குளிர்பானங்களுக்காக நட்பையே மாற்ற தயாராகும் பெண்களை விளம்பரங்கள் அறிமுகப்படுத்திக்கிறன 
+கையில் குறிப்பிட்ட வகை செல்ஃபோன்கள் இருந்தால் வசியப்படுத்தலாம் என்கிற வக்கற சிந்தனைகளுக்கு விளம்பரங்கள் இன்று தீனி போடிக்கிறது 
+
+இது சரியா? இது முறையா? சிந்திக்க வேண்டாமா?
+
+தன் பொருளின் தரம் பற்றிப் பேச வேண்டிய விளம்பரங்கள் தரம் இழந்து போகின்றன
+விளம்பரத்திற்காக உற்பத்தி செலவில் ஏராளமாக செலவிடப்படுகிறதாம்
+பொருளின் தகுதியை உயர்த்த அதை செலவழிக்கலாம். 
+அல்லது அது குறித்த ஆராய்ச்சிக்கு செலவழிக்கலாம் அல்லது பொருளின் விலையை குறைத்து நிர்ணயிக்கலாம் 
+அதனால் வாடிக்கையாளருக்கு கிட்டுமே பலன். 
+
+நுகர்வு கலாச்சாரத்தின் விளைவு தான் இந்த மோசமான விளம்பரங்கள் 
+
+நோய் நாடி 
+நோய்முதல் நாடி 
+செயல்பட வேண்டிய தருணம் இது 
+
+விளம்பரத்தை எவ்வாறு எதிர்கொள்வது நம்மிடம் விழிப்புணர்வு என்ற ஆயுதம் உள்ளது 
+அதன் துணை கொண்டு எந்த அபாயத்தையும் முறியடிக்கலாம் 
+அர்ஜுன் அம்மா புத்திசாலிதான் ஆரோக்கிய பாலையும் விளம்பரத்திற்கு பணத்தையும் பெற்றுக் கொள்வதால்! 
+என விமர்சிப்பதன் மூலம் விளம்பரங்களை எதிர்கொள்ளலாம் 
+
+விழித்தெழுவோம் விமர்சனப் பார்வையில் 
+நச்சு விளம்பரங்களை தகர்த்தெறிவோம் `,
+        englishTranslation: `The Toxic Thoughts Sown Within Us by Advertisements
+
+Advertisements plant poisonous thoughts within us.
+They are barriers placed against the consumer’s independent thinking.
+They are cages built for consumer manipulation.
+
+This is the economic impact of advertisements. But beyond everything else,
+the damage they inflict on the cultural sphere is what truly makes us anxious and afraid.
+
+Advertisements do not sell products to us.
+They sell us to the products.
+
+What makes advertisements so attractive?
+Precise cinematography, perfectly structured storytelling,
+attention-grabbing wordplay, and the constant repetition of slogans like “New, dear, new!”
+These repeated broadcasts leave deep impressions on the mind.
+
+Technically, advertisements captivate both the eye and the mind.
+
+But the real concern is that they turn us into people blind in judgment.
+
+More than a television serial, it is the glamorous advertisements that keep appearing in between
+that capture the tender minds of children.
+
+A young girl who says “Don’t care” about failing in studies
+is deeply disturbed by a dark spot on her skin.
+
+This is the image of the “modern woman” shown in advertisements:
+for a woman, physical beauty matters more than education.
+This is a poisonous idea.
+
+It is like mixing poison in milk.
+
+An advertisement that says “new house, new car, new wife”
+portrays a living, feeling woman as just another consumer object.
+Is this not dangerous—pushing progressive ideas about women backward?
+
+A mother trembles in fear.
+If a certain brand of soap is not bought,
+there may be allergies, there may be pimples,
+and she panics thinking “What if her marriage never happens?”
+
+The outdated boxed idea that marriage is the ultimate goal of a woman’s life
+is another toxic seed silently dropped into our hearts through colorful advertisements.
+
+Subramania Bharati once proclaimed:
+“Women shall rule, frame laws, and lead this world.”
+
+But bank advertisements say:
+“Here is a loan for your son’s higher education and your daughter’s marriage.”
+
+“Let your son study higher and higher,
+but marry your daughter off immediately.”
+
+Are these advertisements not cruelly shattering Bharati’s dream?
+
+A TV company advertisement preaches:
+“The envy of the neighbor is our pride.”
+
+But our scriptures teach:
+Love thy neighbor.
+
+Advertisements even introduce women willing to trade friendship
+for soft drinks.
+
+They feed distorted ideas that possessing a certain brand of cellphone
+is enough to attract and manipulate others.
+
+Is this right? Is this fair? Should we not question it?
+
+Advertisements that should speak about the quality of their products
+are themselves losing all quality.
+
+Huge amounts are spent on advertising from the production cost.
+That money could instead be spent on improving the product’s quality,
+or on research,
+or on reducing the price of the product.
+
+Then the real benefit would reach the customer.
+
+These harmful advertisements are the very outcome of consumerist culture.
+
+This is the time to
+diagnose the disease,
+trace its root cause,
+and act.
+
+How should we confront advertisements?
+We already possess a weapon called awareness.
+
+With its support, we can defeat any danger.
+
+By critically questioning them—
+like the clever mother Arjun who takes both the healthy malt drink
+and the advertisement money—we can resist advertisements.
+
+Let us awaken with a critical vision.
+Let us tear apart these toxic advertisements.`,
+      }
+      ,
+      {
+        id: "item_1775119164359",
+        title: "இயற்கை",
+        date: "2010",
+        image: "/item_1775119164359_iyarkai.jpg",
+        audioFile: "/item_1775119164359_iyarkai.m4a",
+        content: `இயற்கை
+காற்று, மழை, காடு மலை, கடல்
+எல்லாம் இயற்கையின் காட்சி
+இயற்கையைக் கொண்டாடி மகிழ்வோம்.
+
+
+மண் என்றால் அழுக்கு என்ற நம் நிலை
+எப்போது நீங்கும்?
+
+அதுதான் நம் வளம் என்று புரிதல்
+எப்போது பிறக்கும்?
+
+மழை என்றால் தொந்தரவு, சேதம் என்ற
+மனோ நிலை எப்போது போகும்?
+
+அதுதான் நீராதாரம் என்ற உண்மை
+எப்போது புரியும்?
+
+சூரியன் என்றால் வெப்பம் என வெறுக்கும்
+நம் எண்ணம் எப்போது மாறும்?
+
+அதுதான் வெளிச்சம் என்ற உணர்தல்
+எப்போது பிறக்கும்?
+
+காற்று வெறும் காற்று அல்ல;
+நம் உயிர் மூச்சு அல்லவா?
+
+பறவைகளும், விலங்குகளும் நம்மோடு
+வாழ உரிமை படைத்த உயிர்ச்சங்கிலியில்
+கண்ணிகள் என்பதை புரிந்து கொண்டால்,
+
+காக்கை குருவி எங்கள் ஜாதி
+கடலும் மலையும் எங்கள் கூட்டம் என
+இவ் இயற்கையோடு இணைந்து ஆனந்தக் கூத்தாட
+மாட்டோமோ?
+
+வளர்ச்சிப் போதையில் இயற்கையை சீரழிப்பது
+கண்களை விற்று சித்திரம் வாங்கிய கதை தானே?
+பாதை மாறலாமா? பயணத்தை இழக்கலாமா?
+மரங்களின் அழிவும் காடுகளின் வீழ்ச்சியும்
+காற்று மண்டலத்தில் மாசு படிய காரணம் ஆகிறது.
+புவி வெப்பமடைவதற்கும் காரணம் இயற்கைக்கு
+நாம் செய்யும் கொடுமைதானே!
+இயற்கை என்னும் பொன் முட்டையிடும் வாத்தை
+பேராசையால் கொன்று வயிறை அறுத்து கொள்ளும்
+பேதையாக நாம் இருப்பதா?
+
+இயற்கைக்காக குரல் கொடுத்தும்
+அதை காக்க கரம் நீட்டியும்
+
+நாளை உலகை பத்திரமாக பாதுகாத்து
+அடுத்த தலைமுறைக்குத் தர வேண்டிய
+பசுமை வீரர்களாக நாம் மாற வேண்டாமா?
+
+இயற்கையோடு இசைந்து, இயைந்து வாழும்
+வித்தகத்தைக் கற்றுக் கொள்ளுவோம்
+இயற்கை அன்னையைப் போற்றி மகிழ்வோம்;
+வணங்கிப் பாதுகாப்போம்.`,
+        englishTranslation: `Natural breeze, rain, forest, mountain, and ocean
+All are spectacles of nature.
+Let us celebrate and enjoy nature.
+
+When will our mindset that soil means dirt change?
+When will the realization that it is our true wealth be born?
+
+When will the mental state that rain means trouble and damage vanish?
+When will the truth that it is the source of water be understood?
+
+When will our thought that hates the sun as mere heat change?
+When will the understanding that it is our light be born?
+
+Air is not just air;
+Isn't it our very life breath?
+
+If we understand that birds and animals
+Are links in the chain of life, with an equal right to live alongside us,
+
+Wouldn't we, with the belief that "the crow and sparrow are our kin,
+The sea and mountain are our crowd,"
+Join this nature and dance in joy?
+
+Is destroying nature in the intoxication of development not the story of
+Selling one's eyes to buy a painting?
+Can we deviate from the path? Can we lose our journey?
+
+The destruction of trees and the fall of forests
+Become the cause of pollution settling in the atmosphere.
+The cause of global warming is the cruelty we inflict upon nature!
+
+Should we be the fools who, out of greed,
+Kill the nature that is the goose that lays golden eggs and cut open its belly?
+
+Shouldn't we change into green heroes,
+Who raise a voice for nature and stretch out a hand to protect it,
+Safely guarding the world of tomorrow to give it to the next generation?
+
+Let us learn the art of living in harmony and unison with nature.
+Let us praise and enjoy Mother Nature;
+Let us worship and protect her.`,
       }
     ],
   },
@@ -3096,7 +3822,9 @@ Mere planning alone will not help our ideal journey. We cannot rise even an inch
     number: "4",
     title: "பூக்கோல ஹைக்கூக்கள்",
     icon: "🌸",
-    description: "அவரின் ஹைக்கூ கவிதைகள்",
+    description: `
+    தங்கையின் பூக்கோலம்
+    அண்ணணின் சொற்கோலம்`,
     items: [
 
       {

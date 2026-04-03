@@ -118,6 +118,9 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1500,
+  },
   plugins: [react(), mode === "development" && componentTagger(), uploadArticlePlugin()].filter(Boolean),
   resolve: {
     alias: {

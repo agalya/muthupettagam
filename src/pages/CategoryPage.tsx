@@ -11,6 +11,7 @@ import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
 import { downloadArticlePdf } from "@/lib/downloadArticlePdf";
 import { Languages, X, ChevronLeft, ChevronRight, Download } from "lucide-react";
 import ZipDownloadButton from "@/components/ZipDownloadButton";
+import { features } from "@/config/site";
 
 const CategoryPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -112,7 +113,7 @@ const CategoryPage = () => {
               </div>
               
               <div className="flex-shrink-0">
-                <ZipDownloadButton categories={[category]} />
+                {features.enableDownloadCategoryZip && <ZipDownloadButton categories={[category]} />}
               </div>
             </div>
           </motion.div>
@@ -120,16 +121,16 @@ const CategoryPage = () => {
       </div>
 
       {/* Content */}
-      <div className="flex-1 container mx-auto px-4 py-10 max-w-5xl">
+      <div className="flex-1 container mx-auto px-4 py-10 max-w-7xl">
         {category.subCategories ? (
           <Tabs defaultValue={category.subCategories[0].id} className="w-full">
-            <div className={`w-full relative mb-8 flex justify-start sm:justify-center px-1 ${category.id === 'memories' ? 'flex-wrap' : 'overflow-x-auto'}`}>
-              <TabsList className={`inline-flex h-auto p-1.5 bg-muted/80 backdrop-blur rounded-2xl shadow-inner gap-2 ${category.id === 'memories' ? 'flex-wrap w-full justify-center' : 'flex-nowrap whitespace-nowrap min-w-max'}`}>
+            <div className="w-full relative mb-8 flex flex-wrap justify-start sm:justify-center px-1">
+              <TabsList className="inline-flex h-auto p-1.5 bg-muted/80 backdrop-blur rounded-2xl shadow-inner gap-2 flex-wrap w-full justify-center">
                 {category.subCategories.map(sub => (
                   <TabsTrigger 
                     key={sub.id} 
                     value={sub.id} 
-                    className={`py-2.5 px-5 rounded-xl font-tamil-heading text-sm md:text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all ${category.id === 'memories' ? 'flex-1 min-w-[200px] text-center' : 'whitespace-nowrap'}`}
+                    className="flex-1 min-w-[180px] text-center py-2.5 px-5 rounded-xl font-tamil-heading text-sm md:text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all whitespace-nowrap"
                   >
                     <span className="flex items-center justify-center gap-2">
                       {sub.title}
@@ -218,7 +219,7 @@ const CategoryPage = () => {
                                     <span>English Translation</span>
                                   </button>
                                 )}
-                                {item.englishTranslation && (
+                                {features.enableDownloadIndividualPdf && item.englishTranslation && (
                                   <button
                                     onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
                                     className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
@@ -322,7 +323,7 @@ const CategoryPage = () => {
                               <span>English Translation</span>
                             </button>
                           )}
-                          {item.englishTranslation && (
+                          {features.enableDownloadIndividualPdf && item.englishTranslation && (
                             <button
                               onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
                               className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
@@ -382,18 +383,20 @@ const CategoryPage = () => {
             onClick={() => setSelectedIndex(null)}
           >
             <div className="absolute top-6 right-6 flex items-center gap-3 z-20">
-              <button
-                className="text-white/70 hover:text-white transition-colors bg-black/40 p-2 rounded-full backdrop-blur-md"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (currentGalleryImages[selectedIndex].originalItem) {
-                    downloadArticlePdf(currentGalleryImages[selectedIndex].originalItem).catch((err) => console.error("PDF download failed:", err));
-                  }
-                }}
-                title="Download PDF"
-              >
-                <Download className="w-6 h-6" />
-              </button>
+              {features.enableDownloadIndividualPdf && (
+                <button
+                  className="text-white/70 hover:text-white transition-colors bg-black/40 p-2 rounded-full backdrop-blur-md"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (currentGalleryImages[selectedIndex].originalItem) {
+                      downloadArticlePdf(currentGalleryImages[selectedIndex].originalItem).catch((err) => console.error("PDF download failed:", err));
+                    }
+                  }}
+                  title="Download PDF"
+                >
+                  <Download className="w-6 h-6" />
+                </button>
+              )}
               <button
                 className="text-white/70 hover:text-white transition-colors bg-black/40 p-2 rounded-full backdrop-blur-md"
                 onClick={() => setSelectedIndex(null)}

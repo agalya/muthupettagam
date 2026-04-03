@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Output build directory for muthupettagam_website standalone version
+muthupettagam_website/

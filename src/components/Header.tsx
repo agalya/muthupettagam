@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { features } from "@/config/site";
 
 const Header = () => {
   return (
@@ -18,8 +19,8 @@ const Header = () => {
             { to: "/category/his-poems", label: "கவிதைகள்" },
             { to: "/category/press", label: "பத்திரிக்கை" },
             { to: "/category/memories", label: "நினைவுகள்" },
-            { to: "/upload", label: "புதிய பதிவு (Upload)" },
-          ].map((link) => (
+            features.enableUpload ? { to: "/upload", label: "புதிய பதிவு (Upload)" } : null,
+          ].filter((link): link is { to: string, label: string } => link !== null).map((link) => (
             <Link
               key={link.to}
               to={link.to}
