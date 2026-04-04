@@ -322,7 +322,7 @@ const Index = () => {
                   type="text"
                   name="name"
                   className="w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="James"
+                  placeholder="Your Name"
                 />
               </div>
               <div>
@@ -334,7 +334,7 @@ const Index = () => {
                   type="email"
                   name="email"
                   className="w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="james@example.com"
+                  placeholder="Your Email"
                 />
               </div>
               <div className="flex-1 flex flex-col min-h-[150px]">
@@ -345,7 +345,7 @@ const Index = () => {
                   required
                   name="feedback"
                   className="flex-1 w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-y"
-                  placeholder="Write your beautiful memory / feedback here..."
+                  placeholder="Write your feedback here..."
                 ></textarea>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
@@ -385,7 +385,7 @@ const Index = () => {
                   type="text"
                   name="name"
                   className="w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="Ram"
+                  placeholder="Your Name"
                 />
               </div>
               <div>
@@ -397,7 +397,7 @@ const Index = () => {
                   type="email"
                   name="email"
                   className="w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="ram@example.com"
+                  placeholder="Your Email"
                 />
               </div>
               <div className="flex-1 flex flex-col min-h-[150px]">

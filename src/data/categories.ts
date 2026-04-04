@@ -433,6 +433,73 @@ that 'all goodness may befall us.'
     பொன். முத்துக்குமார்,
     முத்து. வேலம்மாள்.`
           },
+          ,
+          {
+            id: "item_1775268451495",
+            title: "மணி விழா மலர் நாள் : , வெள்ளிக்கிழமை [நாயகன்: திரு. சோமசுந்திரம் அவர்கள் நாயகி: திருமதி. தனலெட்சுமி]",
+            date: "21 நவம்பர் 2008",
+            image: "/maranthai.jpg",
+            audioFile: "/item_1775268451495_maranthai_mama_manivizha.m4a",
+            content: `மணி விழா மலர்
+நாள் : 21-11-2008, வெள்ளிக்கிழமை
+
+நாயகன்: திரு. சோமசுந்திரம் அவர்கள்
+நாயகி: திருமதி. தனலெட்சுமி
+
+பிரஸ்டீஜ், ஈகோ, பந்தா என்னும் சிறைக்குள் மாட்டாத எங்கள் அன்புக்குரிய அத்தான்
+
+தம்பிகளின் வளர்ச்சியில், நலனில் “பொன்னியின் செல்வன்” காவிய நாயகி குந்தவையை மிஞ்சும் எங்கள் அன்புக்குரிய அக்கா
+
+இவர்களின்
+
+மணி விழா சிறக்கவும்
+மணி விழா மலர் மணக்கவும்
+வாழ்த்துகிறோம்;
+
+மணி விழா ஜோடிகளை வணங்கி வாழ்த்துகிறோம்.
+
+என்றென்றும் அன்புடன்,
+பொன். முத்துக்குமார் - வேலம்மாள்
+பொன். சிதம்பர கணேசன் - கோமதி
+பொன். கந்தசாமி - அனுராதா
+
+மண்ணை விட்டு மறைந்தாலும் எங்கள் நெஞ்சை விட்டு அகலாத பாசமலர்களாம்
+மாராந்தை M.K. கோமதிநாயக முதலியார் அவர்கள்
+பணகுடி பொன். சுந்தரி அண்ணி அவர்கள்
+மலரடிகளுக்கு இம் மலர் சமர்ப்பணம்
+
+மாமனார் மெச்சும் மருமகன்:
+எனது மருமகன் S. சோம சுந்தரம் பணிவும், கனிவும் ஒருங்கே அமையப் பெற்றவர். கடுமையான விமர்சனத்தை புன்னகை மாறாமல் ஏற்றுக் கொள்ளும் பக்குவம் பெற்றவர். எல்லோரிடத்திலும் அன்பாகப் பழகக் கூடியவர். இனிய சொற்களைத் தேர்ந்தெடுத்து பேசக் கூடியவர். மணி விழா காணும் இந்த நேரத்தில் என் இனிய வாழ்த்துக்களை தெரிவித்துக் கொள்கிறேன்.
+M. பொன்னப்ப முதலியார், பணகுடி.
+
+மாமியார் மெச்சும் மருமகள்:
+எனது மருமகள் S. தனலெட்சுமி அறிவும், ஆற்றலும் மிக்கவர். சிறந்த நிர்வாகி. தொடர்ந்து அவளை படிக்க அனுமதித்து இருந்தால் மிகச் சிறந்த பதவிகளுக்கு வந்திருப்பாள். எந்த ஒரு விஷயத்திலும் அதிக அனைத்து பரிமாணங்களையும் பார்த்து செயல்படக் கூடியவர்.
+ பிள்ளைகளைச் சிறப்பான நிலைக்கு கொண்டு வர அவள் எடுத்துக் கொண்ட முயற்சிகள்தான் எத்தனை..... எத்தனை? மணி விழா காணும் அவளுக்கு என் இதயப் பூர்வமான வாழ்த்துக்கள்.
+மாராந்தை. சாரதா அண்ணி, பணகுடி.`,
+            englishTranslation: `Diamond Jubilee Souvenir (Specifically for a 60th Birthday Celebration).
+Date: 21-11-2008, Friday.
+
+Leading Gentleman (Hero): Mr. Somasundaram
+Leading Lady (Heroine): Mrs. Dhanalakshmi
+
+To our dear Brother-in-law (Atthaan), who is not trapped in the prisons of prestige, ego, or showoff... and to our dear Elder Sister (Akka), who surpasses the epic heroine Kundhavai (from Ponniyin Selvan) in her care for the growth and well-being of her younger brothers...
+
+We wish for this 60th Birthday Celebration (Mani Vizha) to be grand,
+We wish for this Souvenir (Malar) to spread its fragrance,
+We offer our greetings;
+
+We bow to and bless the Diamond Jubilee couple.
+
+With eternal love,
+
+Pon. Muthukumar - Velammal
+Pon. Chidambara Ganesan - Gomathi
+Pon. Kandhasamy - Anuradha
+
+Even though they have left this earth, they never leave our hearts—the "Flowers of Affection" (Pasamalar):
+	Shri M.K. Gomathinayaka Mudaliar of Maranthai
+	Smt. Pon. Sundari Anni (Sister-in-law) of Panagudi`,
+          },
           {
             id: "hv1",
             title: "மணிவிழா வாழ்த்து - [நாயகன்: மீ.ஆறுமுகம், நாயகி: ஆ.நீலா]",
@@ -492,7 +559,7 @@ May the Diamond Jubilee couple live for many more years...
 மணிவிழா மணமக்களே வாழ்க பல்லாண்டு...
     - பொன். முத்துக்குமார்,
       பணகுடி`
-          },
+          }
         ],
       },
       {
