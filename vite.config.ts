@@ -1,10 +1,10 @@
-import { defineConfig } from "vite";
+import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import fs from "fs";
 
-function uploadArticlePlugin() {
+function uploadArticlePlugin(): Plugin {
   return {
     name: "upload-article-plugin",
     configureServer(server: any) {
@@ -14,13 +14,12 @@ function uploadArticlePlugin() {
           req.on("data", (chunk: any) => {
             body += chunk.toString();
           });
-          
+
           req.on("end", () => {
             try {
               const payload = JSON.parse(body);
               const { targetId, newItem, imageBase64, audioBase64 } = payload;
 
-              // 1. Save files to public/
               if (imageBase64 && newItem.image) {
                 const base64Data = imageBase64.replace(/^data:image\/[^;]+;base64,/, "");
                 const imagePath = path.join(__dirname, "public", newItem.image.replace(/^\//, ""));
@@ -33,13 +32,12 @@ function uploadArticlePlugin() {
                 fs.writeFileSync(audioPath, base64Data, "base64");
               }
 
-              // 2. Update categories.ts
               const catPath = path.join(__dirname, "src", "data", "categories.ts");
               const content = fs.readFileSync(catPath, "utf-8");
-              
+
               const targetRegex = new RegExp(`id:\\s*["']${targetId}["'][\\s\\S]*?items:\\s*\\[`);
               const match = targetRegex.exec(content);
-              
+
               if (!match) {
                 res.statusCode = 400;
                 res.end(JSON.stringify({ error: "Could not find target ID in categories.ts" }));
@@ -47,7 +45,7 @@ function uploadArticlePlugin() {
               }
 
               const insertPos = match.index + match[0].length;
-              
+
               let openBrackets = 0;
               let arrayEndIndex = -1;
               for (let i = insertPos; i < content.length; i++) {
@@ -68,7 +66,6 @@ function uploadArticlePlugin() {
                 return;
               }
 
-              // Check if we need to prepend a comma
               let lastNonWs = "";
               for (let i = arrayEndIndex - 1; i >= insertPos; i--) {
                 if (content[i].trim()) {
@@ -78,8 +75,7 @@ function uploadArticlePlugin() {
               }
 
               const prefix = (lastNonWs !== "" && lastNonWs !== ",") ? "," : "";
-              
-              // Build the string representation of the new item
+
               const newItemString = `${prefix}\n          {
             id: "${newItem.id}",
             title: ${JSON.stringify(newItem.title)},
@@ -109,8 +105,39 @@ function uploadArticlePlugin() {
   };
 }
 
-// https://vitejs.dev/config/
+// Generate settings.js based on environment
+function generateSettingsPlugin(): Plugin {
+  return {
+    name: "generate-settings-plugin",
+    apply: "build",
+    generateBundle(options: any) {
+      const publicPath = process.env.VITE_PUBLIC_PATH || "/muthupettagam/";
+      const environment = process.env.VITE_ENVIRONMENT || "production";
+      const enableUpload = process.env.VITE_ENABLE_UPLOAD === "true";
+      const enableDownloadAllZip = process.env.VITE_ENABLE_DOWNLOAD_ALL_ZIP === "true";
+      const enableDownloadCategoryZip = process.env.VITE_ENABLE_DOWNLOAD_CATEGORY_ZIP === "true";
+      const enableDownloadIndividualPdf = process.env.VITE_ENABLE_DOWNLOAD_INDIVIDUAL_PDF === "true";
+
+      const settingsContent = `window.APP_CONFIG = {
+  environment: "${environment}",
+  publicPath: "${publicPath}",
+  enableUpload: ${enableUpload},
+  enableDownloadAllZip: ${enableDownloadAllZip},
+  enableDownloadCategoryZip: ${enableDownloadCategoryZip},
+  enableDownloadIndividualPdf: ${enableDownloadIndividualPdf}
+};`;
+
+      this.emitFile({
+        type: "asset",
+        fileName: "settings.js",
+        source: settingsContent,
+      });
+    }
+  };
+}
+
 export default defineConfig(({ mode }) => ({
+  base: process.env.VITE_PUBLIC_PATH || (mode === "production" ? "/muthupettagam/" : "/"),
   server: {
     host: "::",
     port: 8080,
@@ -121,7 +148,12 @@ export default defineConfig(({ mode }) => ({
   build: {
     chunkSizeWarningLimit: 1500,
   },
-  plugins: [react(), mode === "development" && componentTagger(), uploadArticlePlugin()].filter(Boolean),
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+    uploadArticlePlugin(),
+    generateSettingsPlugin(),
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -1,38 +1,68 @@
-import { Link } from "react-router-dom";
-import { features } from "@/config/site";
+import { useState } from "react";
+import { Download, Loader2 } from "lucide-react";
+import { Category } from "@/data/categories";
+import { downloadCategoryZip, downloadAllCategoriesZip } from "@/lib/downloadZip";
+import appConfig from "@/config/appConfig";  // ADD THIS
 
-const Header = () => {
+interface ZipDownloadButtonProps {
+  categories: Category[];
+  isAll?: boolean;
+  className?: string;
+}
+
+export default function ZipDownloadButton({ categories, isAll, className }: ZipDownloadButtonProps) {
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [progressMsg, setProgressMsg] = useState("");
+
+  // Check if this button type is enabled
+  const isEnabled = isAll
+    ? appConfig.enableDownloadAllZip
+    : appConfig.enableDownloadCategoryZip;
+
+  // Hide button if disabled in current environment
+  if (!isEnabled) {
+    return null;
+  }
+
+  const handleDownload = async () => {
+    setIsDownloading(true);
+    setProgressMsg("Starting...");
+
+    try {
+      if (isAll) {
+        await downloadAllCategoriesZip(categories, setProgressMsg);
+      } else {
+        await downloadCategoryZip(categories[0], setProgressMsg);
+      }
+      setProgressMsg("");
+    } catch (e) {
+      console.error(e);
+      alert("Failed to download ZIP file.");
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-sm text-primary-foreground font-bold">மு</span>
-          </div>
-          <span className="font-tamil-heading text-lg font-semibold text-foreground">
-            முத்துக்குமாரின் நினைவகம்
-          </span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-1">
-          {[
-            { to: "/", label: "முகப்பு" },
-            { to: "/category/his-poems", label: "கவிதைகள்" },
-            { to: "/category/press", label: "பத்திரிக்கை" },
-            { to: "/category/memories", label: "நினைவுகள்" },
-            features.enableUpload ? { to: "/upload", label: "புதிய பதிவு (Upload)" } : null,
-          ].filter((link): link is { to: string, label: string } => link !== null).map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className="font-tamil-body text-sm text-muted-foreground hover:text-foreground hover:bg-secondary px-3 py-2 rounded-lg transition-all"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      </div>
-    </header>
+    <button
+      onClick={handleDownload}
+      disabled={isDownloading}
+      className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium transition-all ${isDownloading
+          ? "bg-primary/70 text-primary-foreground cursor-not-allowed"
+          : "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+        } ${className || ""}`}
+    >
+      {isDownloading ? (
+        <>
+          <Loader2 className="w-5 h-5 animate-spin" />
+          <span className="font-sans text-sm">{progressMsg}</span>
+        </>
+      ) : (
+        <>
+          <Download className="w-5 h-5" />
+          <span className="font-sans text-sm">{isAll ? "Download All as ZIP" : "Download Category ZIP"}</span>
+        </>
+      )}
+    </button>
   );
-};
-
-export default Header;
+}

@@ -9,12 +9,35 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { UploadCloud, Loader2 } from "lucide-react";
+import appConfig from "@/config/appConfig";  // ADD THIS
 
 const MAX_IMAGE_SIZE = 8 * 1024 * 1024; // 8MB
 const MAX_AUDIO_SIZE = 20 * 1024 * 1024; // 20MB
 
 export default function Upload() {
+  // If upload is disabled on production, show message
+  if (!appConfig.enableUpload) {
+    return (
+      <div className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <div className="flex-1 container mx-auto px-4 py-10 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold font-tamil-heading mb-4">Upload Disabled</h1>
+            <p className="text-muted-foreground font-tamil-body">
+              Uploads are currently disabled in this environment.
+            </p>
+            <Link to="/" className="inline-block mt-6 text-primary hover:underline font-tamil-body">
+              ← Back to Home
+            </Link>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
   const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   const [categoryId, setCategoryId] = useState("");
   const [subCategoryId, setSubCategoryId] = useState("");
@@ -124,7 +147,7 @@ export default function Upload() {
       setEnglishText("");
       setImageFile(null);
       setAudioFile(null);
-      
+
       // Attempt to clear file inputs directly isn't perfectly react-way here without refs, 
       // but reloading usually resets states safely.
       setTimeout(() => window.location.reload(), 1000);
@@ -139,7 +162,7 @@ export default function Upload() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      
+
       <div className="flex-1 container mx-auto px-4 py-10 max-w-3xl">
         <Link to="/" className="inline-flex items-center gap-1 text-muted-foreground font-tamil-body text-sm mb-6 hover:text-foreground transition-colors">
           ← முகப்பு
@@ -150,7 +173,7 @@ export default function Upload() {
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-8 bg-card p-6 md:p-8 rounded-2xl shadow-sm border border-border/50">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-3">
               <Label>Category (பிரிவு) *</Label>
@@ -214,9 +237,9 @@ export default function Upload() {
             <>
               <div className="space-y-3">
                 <Label>Tamil Content (தமிழ் உரை)</Label>
-                <Textarea 
-                  value={tamilText} 
-                  onChange={e => setTamilText(e.target.value)} 
+                <Textarea
+                  value={tamilText}
+                  onChange={e => setTamilText(e.target.value)}
                   placeholder="Enter the primary Tamil content here..."
                   className="min-h-[150px] font-sans text-base leading-relaxed"
                 />
@@ -224,9 +247,9 @@ export default function Upload() {
 
               <div className="space-y-3">
                 <Label>English Translation</Label>
-                <Textarea 
-                  value={englishText} 
-                  onChange={e => setEnglishText(e.target.value)} 
+                <Textarea
+                  value={englishText}
+                  onChange={e => setEnglishText(e.target.value)}
                   placeholder="Enter the English translation here..."
                   className="min-h-[150px] font-sans text-base leading-relaxed"
                 />
