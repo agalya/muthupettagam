@@ -184,7 +184,7 @@ const Index = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="கட்டுரைகளைத் தேடிட..."
+              placeholder="கட்டுரைகளைத் தேட..."
               className="w-full bg-white/10 border border-white/20 text-white placeholder-white/50 rounded-full pl-11 pr-14 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50"
             />
             <div className="absolute inset-y-0 right-1 pr-2 flex items-center">
