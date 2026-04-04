@@ -57,6 +57,50 @@ const Index = () => {
     recognition.start();
   };
 
+  const handleFeedbackSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const feedback = formData.get("feedback") as string;
+
+    const submitter = (e.nativeEvent as any).submitter as HTMLButtonElement | null;
+    const method = submitter?.value || "email";
+
+    if (method === "email") {
+      const subject = encodeURIComponent("muthupettagam - feedback");
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nFeedback:\n${feedback}`);
+      window.location.href = `mailto:agalya94@gmail.com,pmkumar1955@gmail.com,ponksamy@gmail.com?subject=${subject}&body=${body}`;
+    } else {
+      const text = encodeURIComponent(`*muthupettagam - feedback*\n\n*Name:* ${name}\n*Email:* ${email}\n\n*Feedback:*\n${feedback}`);
+      window.open(`https://wa.me/917708944004?text=${text}`, "_blank", "noopener,noreferrer");
+    }
+    form.reset();
+  };
+
+  const handleArticleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const article = formData.get("article") as string;
+
+    const submitter = (e.nativeEvent as any).submitter as HTMLButtonElement | null;
+    const method = submitter?.value || "email";
+
+    if (method === "email") {
+      const subject = encodeURIComponent("muthupettagam - new article");
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nArticle:\n${article}`);
+      window.location.href = `mailto:agalya94@gmail.com,pmkumar1955@gmail.com,ponksamy@gmail.com?subject=${subject}&body=${body}`;
+    } else {
+      const text = encodeURIComponent(`*muthupettagam - new article*\n\n*Name:* ${name}\n*Email:* ${email}\n\n*Article:*\n${article}\n\n_[Note from website: user may have attachments, please check if they send any manually following this message]_`);
+      window.open(`https://wa.me/917708944004?text=${text}`, "_blank", "noopener,noreferrer");
+    }
+    form.reset();
+  };
+
   const allArticles = useMemo(() => {
     const articles: any[] = [];
     categories.forEach(cat => {
@@ -256,6 +300,149 @@ const Index = () => {
           </div>
         </section>
       )}
+
+      {/* Forms Section */}
+      <section className="container mx-auto px-4 py-16 border-t border-border/50 relative z-10">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Feedback Form */}
+          <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm flex flex-col">
+            <h3 className="font-tamil-heading text-xl font-semibold mb-2 text-foreground">
+              இணையதள கருத்துக்களைப் பகிர
+            </h3>
+            <p className="font-tamil-body text-sm text-muted-foreground mb-6">
+              (Share your feedback about the website)
+            </p>
+            <form onSubmit={handleFeedbackSubmit} className="flex flex-col gap-4 h-full">
+              <div>
+                <label className="block font-tamil-body text-sm font-medium text-foreground mb-1">
+                  உங்கள் பெயர் (Your Name)
+                </label>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  className="w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  placeholder="James"
+                />
+              </div>
+              <div>
+                <label className="block font-tamil-body text-sm font-medium text-foreground mb-1">
+                  மின்னஞ்சல் (Email)
+                </label>
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  className="w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  placeholder="james@example.com"
+                />
+              </div>
+              <div className="flex-1 flex flex-col min-h-[150px]">
+                <label className="block font-tamil-body text-sm font-medium text-foreground mb-1">
+                  கருத்துக்கள் (Feedback)
+                </label>
+                <textarea
+                  required
+                  name="feedback"
+                  className="flex-1 w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-y"
+                  placeholder="Write your beautiful memory / feedback here..."
+                ></textarea>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+                <button
+                  type="submit"
+                  value="email"
+                  className="w-full bg-primary text-primary-foreground font-tamil-body font-medium rounded-lg px-4 py-3 hover:bg-primary/90 transition-colors"
+                >
+                  மின்னஞ்சல் (Email)
+                </button>
+                <button
+                  type="submit"
+                  value="whatsapp"
+                  className="w-full bg-[#25D366] text-white font-tamil-body font-medium rounded-lg px-4 py-3 hover:bg-[#20bd5a] transition-colors"
+                >
+                  வாட்ஸ்அப் (WhatsApp)
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {/* New Article Form */}
+          <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm flex flex-col">
+            <h3 className="font-tamil-heading text-xl font-semibold mb-2 text-foreground">
+              தங்களிடம் மீதமிருக்கும் திரு.முத்துக்குமாரின் படைப்புகளைப் பகிர
+            </h3>
+            <p className="font-tamil-body text-sm text-muted-foreground mb-6">
+              (Share your remaining writeups of Muthukumar)
+            </p>
+            <form onSubmit={handleArticleSubmit} className="flex flex-col gap-4 h-full">
+              <div>
+                <label className="block font-tamil-body text-sm font-medium text-foreground mb-1">
+                  உங்கள் பெயர் (Your Name)
+                </label>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  className="w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  placeholder="Ram"
+                />
+              </div>
+              <div>
+                <label className="block font-tamil-body text-sm font-medium text-foreground mb-1">
+                  மின்னஞ்சல் (Email)
+                </label>
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  className="w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  placeholder="ram@example.com"
+                />
+              </div>
+              <div className="flex-1 flex flex-col min-h-[150px]">
+                <label className="block font-tamil-body text-sm font-medium text-foreground mb-1">
+                  படைப்பு (Writeup)
+                </label>
+                <textarea
+                  required
+                  name="article"
+                  className="flex-1 w-full bg-background border border-border/50 rounded-lg px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-y"
+                  placeholder="Type the article content here..."
+                ></textarea>
+              </div>
+              <div>
+                <div className="bg-muted text-muted-foreground p-4 rounded-lg text-sm mb-4 border border-border/50">
+                  <p className="font-semibold text-foreground mb-2">பின்வரும் விவரங்களை சேர்க்கவும் / அனுப்பவும்:</p>
+                  <ul className="list-disc list-inside space-y-1 ml-1 text-xs sm:text-sm">
+                    <li>எழுதியவர் பெயர்</li>
+                    <li>யாருக்காக / யாரைப் பற்றி எழுதப்பட்டுள்ளது</li>
+                    <li>எழுதப்பட்ட தேதி</li>
+                    <li>இணைக்க வேண்டிய புகைப்படம்</li>
+                    <li>விருப்பமிருந்தால், அதற்கான குரல் பதிவு (audio file)</li>
+                  </ul>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+                  <button
+                    type="submit"
+                    value="email"
+                    className="w-full bg-primary text-primary-foreground font-tamil-body font-medium rounded-lg px-4 py-3 hover:bg-primary/90 transition-colors"
+                  >
+                    மின்னஞ்சல் (Email)
+                  </button>
+                  <button
+                    type="submit"
+                    value="whatsapp"
+                    className="w-full bg-[#25D366] text-white font-tamil-body font-medium rounded-lg px-4 py-3 hover:bg-[#20bd5a] transition-colors"
+                  >
+                    வாட்ஸ்அப் (WhatsApp)
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
