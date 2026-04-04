@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
 
         <p className="font-tamil-body text-[10px] text-muted-foreground max-w-md mx-auto">
-          இந்த இணையதளம் அவரின் படைப்புகளை பாதுகாக்கும் முத்துப் பெட்டகம்
+          இந்த இணையதளம் அவரின் படைப்புகளைப் பாதுகாக்கும் முத்துப் பெட்டகம்
         </p>
       </div>
     </footer>
