@@ -22,13 +22,13 @@ function uploadArticlePlugin(): Plugin {
 
               if (imageBase64 && newItem.image) {
                 const base64Data = imageBase64.replace(/^data:image\/[^;]+;base64,/, "");
-                const imagePath = path.join(__dirname, "public", newItem.image.replace(/^\//, ""));
+                const imagePath = path.join(__dirname, "public", newItem.image.replace(/^\\/, ""));
                 fs.writeFileSync(imagePath, base64Data, "base64");
               }
 
               if (audioBase64 && newItem.audioFile) {
                 const base64Data = audioBase64.replace(/^data:audio\/[^;]+;base64,/, "");
-                const audioPath = path.join(__dirname, "public", newItem.audioFile.replace(/^\//, ""));
+                const audioPath = path.join(__dirname, "public", newItem.audioFile.replace(/^\\/, ""));
                 fs.writeFileSync(audioPath, base64Data, "base64");
               }
 
@@ -76,6 +76,7 @@ function uploadArticlePlugin(): Plugin {
 
               const prefix = (lastNonWs !== "" && lastNonWs !== ",") ? "," : "";
 
+              // Build the string representation of the new item
               const newItemString = `${prefix}\n          {
             id: "${newItem.id}",
             title: ${JSON.stringify(newItem.title)},
@@ -104,6 +105,8 @@ function uploadArticlePlugin(): Plugin {
     }
   };
 }
+
+
 
 // Generate settings.js based on environment
 function generateSettingsPlugin(): Plugin {
