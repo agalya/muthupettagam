@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Play, Square } from "lucide-react";
+import { getAudioUrl } from "@/lib/audioUtils";
 
 interface TextToSpeechProps {
   text: string;
@@ -100,7 +101,10 @@ const TextToSpeech = ({
       };
     }
 
-    const audio = new window.Audio(path);
+    const audioUrl = getAudioUrl(path);
+    if (!audioUrl) return;
+
+    const audio = new window.Audio(audioUrl);
     audio.onended = () => setIsPlaying(false);
     audio.onerror = () => {
       audioFailedRef.current = true;

@@ -1,3 +1,5 @@
+import { useAssetUrl } from "@/hooks/useAssetUrl";
+import { getAudioUrl } from "@/lib/audioUtils";
 import { useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -55,7 +57,7 @@ const CategoryPage = () => {
         originalItem: item
       }));
       return imgs.sort((a, b) => {
-        const getT = (id: string) => { const m = id.match(/\d{13}/); return m ? parseInt(m[0],10) : 0; };
+        const getT = (id: string) => { const m = id.match(/\d{13}/); return m ? parseInt(m[0], 10) : 0; };
         return getT(b.id) - getT(a.id);
       });
     }
@@ -82,7 +84,7 @@ const CategoryPage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      
+
       {/* Hero */}
       <div className="gradient-memorial relative overflow-hidden py-16 px-4">
         <div className="absolute inset-0 opacity-10">
@@ -111,7 +113,7 @@ const CategoryPage = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex-shrink-0">
                 {features.enableDownloadCategoryZip && <ZipDownloadButton categories={[category]} />}
               </div>
@@ -127,9 +129,9 @@ const CategoryPage = () => {
             <div className="w-full relative mb-8 flex flex-wrap justify-start sm:justify-center px-1">
               <TabsList className="inline-flex h-auto p-1.5 bg-muted/80 backdrop-blur rounded-2xl shadow-inner gap-2 flex-wrap w-full justify-center">
                 {category.subCategories.map(sub => (
-                  <TabsTrigger 
-                    key={sub.id} 
-                    value={sub.id} 
+                  <TabsTrigger
+                    key={sub.id}
+                    value={sub.id}
                     className="flex-1 min-w-[180px] text-center py-2.5 px-5 rounded-xl font-tamil-heading text-sm md:text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all whitespace-nowrap"
                   >
                     <span className="flex items-center justify-center gap-2">
@@ -142,7 +144,7 @@ const CategoryPage = () => {
                 ))}
               </TabsList>
             </div>
-            
+
             {category.subCategories.map((sub, i) => (
               <TabsContent key={sub.id} value={sub.id} className="mt-0 outline-none">
                 <motion.div
@@ -155,9 +157,9 @@ const CategoryPage = () => {
                     <div className="mb-8 p-6 rounded-2xl bg-card/60 backdrop-blur border border-border/50 shadow-sm flex flex-col md:flex-row gap-6">
                       {sub.image && (
                         <div className="w-full md:w-1/3 flex-shrink-0">
-                          <img 
-                            src={sub.image} 
-                            alt={sub.title} 
+                          <img
+                            src={useAssetUrl(sub.image)}
+                            alt={sub.title}
                             className="w-full h-auto rounded-xl object-cover aspect-[4/3] shadow-sm"
                           />
                         </div>
@@ -175,14 +177,14 @@ const CategoryPage = () => {
                   {sub.id === "photos" ? (
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pb-8">
                       {currentGalleryImages.map((img, idx) => (
-                        <div 
-                          key={`${img.id}-${idx}`} 
+                        <div
+                          key={`${img.id}-${idx}`}
                           className="rounded-xl overflow-hidden border border-border/50 shadow-sm aspect-square bg-muted/30 group relative cursor-pointer"
                           onClick={() => setSelectedIndex(idx)}
                         >
-                          <img 
-                            src={img.src} 
-                            alt={img.title || "Photo"} 
+                          <img
+                            src={useAssetUrl(img.src)}
+                            alt={img.title || "Photo"}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             loading="lazy"
                           />
@@ -199,69 +201,69 @@ const CategoryPage = () => {
                       {sub.items.map((item) => (
                         <AccordionItem
                           key={item.id}
-                        value={item.id}
-                        className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
-                      >
-                        <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left py-4">
-                          <ArticleTitle item={item} titleClassName="font-tamil-heading font-semibold" />
-                        </AccordionTrigger>
-                        <AccordionContent>
-                          <div className="pt-2 pb-4">
-                            {item.content && (
-                              <div className="mb-6 flex flex-wrap gap-3 max-w-3xl mx-auto">
-                                <TextToSpeech text={item.content} audioFile={item.audioFile} />
-                                {item.englishTranslation && (
-                                  <button 
-                                    onClick={() => document.getElementById(`translation-${item.id}`)?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
-                                  >
-                                    <Languages className="w-4 h-4" />
-                                    <span>English Translation</span>
-                                  </button>
-                                )}
-                                {features.enableDownloadIndividualPdf && item.englishTranslation && (
-                                  <button
-                                    onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
-                                    className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
-                                  >
-                                    <span>Download PDF</span>
-                                  </button>
-                                )}
-                              </div>
-                            )}
-                            {item.image && (
-                              <div className="mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
-                                <img src={item.image} alt={articleDisplayTitle(item)} className="w-full h-auto" />
-                              </div>
-                            )}
-                            <p className="font-tamil-body text-sm md:text-base text-foreground whitespace-pre-wrap leading-relaxed max-w-3xl mx-auto">
-                              {item.content}
-                            </p>
-                            {item.englishTranslation && (
-                              <div id={`translation-${item.id}`} className="mt-8 pt-6 border-t border-border/50 max-w-3xl mx-auto">
-                                <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
-                                  <h4 className="text-lg font-semibold text-primary font-sans flex items-center gap-2 m-0">
-                                    <Languages className="w-5 h-5" />
-                                    English Translation
-                                  </h4>
-                                  <TextToSpeech 
-                                    text={item.englishTranslation} 
-                                    audioFile={item.englishAudioFile} 
-                                    lang="en-US" 
-                                    labelPlay="Listen" 
-                                    labelStop="Stop" 
-                                  />
+                          value={item.id}
+                          className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
+                        >
+                          <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left py-4">
+                            <ArticleTitle item={item} titleClassName="font-tamil-heading font-semibold" />
+                          </AccordionTrigger>
+                          <AccordionContent>
+                            <div className="pt-2 pb-4">
+                              {item.content && (
+                                <div className="mb-6 flex flex-wrap gap-3 max-w-3xl mx-auto">
+                                  <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                                  {item.englishTranslation && (
+                                    <button
+                                      onClick={() => document.getElementById(`translation-${item.id}`)?.scrollIntoView({ behavior: 'smooth' })}
+                                      className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
+                                    >
+                                      <Languages className="w-4 h-4" />
+                                      <span>English Translation</span>
+                                    </button>
+                                  )}
+                                  {features.enableDownloadIndividualPdf && item.englishTranslation && (
+                                    <button
+                                      onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
+                                      className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
+                                    >
+                                      <span>Download PDF</span>
+                                    </button>
+                                  )}
                                 </div>
-                                <p className="font-sans text-sm md:text-base text-foreground/90 whitespace-pre-wrap leading-relaxed">
-                                  {item.englishTranslation}
-                                </p>
-                              </div>
-                            )}
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
+                              )}
+                              {item.image && (
+                                <div className="mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
+                                  <img src={useAssetUrl(item.image)} alt={articleDisplayTitle(item)} className="w-full h-auto" />
+                                </div>
+                              )}
+                              <p className="font-tamil-body text-sm md:text-base text-foreground whitespace-pre-wrap leading-relaxed max-w-3xl mx-auto">
+                                {item.content}
+                              </p>
+                              {item.englishTranslation && (
+                                <div id={`translation-${item.id}`} className="mt-8 pt-6 border-t border-border/50 max-w-3xl mx-auto">
+                                  <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
+                                    <h4 className="text-lg font-semibold text-primary font-sans flex items-center gap-2 m-0">
+                                      <Languages className="w-5 h-5" />
+                                      English Translation
+                                    </h4>
+                                    <TextToSpeech
+                                      text={item.englishTranslation}
+                                      audioFile={item.englishAudioFile}
+                                      lang="en-US"
+                                      labelPlay="Listen"
+                                      labelStop="Stop"
+                                    />
+                                  </div>
+                                  <p className="font-sans text-sm md:text-base text-foreground/90 whitespace-pre-wrap leading-relaxed">
+                                    {item.englishTranslation}
+                                  </p>
+                                </div>
+                              )}
+                            </div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
                   )}
                 </motion.div>
               </TabsContent>
@@ -279,7 +281,7 @@ const CategoryPage = () => {
                   >
                     <div className="overflow-hidden">
                       <img
-                        src={img.src}
+                        src={useAssetUrl(img.src)}
                         alt={img.title || "Haiku"}
                         className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
@@ -294,80 +296,80 @@ const CategoryPage = () => {
                 ))}
               </div>
             ) : (
-            <Accordion type="multiple" className="space-y-3">
-            {category.items.map((item, i) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08, duration: 0.4 }}
-              >
-                <AccordionItem
-                  value={item.id}
-                  className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
-                >
-                  <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left py-4">
-                    <ArticleTitle item={item} titleClassName="font-tamil-heading font-semibold" />
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="pt-2 pb-4">
-                      {item.content && (
-                        <div className="mb-5 flex flex-wrap gap-3">
-                          <TextToSpeech text={item.content} audioFile={item.audioFile} />
-                          {item.englishTranslation && (
-                            <button 
-                              onClick={() => document.getElementById(`translation-${item.id}`)?.scrollIntoView({ behavior: 'smooth' })}
-                              className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
-                            >
-                              <Languages className="w-4 h-4" />
-                              <span>English Translation</span>
-                            </button>
+              <Accordion type="multiple" className="space-y-3">
+                {category.items.map((item, i) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.08, duration: 0.4 }}
+                  >
+                    <AccordionItem
+                      value={item.id}
+                      className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
+                    >
+                      <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left py-4">
+                        <ArticleTitle item={item} titleClassName="font-tamil-heading font-semibold" />
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="pt-2 pb-4">
+                          {item.content && (
+                            <div className="mb-5 flex flex-wrap gap-3">
+                              <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                              {item.englishTranslation && (
+                                <button
+                                  onClick={() => document.getElementById(`translation-${item.id}`)?.scrollIntoView({ behavior: 'smooth' })}
+                                  className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
+                                >
+                                  <Languages className="w-4 h-4" />
+                                  <span>English Translation</span>
+                                </button>
+                              )}
+                              {features.enableDownloadIndividualPdf && item.englishTranslation && (
+                                <button
+                                  onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
+                                  className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
+                                >
+                                  <span>Download PDF</span>
+                                </button>
+                              )}
+                            </div>
                           )}
-                          {features.enableDownloadIndividualPdf && item.englishTranslation && (
-                            <button
-                              onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
-                              className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
-                            >
-                              <span>Download PDF</span>
-                            </button>
+                          {item.image && (
+                            <div className="mb-5 rounded-lg overflow-hidden border border-border/50 shadow-sm">
+                              <img src={useAssetUrl(item.image)} alt={articleDisplayTitle(item)} className="w-full h-auto" />
+                            </div>
                           )}
-                        </div>
-                      )}
-                      {item.image && (
-                        <div className="mb-5 rounded-lg overflow-hidden border border-border/50 shadow-sm">
-                          <img src={item.image} alt={articleDisplayTitle(item)} className="w-full h-auto" />
-                        </div>
-                      )}
-                      <p className="font-tamil-body text-sm text-foreground whitespace-pre-wrap leading-relaxed">
-                        {item.content}
-                      </p>
-                      {item.englishTranslation && (
-                        <div id={`translation-${item.id}`} className="mt-6 pt-6 border-t border-border/50">
-                          <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
-                            <h4 className="text-lg font-semibold text-primary font-sans flex items-center gap-2 m-0">
-                              <Languages className="w-5 h-5" />
-                              English Translation
-                            </h4>
-                            <TextToSpeech 
-                              text={item.englishTranslation} 
-                              audioFile={item.englishAudioFile} 
-                              lang="en-US" 
-                              labelPlay="Listen" 
-                              labelStop="Stop" 
-                            />
-                          </div>
-                          <p className="font-sans text-sm md:text-base text-foreground/90 whitespace-pre-wrap leading-relaxed">
-                            {item.englishTranslation}
+                          <p className="font-tamil-body text-sm text-foreground whitespace-pre-wrap leading-relaxed">
+                            {item.content}
                           </p>
+                          {item.englishTranslation && (
+                            <div id={`translation-${item.id}`} className="mt-6 pt-6 border-t border-border/50">
+                              <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
+                                <h4 className="text-lg font-semibold text-primary font-sans flex items-center gap-2 m-0">
+                                  <Languages className="w-5 h-5" />
+                                  English Translation
+                                </h4>
+                                <TextToSpeech
+                                  text={item.englishTranslation}
+                                  audioFile={item.englishAudioFile}
+                                  lang="en-US"
+                                  labelPlay="Listen"
+                                  labelStop="Stop"
+                                />
+                              </div>
+                              <p className="font-sans text-sm md:text-base text-foreground/90 whitespace-pre-wrap leading-relaxed">
+                                {item.englishTranslation}
+                              </p>
+                            </div>
+                          )}
                         </div>
-                      )}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </motion.div>
-            ))}
-          </Accordion>
-          )}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </motion.div>
+                ))}
+              </Accordion>
+            )}
           </div>
         ) : null}
       </div>
@@ -439,7 +441,7 @@ const CategoryPage = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={currentGalleryImages[selectedIndex].src}
+                src={useAssetUrl(currentGalleryImages[selectedIndex].src)}
                 alt={currentGalleryImages[selectedIndex].title || "Full size photo"}
                 className="max-w-full max-h-[80vh] object-contain rounded-t-lg shadow-2xl"
               />

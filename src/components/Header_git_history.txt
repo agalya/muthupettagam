@@ -1,0 +1,298 @@
+﻿commit b86bbe9f9c63b12c4e01608f7868f31e8512a359
+Author: cosmocalibre <coscalmedia@gmail.com>
+Date:   Sat Apr 4 17:18:38 2026 +0530
+
+    Publish pages changes
+
+diff --git a/src/components/Header.tsx b/src/components/Header.tsx
+index 8f240cc..474a3d4 100644
+--- a/src/components/Header.tsx
++++ b/src/components/Header.tsx
+@@ -1,38 +1,68 @@
+-import { Link } from "react-router-dom";
+-import { features } from "@/config/site";
++import { useState } from "react";
++import { Download, Loader2 } from "lucide-react";
++import { Category } from "@/data/categories";
++import { downloadCategoryZip, downloadAllCategoriesZip } from "@/lib/downloadZip";
++import appConfig from "@/config/appConfig";  // ADD THIS
++
++interface ZipDownloadButtonProps {
++  categories: Category[];
++  isAll?: boolean;
++  className?: string;
++}
++
++export default function ZipDownloadButton({ categories, isAll, className }: ZipDownloadButtonProps) {
++  const [isDownloading, setIsDownloading] = useState(false);
++  const [progressMsg, setProgressMsg] = useState("");
++
++  // Check if this button type is enabled
++  const isEnabled = isAll
++    ? appConfig.enableDownloadAllZip
++    : appConfig.enableDownloadCategoryZip;
++
++  // Hide button if disabled in current environment
++  if (!isEnabled) {
++    return null;
++  }
++
++  const handleDownload = async () => {
++    setIsDownloading(true);
++    setProgressMsg("Starting...");
++
++    try {
++      if (isAll) {
++        await downloadAllCategoriesZip(categories, setProgressMsg);
++      } else {
++        await downloadCategoryZip(categories[0], setProgressMsg);
++      }
++      setProgressMsg("");
++    } catch (e) {
++      console.error(e);
++      alert("Failed to download ZIP file.");
++    } finally {
++      setIsDownloading(false);
++    }
++  };
+ 
+-const Header = () => {
+   return (
+-    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
+-        <Link to="/" className="flex items-center gap-3 group">
+-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+-            <span className="text-sm text-primary-foreground font-bold">α««α»ü</span>
+-          </div>
+-          <span className="font-tamil-heading text-lg font-semibold text-foreground">
+-            α««α»üα«ñα»ìα«ñα»üα«òα»ìα«òα»üα««α«╛α«░α«┐α«⌐α»ì α«¿α«┐α«⌐α»êα«╡α«òα««α»ì
+-          </span>
+-        </Link>
+-        <nav className="hidden md:flex items-center gap-1">
+-          {[
+-            { to: "/", label: "α««α»üα«òα«¬α»ìα«¬α»ü" },
+-            { to: "/category/his-poems", label: "α«òα«╡α«┐α«ñα»êα«òα«│α»ì" },
+-            { to: "/category/press", label: "α«¬α«ñα»ìα«ñα«┐α«░α«┐α«òα»ìα«òα»ê" },
+-            { to: "/category/memories", label: "α«¿α«┐α«⌐α»êα«╡α»üα«òα«│α»ì" },
+-            features.enableUpload ? { to: "/upload", label: "α«¬α»üα«ñα«┐α«» α«¬α«ñα«┐α«╡α»ü (Upload)" } : null,
+-          ].filter((link): link is { to: string, label: string } => link !== null).map((link) => (
+-            <Link
+-              key={link.to}
+-              to={link.to}
+-              className="font-tamil-body text-sm text-muted-foreground hover:text-foreground hover:bg-secondary px-3 py-2 rounded-lg transition-all"
+-            >
+-              {link.label}
+-            </Link>
+-          ))}
+-        </nav>
+-      </div>
+-    </header>
++    <button
++      onClick={handleDownload}
++      disabled={isDownloading}
++      className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium transition-all ${isDownloading
++          ? "bg-primary/70 text-primary-foreground cursor-not-allowed"
++          : "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg hover:-translate-y-0.5"
++        } ${className || ""}`}
++    >
++      {isDownloading ? (
++        <>
++          <Loader2 className="w-5 h-5 animate-spin" />
++          <span className="font-sans text-sm">{progressMsg}</span>
++        </>
++      ) : (
++        <>
++          <Download className="w-5 h-5" />
++          <span className="font-sans text-sm">{isAll ? "Download All as ZIP" : "Download Category ZIP"}</span>
++        </>
++      )}
++    </button>
+   );
+-};
+-
+-export default Header;
++}
+\ No newline at end of file
+
+commit c531cd2d1f419369b7d430e5681cba06686500b4
+Author: cosmocalibre <coscalmedia@gmail.com>
+Date:   Fri Apr 3 17:57:03 2026 +0530
+
+    Update application and ignore large build file
+
+diff --git a/src/components/Header.tsx b/src/components/Header.tsx
+index ba285f7..8f240cc 100644
+--- a/src/components/Header.tsx
++++ b/src/components/Header.tsx
+@@ -1,4 +1,5 @@
+ import { Link } from "react-router-dom";
++import { features } from "@/config/site";
+ 
+ const Header = () => {
+   return (
+@@ -18,8 +19,8 @@ const Header = () => {
+             { to: "/category/his-poems", label: "α«òα«╡α«┐α«ñα»êα«òα«│α»ì" },
+             { to: "/category/press", label: "α«¬α«ñα»ìα«ñα«┐α«░α«┐α«òα»ìα«òα»ê" },
+             { to: "/category/memories", label: "α«¿α«┐α«⌐α»êα«╡α»üα«òα«│α»ì" },
+-            { to: "/upload", label: "α«¬α»üα«ñα«┐α«» α«¬α«ñα«┐α«╡α»ü (Upload)" },
+-          ].map((link) => (
++            features.enableUpload ? { to: "/upload", label: "α«¬α»üα«ñα«┐α«» α«¬α«ñα«┐α«╡α»ü (Upload)" } : null,
++          ].filter((link): link is { to: string, label: string } => link !== null).map((link) => (
+             <Link
+               key={link.to}
+               to={link.to}
+
+commit 07fb25409c625a2b26b319d024692c8e7a34333a
+Author: cosmocalibre <coscalmedia@gmail.com>
+Date:   Tue Mar 31 13:06:01 2026 +0530
+
+    Upto Irangal
+
+diff --git a/src/components/Header.tsx b/src/components/Header.tsx
+index 0b04ca9..ba285f7 100644
+--- a/src/components/Header.tsx
++++ b/src/components/Header.tsx
+@@ -18,6 +18,7 @@ const Header = () => {
+             { to: "/category/his-poems", label: "α«òα«╡α«┐α«ñα»êα«òα«│α»ì" },
+             { to: "/category/press", label: "α«¬α«ñα»ìα«ñα«┐α«░α«┐α«òα»ìα«òα»ê" },
+             { to: "/category/memories", label: "α«¿α«┐α«⌐α»êα«╡α»üα«òα«│α»ì" },
++            { to: "/upload", label: "α«¬α»üα«ñα«┐α«» α«¬α«ñα«┐α«╡α»ü (Upload)" },
+           ].map((link) => (
+             <Link
+               key={link.to}
+
+commit ac4bb824ccc3887779a12cbcc29b634851ad4178
+Author: cosmocalibre <coscalmedia@gmail.com>
+Date:   Sat Mar 28 15:47:57 2026 +0530
+
+    feat: implement home page with voice search and category navigation features
+
+diff --git a/src/components/Header.tsx b/src/components/Header.tsx
+index e6b5c63..0b04ca9 100644
+--- a/src/components/Header.tsx
++++ b/src/components/Header.tsx
+@@ -6,10 +6,10 @@ const Header = () => {
+       <div className="container mx-auto flex items-center justify-between px-4 py-4">
+         <Link to="/" className="flex items-center gap-3 group">
+           <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+-            <span className="text-sm text-primary-foreground font-bold">α«¿α«┐</span>
++            <span className="text-sm text-primary-foreground font-bold">α««α»ü</span>
+           </div>
+           <span className="font-tamil-heading text-lg font-semibold text-foreground">
+-            α«¿α«┐α«⌐α»êα«╡α»ü α««α«▓α«░α»ì
++            α««α»üα«ñα»ìα«ñα»üα«òα»ìα«òα»üα««α«╛α«░α«┐α«⌐α»ì α«¿α«┐α«⌐α»êα«╡α«òα««α»ì
+           </span>
+         </Link>
+         <nav className="hidden md:flex items-center gap-1">
+
+commit 00c27aba3f0b9b82c5098089aaf623d2940ee47c
+Author: gpt-engineer-app[bot] <159125892+gpt-engineer-app[bot]@users.noreply.github.com>
+Date:   Sat Mar 28 05:05:02 2026 +0000
+
+    Modernized site color scheme
+    
+    Co-authored-by: agalya <7957058+agalya@users.noreply.github.com>
+
+diff --git a/src/components/Header.tsx b/src/components/Header.tsx
+index 5bad350..e6b5c63 100644
+--- a/src/components/Header.tsx
++++ b/src/components/Header.tsx
+@@ -1,29 +1,32 @@
+-import { motion } from "framer-motion";
+ import { Link } from "react-router-dom";
+ 
+ const Header = () => {
+   return (
+-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-sm">
+-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+-        <Link to="/" className="flex items-center gap-2">
+-          <span className="text-xl text-memorial-gold">Γ£ª</span>
++    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
++      <div className="container mx-auto flex items-center justify-between px-4 py-4">
++        <Link to="/" className="flex items-center gap-3 group">
++          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
++            <span className="text-sm text-primary-foreground font-bold">α«¿α«┐</span>
++          </div>
+           <span className="font-tamil-heading text-lg font-semibold text-foreground">
+             α«¿α«┐α«⌐α»êα«╡α»ü α««α«▓α«░α»ì
+           </span>
+         </Link>
+-        <nav className="hidden md:flex items-center gap-6">
+-          <Link to="/" className="font-tamil-body text-sm text-muted-foreground hover:text-foreground transition-colors">
+-            α««α»üα«òα«¬α»ìα«¬α»ü
+-          </Link>
+-          <Link to="/category/his-poems" className="font-tamil-body text-sm text-muted-foreground hover:text-foreground transition-colors">
+-            α«òα«╡α«┐α«ñα»êα«òα«│α»ì
+-          </Link>
+-          <Link to="/category/press" className="font-tamil-body text-sm text-muted-foreground hover:text-foreground transition-colors">
+-            α«¬α«ñα»ìα«ñα«┐α«░α«┐α«òα»ìα«òα»ê
+-          </Link>
+-          <Link to="/category/memories" className="font-tamil-body text-sm text-muted-foreground hover:text-foreground transition-colors">
+-            α«¿α«┐α«⌐α»êα«╡α»üα«òα«│α»ì
+-          </Link>
++        <nav className="hidden md:flex items-center gap-1">
++          {[
++            { to: "/", label: "α««α»üα«òα«¬α»ìα«¬α»ü" },
++            { to: "/category/his-poems", label: "α«òα«╡α«┐α«ñα»êα«òα«│α»ì" },
++            { to: "/category/press", label: "α«¬α«ñα»ìα«ñα«┐α«░α«┐α«òα»ìα«òα»ê" },
++            { to: "/category/memories", label: "α«¿α«┐α«⌐α»êα«╡α»üα«òα«│α»ì" },
++          ].map((link) => (
++            <Link
++              key={link.to}
++              to={link.to}
++              className="font-tamil-body text-sm text-muted-foreground hover:text-foreground hover:bg-secondary px-3 py-2 rounded-lg transition-all"
++            >
++              {link.label}
++            </Link>
++          ))}
+         </nav>
+       </div>
+     </header>
+
+commit 54438deb9a0a6d7b23ee39b8f5529594cf2935b6
+Author: gpt-engineer-app[bot] <159125892+gpt-engineer-app[bot]@users.noreply.github.com>
+Date:   Sat Mar 28 04:56:58 2026 +0000
+
+    Added memorial Tamil theme CSS
+    
+    Co-authored-by: agalya <7957058+agalya@users.noreply.github.com>
+
+diff --git a/src/components/Header.tsx b/src/components/Header.tsx
+new file mode 100644
+index 0000000..5bad350
+--- /dev/null
++++ b/src/components/Header.tsx
+@@ -0,0 +1,33 @@
++import { motion } from "framer-motion";
++import { Link } from "react-router-dom";
++
++const Header = () => {
++  return (
++    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-sm">
++      <div className="container mx-auto flex items-center justify-between px-4 py-3">
++        <Link to="/" className="flex items-center gap-2">
++          <span className="text-xl text-memorial-gold">Γ£ª</span>
++          <span className="font-tamil-heading text-lg font-semibold text-foreground">
++            α«¿α«┐α«⌐α»êα«╡α»ü α««α«▓α«░α»ì
++          </span>
++        </Link>
++        <nav className="hidden md:flex items-center gap-6">
++          <Link to="/" className="font-tamil-body text-sm text-muted-foreground hover:text-foreground transition-colors">
++            α««α»üα«òα«¬α»ìα«¬α»ü
++          </Link>
++          <Link to="/category/his-poems" className="font-tamil-body text-sm text-muted-foreground hover:text-foreground transition-colors">
++            α«òα«╡α«┐α«ñα»êα«òα«│α»ì
++          </Link>
++          <Link to="/category/press" className="font-tamil-body text-sm text-muted-foreground hover:text-foreground transition-colors">
++            α«¬α«ñα»ìα«ñα«┐α«░α«┐α«òα»ìα«òα»ê
++          </Link>
++          <Link to="/category/memories" className="font-tamil-body text-sm text-muted-foreground hover:text-foreground transition-colors">
++            α«¿α«┐α«⌐α»êα«╡α»üα«òα«│α»ì
++          </Link>
++        </nav>
++      </div>
++    </header>
++  );
++};
++
++export default Header;

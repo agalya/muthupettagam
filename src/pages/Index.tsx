@@ -11,28 +11,30 @@ import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
 import { downloadArticlePdf } from "@/lib/downloadArticlePdf";
 import ZipDownloadButton from "@/components/ZipDownloadButton";
 import { features } from "@/config/site";
-
-import img1 from "@/assets/periyappaAndPeriyamma.jpeg";
-import img2 from "@/assets/periyappaAndSiddhu.jpeg";
-import img3 from "@/assets/periyappaKavinandShawn.jpeg";
-import img4 from "@/assets/periyappareadingpaper.jpeg";
-import img5 from "@/assets/Railviharperiyappa.jpeg";
-
-const photos = [img1, img2, img5, img4, img3];
+import { useAssetUrl } from "@/hooks/useAssetUrl";
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isListening, setIsListening] = useState(false);
 
+  // Generate photos array with proper asset URLs
+  const photos = [
+    useAssetUrl('images/periyappaAndPeriyamma.jpeg'),
+    useAssetUrl('images/periyappaAndSiddhu.jpeg'),
+    useAssetUrl('images/Railviharperiyappa.jpeg'),
+    useAssetUrl('images/periyappareadingpaper.jpeg'),
+    useAssetUrl('images/periyappaKavinandShawn.jpeg'),
+  ];
+
   const handleVoiceSearch = () => {
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SpeechRecognition) {
-      alert("உங்கள் உலாவி குரல் தேடலை ஆதரிக்கவில்லை."); // Your browser doesn't support voice search
+      alert("உங்கள் உலாவி குரல் தேடலை ஆதரிக்கவில்லை.");
       return;
     }
 
     const recognition = new SpeechRecognition();
-    recognition.lang = 'ta-IN'; // Tamil language
+    recognition.lang = 'ta-IN';
     recognition.continuous = false;
     recognition.interimResults = false;
 
@@ -95,7 +97,7 @@ const Index = () => {
       const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nArticle:\n${article}`);
       window.location.href = `mailto:agalya94@gmail.com,pmkumar1955@gmail.com,ponksamy@gmail.com?subject=${subject}&body=${body}`;
     } else {
-      const text = encodeURIComponent(`*muthupettagam - new article*\n\n*Name:* ${name}\n*Email:* ${email}\n\n*Article:*\n${article}\n\n_[Note from website: user may have attachments, please check if they send any manually following this message]_`);
+      const text = encodeURIComponent(`*muthupettagam - new article*\n\n*Name:* ${name}\n*Email:* ${email}\n\n*Article:*\n${article}`);
       window.open(`https://wa.me/917708944004?text=${text}`, "_blank", "noopener,noreferrer");
     }
     form.reset();
@@ -134,9 +136,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      {/* Hero Section with Photo Background */}
       <section className="bg-[hsl(220_20%_12%)] relative overflow-hidden py-24 px-4 text-center">
-        {/* Photo mosaic background */}
         <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-5 gap-0 opacity-[0.75]">
           {photos.map((src, i) => (
             <motion.div
@@ -155,10 +155,8 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220_30%_8%/0.6)] via-[hsl(220_25%_12%/0.5)] to-[hsl(220_20%_15%/0.7)]" />
 
-        {/* Ambient glow */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-1/4 w-64 h-64 rounded-full bg-accent blur-[100px]" />
           <div className="absolute bottom-10 right-1/4 w-48 h-48 rounded-full bg-accent blur-[80px]" />
@@ -175,7 +173,7 @@ const Index = () => {
           </h1>
           <div className="w-20 h-1 gradient-gold mx-auto mb-6 rounded-full" />
           <p className="font-tamil-body text-white/70 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
-            எழுத்தாளர், கவிஞர், விமர்சகர் — காலத்தால் அழியாத... காலனால் களவு கொள்ள முடியாத... கருத்துக் கருவூலங்கள்
+            எழுத்தாளர், கவிஞர், விமர்சகர் — காலத்தால் அழியாத...
           </p>
 
           <div className="mt-8 max-w-md mx-auto relative group">
@@ -187,7 +185,7 @@ const Index = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="கட்டுரைகளைத் தேடிட..."
-              className="w-full bg-white/10 border border-white/20 text-white placeholder-white/50 rounded-full pl-11 pr-14 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-md transition-all"
+              className="w-full bg-white/10 border border-white/20 text-white placeholder-white/50 rounded-full pl-11 pr-14 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50"
             />
             <div className="absolute inset-y-0 right-1 pr-2 flex items-center">
               <button
@@ -203,7 +201,6 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Categories Grid */}
       {searchQuery.trim() ? (
         <section className="container mx-auto px-4 -mt-8 relative z-10 pb-16">
           <div className="max-w-3xl mx-auto bg-card rounded-2xl border border-border/50 p-6 shadow-xl">
@@ -252,7 +249,7 @@ const Index = () => {
                         )}
                         {item.image && (
                           <div className="mb-5 rounded-lg overflow-hidden border border-border/50 shadow-sm">
-                            <img src={item.image} alt={articleDisplayTitle(item)} className="w-full h-auto" />
+                            <img src={useAssetUrl(item.image)} alt={articleDisplayTitle(item)} className="w-full h-auto" />
                           </div>
                         )}
                         <p className="font-tamil-body text-sm md:text-base text-foreground whitespace-pre-wrap leading-relaxed">
@@ -301,10 +298,9 @@ const Index = () => {
         </section>
       )}
 
-      {/* Forms Section */}
       <section className="container mx-auto px-4 py-16 border-t border-border/50 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Feedback Form */}
+          {/* Feedback Form - Keep as is */}
           <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm flex flex-col">
             <h3 className="font-tamil-heading text-xl font-semibold mb-2 text-foreground">
               இணையதள கருத்துக்களைப் பகிர
@@ -367,7 +363,7 @@ const Index = () => {
             </form>
           </div>
 
-          {/* New Article Form */}
+          {/* New Article Form - Keep as is */}
           <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm flex flex-col">
             <h3 className="font-tamil-heading text-xl font-semibold mb-2 text-foreground">
               தங்களிடம் மீதமிருக்கும் திரு.முத்துக்குமாரின் படைப்புகளைப் பகிர
