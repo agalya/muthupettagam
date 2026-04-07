@@ -1932,6 +1932,44 @@ And departed into an eternal sleep, Brother.`,
             ஓய்வுக்குப் பின் நிதானமாக உரையாடலாம் என்று தானே இருந்தேன்
             ஆறாத் துயரில் தள்ளிவிட்டு மீளாத் துயிலில் சென்றுவிட்டாயே அண்ணா `
           },
+          ,
+          {
+            id: "item_1775570512305",
+            title: "மகள் செல்வியின் இரங்கல்",
+            date: "5 ஏப்ரல் 2026",
+            image: "/item_1775570512305_Selvi_Supriya_image.jpeg",
+            audioFile: "/item_1775570512305_selvi_akka_audio.ogg",
+            content: `மனசு ரொம்ப வலிக்குது. 
+பெரியப்பா நீங்கள் இல்லாத வாழ்க்கை ரொம்ப கஷ்டமாக இருக்கிறது. 
+என்னை கண் கலங்க விட்டது இல்லை எப்போதும் நீங்கள், 
+ஆனால் இன்னைக்கு என் கண்ணில் இருந்து கண்ணீர் வத்தி போகும் அளவுக்கு அழுதாலும் துடைக்க யாரும் இல்லை. 
+என்னை சுற்றி நிறைய பேர் இருந்தாலும் யாரும் இல்லாத மாதிரி இருக்கு. 
+எப்படி இப்படி விட்டுட்டு போனிங்க
+
+நம்ம வீடு
+நல்ல காற்று
+உங்கள் ஈசி சேர்
+உங்கள் பேனா
+கூட நாங்களும்
+காத்திருக்கிறோம்
+உங்கள் வருகையை
+எதிர்பார்த்து 😭
+
+நிறைய கற்றுக் கொடுத்த நீங்கள். 
+நீங்கள் இல்லாமல் எப்படி வாழ வேண்டும் சொல்லி தரல. 
+எனக்கு சொல்லி கொடுத்த மாதிரி என் பொண்ணுக்கு சொல்லி கொடுக்க திரும்பி வாங்க`,
+            englishTranslation: `My heart hurts so much. Paternal Uncle (Periyappa), 
+life without you is very difficult. 
+You never once let me shed a tear, but today, even though I cry until my tears run dry, there is no one here to wipe them away. 
+Even though there are many people around me, I feel completely alone. 
+How could you leave me like this?
+
+Our home, the cool breeze, your easy chair, and your pen... 
+along with all of us, we are all waiting, longing for your arrival. 😭
+
+You taught me so many things. But you didn't teach me how to live without you. 
+Please come back to teach my daughter, just like you taught me.`,
+          },
           {
             id: "item_1774935563695",
             title: "மகன் வேதநாயகத்தின் இரங்கல்",
@@ -2520,6 +2558,96 @@ Seeking to build that new world under your guidance!
 Your loving daughter,
 Agalya`,
           }
+          ,
+          {
+            id: "item_1775562803355",
+            title: "சம்மந்தி செல்வகணபதியின் இரங்கல்",
+            date: "4 ஏப்ரல் 2026",
+            image: "/item_1775562803355_Selvaganapathy.jpeg",
+            audioFile: "/item_1775562803355_Selvaganapathy_audio.opus",
+            content: `முத்துக்குமார் எனும் முழு நிலவு:
+
+காலன் உன்னை அழைத்ததனால் 
+கண்ணீர் விட்டு அழுகின்றோம்
+இறந்தாலும் 
+இரவாது உம் நினைவு 
+மறந்தாலும் 
+மடியாது உம் உறவு
+சாவை 
+காணும் நிலையில்லை உனக்கு
+சாவே 
+அன்னாரைக் கொன்றாய் எதற்கு 
+கண் முன்னே வாழ்ந்த காலம் 
+கனவாகி போனாலும் 
+எங்கள் முன்னே உங்கள் முகம் 
+எந்நாளும் உயிர் வாழும் 
+மண்ணை விட்டு மறைந்து நீங்கள் 
+விண்ணை நோக்கி சென்றாலும் 
+கண்ணை விட்டு மறையாமல் 
+காலம் முழுதும் இருப்பீர்கள் 
+மீண்டும் இங்கே வாராயோ 
+எங்கள் வேதனைகள் தீர்ப்பாயோ! 
+அத்தானே வாரீரோ 
+ஆரிரோ! ஆரிரோ!
+
+உங்கள் அத்தான் 
+Er வீ.செல்வகணபதி
+ஈகை நகர் 
+திருச்சி
+`,
+            englishTranslation: `Muthukumar: The Full Moon
+Because Death has called for you,
+We stand here shedding tears.
+Though you have passed,
+Your memory shall never die.
+Even if we were to forget,
+Our bond with you shall never perish.
+
+You were not at an age to see death,
+O Death! Why did you take him away?
+Though the time you lived before our eyes
+Has now turned into a dream,
+Your face will live on before us,
+Soulful and alive, forever.
+
+Though you have left this earth
+To journey toward the heavens,
+You will remain through all time,
+Never fading from our sight.
+
+Will you not return to us once more?
+Will you not heal our grievances?
+O Athane (Brother-in-law), will you not come?
+Lullaby... Lullaby...
+
+By your Brother-in-law,
+Er. V. Selvaganapathy
+Eegai Nagar, Trichy`,
+          }
+          ,
+          {
+            id: "item_1775570257954",
+            title: "சரசண்ணி குடும்ப தங்கைகள் சார்பாக மருமகள் லட்சுமி சுந்தரின் இரங்கல்",
+            date: "6 ஏப்ரல் 2026",
+            image: "/item_1775570257954_kala_aththai_marumagal_photo.jpeg",
+            audioFile: "/item_1775570257954_kala_aththai_-_marumagal_audio.ogg",
+            content: `சரசண்ணி குடும்ப தங்கைகள் சார்பாக மருமகள் லட்சுமி சுந்தரின் இரங்கல்
+
+அன்புள்ள குமார் சித்தப்பாவுக்கு உங்க தங்கச்சி கலா அழகப்பன் அவங்க மருமக லட்சுமி சுந்தர் செலுத்தும் நினைவாஞ்சலி. 
+இதை வந்து நான் சரஸ்வதி ஆத்தா, விநாயகசுந்தரம் தாத்தா குடும்பத்தின் சார்பாக, உங்க ஆறு தங்கச்சிகளுடைய குடும்பத்தின் சார்பாக இதை சொல்ல நினைக்கிறேன். உங்க அந்த ஆறு தங்கச்சிகளையும் உங்க சொந்த தங்கச்சி மாதிரிதான் நீங்க பாவிச்சீங்க. 
+எங்க வீட்டு பங்க்ஷன் எந்த பங்க்ஷனையும் நீங்க விட்டுக் கொடுத்ததே கிடையாது. 
+கண்டிப்பா வந்து தாய்மாமன் முறைக்கு என்ன செய்யணுமோ அதை வந்து செஞ்சீங்க. அதே மாதிரி வேலம்மா சித்தியும் உங்களுக்கு நிகரா அவங்களும் எங்க எல்லார் மேலயும் ஒரு ரொம்ப அன்பா பிரியமா இருப்பாங்க. 
+எங்க அத்தை கலா அத்தைக்கு 'வேலம்மா அண்ணி .. வேலம்மா அண்ணி..' னு சொல்லி சொல்லும்போதே ஒரு எனர்ஜி. அவங்க வந்து உங்க ரெண்டு பேரையும் ரொம்ப உயரத்துல வச்சிருக்காங்க மதிப்பா.  
+உங்க எல்லாரோட ஆசீர்வாதம், உங்க ரெண்டு பேரோட ஆசீர்வாதம் எங்க எல்லார் குடும்பத்துக்கும் வேணும். உங்களை மாதிரி வாழ நாங்க பழகிக்கணும். உங்ககிட்ட இருந்து நாங்க அதைத்தான் கத்துக்கிட்டோம். எப்படி எல்லார்கிட்டயும் அன்பா பாசமா இருக்கணும்ங்கறதை உங்ககிட்ட இருந்து நாங்க கத்துக்கிட்டோம். அதை நாங்க ஃபாலோ பண்ணுவோம்.
+
+	- கலா அழகப்பன் மருமகள்,
+	   லக்ஷ்மி சுந்தர்`,
+            englishTranslation: `This is a memorial tribute to dear Kumar Chittappa (uncle) from Lakshmi Sundar, the daughter-in-law of your sister, Kala Azhagappan. I would like to say this on behalf of Saraswathi Aatha and Vinayagasundaram Grandpa’s family, and on behalf of the families of your six sisters. You treated all six of those sisters like your own sisters. You never missed any of our family functions. You always came and did exactly what a maternal uncle should do. Similarly, Velamma Chithi (aunt) was equally affectionate and loving toward all of us. When my aunt Kala calls out ‘Velamma anni... Velamma anni...’ there is a certain energy in it. She holds both of you in such high regard and respect. We need the blessings of both of you for all our families. We must learn to live like you. That is what we have learned from you. We have learned from you how to be kind and affectionate toward everyone. We will follow that.
+
+	-Kala Azhagappan's daughter-in-law, 
+	 Lakshmi Sundar`,
+          }
+
         ],
       },
     ],
@@ -2965,6 +3093,88 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
 
 — Velammal Muthukumar, Panagudi.`,
           }
+          ,
+          {
+            id: "item_1775565308451",
+            title: "அந்தக் காலத் தேர்தல் ஞாபகங்கள் தேர்தல் கூத்து - உள்குத்து",
+            date: "மார்ச் 2026",
+            image: "/item_1775565308451_photo-collage.png.png",
+            audioFile: "/item_1775565308451_election_1967.m4a",
+            content: `அந்தக் காலத் தேர்தல் ஞாபகங்கள்
+தேர்தல் கூத்து - உட்குத்து
+
+பொதுவாக தேர்தல்களில் சுவாரஸ்யங்களுக்குப் பஞ்சமே இருக்காது. 1967 பொதுத் தேர்தல் அதற்கு விதிவிலக்கல்ல. எனக்கு வயது 13. ஆனால் அரசியல் ஆர்வம் அதிகம். எங்கள் இராதாபுரம் தொகுதி அப்போது காங்கிரஸ் கோட்டை. அது திருச்செந்தூர் நாடாளுமன்ற தொகுதிக்குக் கீழ் வரக்கூடியது. காங்கிரஸ் சார்பாக திரு. சௌந்திரபாண்டியன் இராதாபுரம் சட்டமன்ற தொகுதிக்கும், திரு. கே.டி. கோசல்ராம் திருச்செந்தூர் நாடாளுமன்ற தொகுதிக்கும் நிறுத்தப்பட்டு இருந்தனர்.
+
+அப்போதே காங்கிரஸில் உட்குத்து ஆரம்பித்து விட்டது. "மேலே (பாராளுமன்றத்துக்கு) இரட்டை காளைக்கும், கீழே (சட்டமன்றத்துக்கு) உதயசூரியனுக்கும் வாக்கு சேகரிக்கிறார் கே.டி. கோசல்ராம்" என்ற முணுமுணுப்பு பரவிக் கொண்டிருந்தது. அதற்கு ஏற்றால் போல், எங்கள் ஊருக்கு வேலை செய்ய வந்த கார் டிரைவர் ஒருவர் "மேலே காளைக்கும் கீழே சூரியனுக்கும் ஓட்டுப் போடச் சொல்வதாக" தகவல் வர, கொந்தளிப்பான சூழல் உருவாகிவிட்டது.
+
+சட்டமன்ற வேட்பாளர் சௌந்திரபாண்டியன் சகோதரர் ஆவேசமாகச் சென்று டிரைவரைத் தட்டி (?) கேட்க, சில தேவையற்ற தகராறுகள் ஏற்பட்டு டிரைவரைத் தேர்தல் பணியிலிருந்து விடுவித்து, காப்பாற்றி ஊருக்கு அனுப்பி வைத்தார்கள். தேர்தல் முடிந்தது; ரிசல்ட்டும் வந்தது. நாடெங்கும் தி.மு.க. அலை வீசியதாலும், திருச்செந்தூர் நாடாளுமன்ற தொகுதியின்கீழ் வரும் இராதாபுரம், நாங்குநேரி, சேரன்மாதேவி உள்ளிட்ட நான்கு தொகுதிகளில் காங்கிரஸ் வெற்றி பெற்றுவிட்டது.
+
+எதிர்பாராத திருப்பமாக திருச்செந்தூர் நாடாளுமன்ற தொகுதியில் தமிழகம் முழுவதும் நன்கு அறிமுகமான கோசல்ராம், கட்சிக்கிளையே கிடையாத சுதந்திரா கட்சி வேட்பாளர் சந்தோஷத்திடம் தோற்றுப் போய்விட்டார். உட்குத்தின் விளைவு இது என்று சுவாரஸ்யமாக மக்கள் பேசிக் கொண்டனர்.
+
+இன்னொரு சுவாரஸ்யம் - நெல்லை மாவட்ட தி.மு.க. செயலாளரான ரத்தினவேல் பாண்டியன் அமைச்சராக வேண்டியவர் தோற்றுப் போனார். நல்ல வேளை தோற்றுப் போனார்; இல்லையென்றால் உச்சநீதிமன்ற நீதிபதியாக ஆகி இருக்க முடியுமா?
+
+பொன். முத்துக்குமார்
+பாரதி இல்லம்`,
+            englishTranslation: `Memories of Elections from that Era
+Election Antics – The "Inside Job"
+Generally, there is never a shortage of excitement during elections. The 1967 General Election was no exception. I was only 13 years old then, but I had a very keen interest in politics. Our Radhapuram constituency was a Congress stronghold at the time. it fell under the Tiruchendur Parliamentary constituency. Representing the Congress party, Mr. Soundarapandian was fielded for the Radhapuram Assembly seat, and Mr. K.T. Kosalram was fielded for the Tiruchendur Parliamentary seat.
+
+Even back then, internal sabotage (uṭkuttu) had begun within the Congress. A rumor began to spread: "K.T. Kosalram is asking for votes for the 'Double Oxen' (Congress symbol) for the top (Parliament), but for the 'Rising Sun' (DMK symbol) for the bottom (Assembly)." To make matters worse, news reached us that a car driver who had come to our village for work was telling people to "vote for the Oxen above and the Sun below." This created a very volatile atmosphere.
+
+The brother of the Assembly candidate, Mr. Soundarapandian, went in a rage to confront and question the driver. This led to some unnecessary altercations; eventually, the driver was relieved from his election duties, rescued, and sent back to his hometown. The election concluded, and the results arrived. Despite a DMK wave sweeping the state, the Congress actually won in four assembly segments under the Tiruchendur Parliamentary seat, including Radhapuram, Nanguneri, and Cheranmahadevi.
+
+However, in an unexpected turn of events in the Tiruchendur Parliamentary seat, the well-known K.T. Kosalram lost to the Swatantra Party candidate, Mr. Santhosham, who didn't even have a local party branch. People talked interestingly about how this was the direct result of that internal sabotage.
+
+There was another interesting highlight—Rathnavel Pandian, the DMK Secretary for Nellai District, who was expected to become a Minister, lost his seat. In hindsight, it was a good thing he lost; otherwise, would he have ever been able to become a Justice of the Supreme Court?
+
+Pon. Muthukumar,
+Bharathi Illam
+
+A Quick Note on the History:
+The author's concluding wit refers to Justice P.S. Rathnavel Pandian. After his loss in the 1967 elections, he returned to the legal profession and eventually rose to become a judge of the Supreme Court of India. It’s a classic example of how a "defeat" in one field can lead to a "supreme" victory in another!`,
+          }
+          ,
+          {
+            id: "item_1775565618323",
+            title: "தேர்தல் சுவாரஸ்யங்கள்",
+            date: "மார்ச் 2026",
+            image: "/item_1775565618323_collage.png",
+            audioFile: "/item_1775565618323_election-1971-audio.mp3",
+            content: `தேர்தல் சுவாரஸ்யங்கள்
+
+1971-ல் திருச்செந்தூர் நாடாளுமன்றத் தேர்தல் வாக்கு எண்ணிக்கை பல முறை நடந்தது. கடும் இழுபறிக்குப் பின்னர், திமுக முக்கிய பிரமுகரும் வேட்பாளருமான திரு M.S. சிவசாமி சொற்ப வாக்கு வித்தியாசத்தில் வெற்றி பெற்றதாக அறிவிக்கப்பட்டது. "சிவசாமி ஜெயிக்கும் வரை எண்ணச் சொன்னார் முதல்வர் கலைஞர்" என்று ஒரே பேச்சு. அந்த தேர்தலில் இந்திரா காங்கிரஸ் - திமுக கூட்டணி வென்றது.
+
+"வென்றது ரஷ்ய மை" என்று காமராஜரின் ஸ்தாபன காங்கிரஸ் சொல்லிக் கொண்டிருந்தது. பணகுடி வெற்றி விழாவில் சி.பா. ஆதித்தனார் "ஆமாம், வெற்றி பெற்றது மை தான், ஒப்புக் கொள்கிறேன்" என்று சொல்லி நிறுத்திவிட்டு, "அது ரஷ்ய மை அல்ல; வாய்மை, உண்மை, நேர்மை என்கிற மை தான்" என்று பேச்சைத் தொடர்ந்து கைத்தட்டலை அள்ளிக் கொண்டார்
+
+நாகர் கோவில் தொகுதியில்
+
+ஸ்தாபன காங்கிரஸ் பிரமுகர் பெரியவர் இஸ்மாயில் போட்டியிட, அண்ணா திமுக சார்பில் நாஞ்சில் வின்சென்ட் என்ற இளைஞர் போட்டியிட்டார். வாக்கு எண்ணிக்கையில் பெரியவர் இஸ்மாயில் முன்னிலை பெற ஆரம்பித்ததும், அவர் வீட்டுக்குக் கிளம்பிச் சென்றுவிட்டார். 'திடீர் திருப்பமாக' நாஞ்சில் வின்சென்ட் குறைந்த வாக்கு வித்தியாசத்தில் வெற்றி பெற்றுவிட்டார். உடனே நாஞ்சில் வின்சென்ட் மாலையோடு சென்று பெரியவர் இஸ்மாயிலை வணங்கி ஆசி பெற்றார்.`,
+            englishTranslation: `Election Curiosities
+In the 1971 Tiruchendur Parliamentary election, the counting of votes took place multiple times. After a long and intense tug-of-war, the DMK candidate and prominent figure, Mr. M.S. Sivasami, was declared the winner by a narrow margin. There was widespread talk that "Chief Minister Kalaignar (Karunanidhi) ordered counting to continue until Sivasami won." The Indira Congress-DMK alliance won that election.
+
+The Organization Congress (Kamara-led faction) claimed that it was "Russian Ink" (implying election tampering/fraud) that won. At a victory celebration in Panagudi, Si. Pa. Aditanar said, "Yes, it was indeed the ink that won, I admit it." He paused and then continued, "But it wasn't Russian ink; it was the ink of Vaaimai (Truthfulness), Unmai (Truth), and Nermai (Honesty)," earning thunderous applause.
+
+In the Nagercoil Constituency
+When the veteran Organization Congress leader Ismail contested, a young man named Nanjil Vincent contested on behalf of the AIADMK. As Ismail began leading during the vote count, he assumed victory and left for his home. In a 'sudden twist,' Nanjil Vincent ended up winning by a small margin of votes. Immediately, Nanjil Vincent went to the elder Ismail with a garland, paid his respects, and sought his blessings.`,
+          }
+          ,
+          {
+            id: "item_1775565790545",
+            title: "10 செகண்ட் கதை",
+            date: "மார்ச் 2026",
+            image: "/item_1775565790545_photo-collage.png.png",
+            audioFile: "/item_1775565790545_10s_kathai_audio.mp3",
+            content: `பத்து செகண்ட் கதை
+
+"அவரு எங்க பேசுறாரு? எப்ப பார்த்தாலும் பேஸ்புக், வாட்ஸ் அப், பேப்பர்... வீட்ல ஒருத்தி இருக்காளா? செத்தாளா? சிந்தனையே கிடையாது" என மனைவி எதிர் வீட்டில் அங்கலாய்ப்பதை கேட்டு உருகிய கணவன் வீட்டுக்கு வந்து மனைவியிடம் மெல்ல பேச ஆரம்பித்தான்.
+
+"கொஞ்ச நேரம்... நிம்மதியா செல்லுலே வீடியோ கேம் பார்க்க விடாம என்ன ஒரே தொணதொணப்பு; புளுபுளுப்பு.... நீங்க பேஸ்புக், வாட்ஸ் அப் எல்லாம் பார்த்து முடிச்சாச்சா? அடுத்தவ ஒன்னும் பாத்திரப்பிடாதே" என எரிந்து விழுந்தாள் மனைவி.`,
+            englishTranslation: `When does he ever talk? All the time it's just Facebook, WhatsApp, or the newspaper... Does he even care that there’s a woman at home? Whether she’s alive or dead? He has no concern at all!"
+
+Hearing his wife lamenting like this to the neighbors, the husband’s heart melted. He went back home and gently tried to start a conversation with her.
+
+His wife snapped at him in a rage: "Can't you let me play my video games on the phone in peace for a moment? Always nagging and pestering! Are you already done looking at your Facebook and WhatsApp? God forbid anyone else gets to look at anything!`,
+          }
         ],
       },
       {
@@ -3245,6 +3455,16 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
 
 
 
+          }
+        ,
+          {
+            id: "item_1775571160804",
+            title: "பசுமை நிறைந்த நினைவுகள்",
+            
+            image: "/item_1775571160804_School_photo.jpeg",
+            
+            
+            
           }
         ],
       },

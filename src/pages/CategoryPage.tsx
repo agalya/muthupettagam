@@ -204,14 +204,21 @@ const CategoryPage = () => {
                           value={item.id}
                           className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
                         >
-                          <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left py-4">
+                          <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left pt-4 pb-0">
                             <ArticleTitle item={item} titleClassName="font-tamil-heading font-semibold" />
                           </AccordionTrigger>
                           <AccordionContent>
-                            <div className="pt-2 pb-4">
+                            <div className="pt-0 pb-4">
                               {item.content && (
-                                <div className="mb-6 flex flex-wrap gap-3 max-w-3xl mx-auto">
-                                  <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                                <div className="sticky top-16 md:top-20 z-10 bg-background/95 backdrop-blur-md pt-0 pb-3 mb-6 -mt-2 border-b border-border/50 shadow-sm flex flex-wrap gap-3 items-center max-w-4xl mx-auto rounded-t-lg -mx-2 px-2 md:-mx-4 md:px-4">
+                                  {item.audioFile ? (
+                                    <div className="flex flex-col gap-1 w-full sm:w-auto flex-grow max-w-sm">
+                                      <span className="font-tamil-body text-xs font-semibold text-muted-foreground ml-2">கேட்க :</span>
+                                      <audio controls src={getAudioUrl(item.audioFile)} className="w-full h-10 outline-none hover:shadow-sm transition-shadow rounded-full" />
+                                    </div>
+                                  ) : (
+                                    <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                                  )}
                                   {item.englishTranslation && (
                                     <button
                                       onClick={() => document.getElementById(`translation-${item.id}`)?.scrollIntoView({ behavior: 'smooth' })}
@@ -226,6 +233,7 @@ const CategoryPage = () => {
                                       onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
                                       className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
                                     >
+                                      <Download className="w-4 h-4" />
                                       <span>Download PDF</span>
                                     </button>
                                   )}
@@ -246,13 +254,20 @@ const CategoryPage = () => {
                                       <Languages className="w-5 h-5" />
                                       English Translation
                                     </h4>
-                                    <TextToSpeech
-                                      text={item.englishTranslation}
-                                      audioFile={item.englishAudioFile}
-                                      lang="en-US"
-                                      labelPlay="Listen"
-                                      labelStop="Stop"
-                                    />
+                                    {item.englishAudioFile ? (
+                                      <div className="flex flex-col gap-1 w-full sm:w-auto">
+                                        <span className="font-sans text-xs font-semibold text-muted-foreground ml-2">Listen:</span>
+                                        <audio controls src={getAudioUrl(item.englishAudioFile)} className="w-full h-10 outline-none hover:shadow-sm transition-shadow rounded-full" />
+                                      </div>
+                                    ) : (
+                                      <TextToSpeech
+                                        text={item.englishTranslation}
+                                        audioFile={item.englishAudioFile}
+                                        lang="en-US"
+                                        labelPlay="Listen"
+                                        labelStop="Stop"
+                                      />
+                                    )}
                                   </div>
                                   <p className="font-sans text-sm md:text-base text-foreground/90 whitespace-pre-wrap leading-relaxed">
                                     {item.englishTranslation}
@@ -308,14 +323,21 @@ const CategoryPage = () => {
                       value={item.id}
                       className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
                     >
-                      <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left py-4">
+                      <AccordionTrigger className="font-tamil-heading font-semibold text-foreground hover:no-underline text-left pt-4 pb-0">
                         <ArticleTitle item={item} titleClassName="font-tamil-heading font-semibold" />
                       </AccordionTrigger>
                       <AccordionContent>
-                        <div className="pt-2 pb-4">
+                        <div className="pt-0 pb-4">
                           {item.content && (
-                            <div className="mb-5 flex flex-wrap gap-3">
-                              <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                            <div className="sticky top-16 md:top-20 z-10 bg-background/95 backdrop-blur-md pt-0 pb-3 mb-6 -mt-2 border-b border-border/50 shadow-sm flex flex-wrap gap-3 items-center max-w-4xl mx-auto rounded-t-lg -mx-2 px-2 md:-mx-4 md:px-4">
+                              {item.audioFile ? (
+                                <div className="flex flex-col gap-1 w-full sm:w-auto flex-grow max-w-sm">
+                                  <span className="font-tamil-body text-xs font-semibold text-muted-foreground ml-2">கேட்க :</span>
+                                  <audio controls src={getAudioUrl(item.audioFile)} className="w-full h-10 outline-none hover:shadow-sm transition-shadow rounded-full" />
+                                </div>
+                              ) : (
+                                <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                              )}
                               {item.englishTranslation && (
                                 <button
                                   onClick={() => document.getElementById(`translation-${item.id}`)?.scrollIntoView({ behavior: 'smooth' })}
@@ -330,33 +352,41 @@ const CategoryPage = () => {
                                   onClick={() => downloadArticlePdf(item).catch((e) => console.error("PDF download failed:", e))}
                                   className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
                                 >
+                                  <Download className="w-4 h-4" />
                                   <span>Download PDF</span>
                                 </button>
                               )}
                             </div>
                           )}
                           {item.image && (
-                            <div className="mb-5 rounded-lg overflow-hidden border border-border/50 shadow-sm">
+                            <div className="mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
                               <img src={useAssetUrl(item.image)} alt={articleDisplayTitle(item)} className="w-full h-auto" />
                             </div>
                           )}
-                          <p className="font-tamil-body text-sm text-foreground whitespace-pre-wrap leading-relaxed">
+                          <p className="font-tamil-body text-sm md:text-base text-foreground whitespace-pre-wrap leading-relaxed max-w-3xl mx-auto">
                             {item.content}
                           </p>
                           {item.englishTranslation && (
-                            <div id={`translation-${item.id}`} className="mt-6 pt-6 border-t border-border/50">
+                            <div id={`translation-${item.id}`} className="mt-8 pt-6 border-t border-border/50 max-w-3xl mx-auto">
                               <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
                                 <h4 className="text-lg font-semibold text-primary font-sans flex items-center gap-2 m-0">
                                   <Languages className="w-5 h-5" />
                                   English Translation
                                 </h4>
-                                <TextToSpeech
-                                  text={item.englishTranslation}
-                                  audioFile={item.englishAudioFile}
-                                  lang="en-US"
-                                  labelPlay="Listen"
-                                  labelStop="Stop"
-                                />
+                                {item.englishAudioFile ? (
+                                  <div className="flex flex-col gap-1 w-full sm:w-auto">
+                                    <span className="font-sans text-xs font-semibold text-muted-foreground ml-2">Listen:</span>
+                                    <audio controls src={getAudioUrl(item.englishAudioFile)} className="w-full h-10 outline-none hover:shadow-sm transition-shadow rounded-full" />
+                                  </div>
+                                ) : (
+                                  <TextToSpeech
+                                    text={item.englishTranslation}
+                                    audioFile={item.englishAudioFile}
+                                    lang="en-US"
+                                    labelPlay="Listen"
+                                    labelStop="Stop"
+                                  />
+                                )}
                               </div>
                               <p className="font-sans text-sm md:text-base text-foreground/90 whitespace-pre-wrap leading-relaxed">
                                 {item.englishTranslation}

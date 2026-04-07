@@ -1,4 +1,4 @@
-import { defineConfig, Plugin } from "vite";
+import { defineConfig, loadEnv, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
@@ -109,17 +109,17 @@ function uploadArticlePlugin(): Plugin {
 
 
 // Generate settings.js based on environment
-function generateSettingsPlugin(): Plugin {
+function generateSettingsPlugin(env: Record<string, string>): Plugin {
   return {
     name: "generate-settings-plugin",
     apply: "build",
     generateBundle(options: any) {
-      const publicPath = process.env.VITE_PUBLIC_PATH || "/muthupettagam/";
-      const environment = process.env.VITE_ENVIRONMENT || "production";
-      const enableUpload = process.env.VITE_ENABLE_UPLOAD === "true";
-      const enableDownloadAllZip = process.env.VITE_ENABLE_DOWNLOAD_ALL_ZIP === "true";
-      const enableDownloadCategoryZip = process.env.VITE_ENABLE_DOWNLOAD_CATEGORY_ZIP === "true";
-      const enableDownloadIndividualPdf = process.env.VITE_ENABLE_DOWNLOAD_INDIVIDUAL_PDF === "true";
+      const publicPath = env.VITE_PUBLIC_PATH || "/muthupettagam/";
+      const environment = env.VITE_ENVIRONMENT || "production";
+      const enableUpload = env.VITE_ENABLE_UPLOAD === "true";
+      const enableDownloadAllZip = env.VITE_ENABLE_DOWNLOAD_ALL_ZIP === "true";
+      const enableDownloadCategoryZip = env.VITE_ENABLE_DOWNLOAD_CATEGORY_ZIP === "true";
+      const enableDownloadIndividualPdf = env.VITE_ENABLE_DOWNLOAD_INDIVIDUAL_PDF === "true";
 
       const settingsContent = `window.APP_CONFIG = {
   environment: "${environment}",
@@ -139,28 +139,32 @@ function generateSettingsPlugin(): Plugin {
   };
 }
 
-export default defineConfig(({ mode }) => ({
-  base: process.env.VITE_PUBLIC_PATH || (mode === "production" ? "/muthupettagam/" : "/"),
-  server: {
-    host: "::",
-    port: 8080,
-    hmr: {
-      overlay: false,
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+  
+  return {
+    base: env.VITE_PUBLIC_PATH || (mode === "production" ? "/muthupettagam/" : "/"),
+    server: {
+      host: "::",
+      port: 8080,
+      hmr: {
+        overlay: false,
+      },
     },
-  },
-  build: {
-    chunkSizeWarningLimit: 1500,
-  },
-  plugins: [
-    react(),
-    mode === "development" && componentTagger(),
-    uploadArticlePlugin(),
-    generateSettingsPlugin(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+    build: {
+      chunkSizeWarningLimit: 1500,
     },
-    dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
-  },
-}));
+    plugins: [
+      react(),
+      mode === "development" && componentTagger(),
+      uploadArticlePlugin(),
+      generateSettingsPlugin(env),
+    ].filter(Boolean),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+      dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
+    },
+  };
+});
