@@ -1,4 +1,4 @@
-export interface WritingItem {
+﻿export interface WritingItem {
   id: string;
   title: string;
   content?: string;
@@ -1937,8 +1937,8 @@ And departed into an eternal sleep, Brother.`,
             id: "item_1775570512305",
             title: "மகள் செல்வியின் இரங்கல்",
             date: "5 ஏப்ரல் 2026",
-            image: "/item_1775570512305_Selvi_Supriya_image.jpeg",
-            audioFile: "/item_1775570512305_selvi_akka_audio.ogg",
+            image: "images/item_1775570512305_Selvi_Supriya_image.jpeg",
+            audioFile: "audio/item_1775570512305_selvi_akka_audio.ogg",
             content: `மனசு ரொம்ப வலிக்குது. 
 பெரியப்பா நீங்கள் இல்லாத வாழ்க்கை ரொம்ப கஷ்டமாக இருக்கிறது. 
 என்னை கண் கலங்க விட்டது இல்லை எப்போதும் நீங்கள், 
@@ -2563,8 +2563,8 @@ Agalya`,
             id: "item_1775562803355",
             title: "சம்மந்தி செல்வகணபதியின் இரங்கல்",
             date: "4 ஏப்ரல் 2026",
-            image: "/item_1775562803355_Selvaganapathy.jpeg",
-            audioFile: "/item_1775562803355_Selvaganapathy_audio.opus",
+            image: "images/item_1775562803355_Selvaganapathy.jpeg",
+            audioFile: "audio/item_1775562803355_Selvaganapathy_audio.opus",
             content: `முத்துக்குமார் எனும் முழு நிலவு:
 
 காலன் உன்னை அழைத்ததனால் 
@@ -2629,8 +2629,8 @@ Eegai Nagar, Trichy`,
             id: "item_1775570257954",
             title: "சரசண்ணி குடும்ப தங்கைகள் சார்பாக மருமகள் லட்சுமி சுந்தரின் இரங்கல்",
             date: "6 ஏப்ரல் 2026",
-            image: "/item_1775570257954_kala_aththai_marumagal_photo.jpeg",
-            audioFile: "/item_1775570257954_kala_aththai_-_marumagal_audio.ogg",
+            image: "images/item_1775570257954_kala_aththai_marumagal_photo.jpeg",
+            audioFile: "audio/item_1775570257954_kala_aththai_-_marumagal_audio.ogg",
             content: `சரசண்ணி குடும்ப தங்கைகள் சார்பாக மருமகள் லட்சுமி சுந்தரின் இரங்கல்
 
 அன்புள்ள குமார் சித்தப்பாவுக்கு உங்க தங்கச்சி கலா அழகப்பன் அவங்க மருமக லட்சுமி சுந்தர் செலுத்தும் நினைவாஞ்சலி. 
@@ -3098,8 +3098,8 @@ To my husband, the ginger coffee and dry-ginger coffee she made felt like nectar
             id: "item_1775565308451",
             title: "அந்தக் காலத் தேர்தல் ஞாபகங்கள் தேர்தல் கூத்து - உள்குத்து",
             date: "மார்ச் 2026",
-            image: "/item_1775565308451_photo-collage.png.png",
-            audioFile: "/item_1775565308451_election_1967.m4a",
+            image: "images/item_1775565308451_photo-collage.png.png",
+            audioFile: "audio/item_1775565308451_election_1967.m4a",
             content: `அந்தக் காலத் தேர்தல் ஞாபகங்கள்
 தேர்தல் கூத்து - உட்குத்து
 
@@ -3138,8 +3138,8 @@ The author's concluding wit refers to Justice P.S. Rathnavel Pandian. After his 
             id: "item_1775565618323",
             title: "தேர்தல் சுவாரஸ்யங்கள்",
             date: "மார்ச் 2026",
-            image: "/item_1775565618323_collage.png",
-            audioFile: "/item_1775565618323_election-1971-audio.mp3",
+            image: "images/item_1775565618323_collage.png",
+            audioFile: "audio/item_1775565618323_election-1971-audio.mp3",
             content: `தேர்தல் சுவாரஸ்யங்கள்
 
 1971-ல் திருச்செந்தூர் நாடாளுமன்றத் தேர்தல் வாக்கு எண்ணிக்கை பல முறை நடந்தது. கடும் இழுபறிக்குப் பின்னர், திமுக முக்கிய பிரமுகரும் வேட்பாளருமான திரு M.S. சிவசாமி சொற்ப வாக்கு வித்தியாசத்தில் வெற்றி பெற்றதாக அறிவிக்கப்பட்டது. "சிவசாமி ஜெயிக்கும் வரை எண்ணச் சொன்னார் முதல்வர் கலைஞர்" என்று ஒரே பேச்சு. அந்த தேர்தலில் இந்திரா காங்கிரஸ் - திமுக கூட்டணி வென்றது.
@@ -3162,8 +3162,8 @@ When the veteran Organization Congress leader Ismail contested, a young man name
             id: "item_1775565790545",
             title: "10 செகண்ட் கதை",
             date: "மார்ச் 2026",
-            image: "/item_1775565790545_photo-collage.png.png",
-            audioFile: "/item_1775565790545_10s_kathai_audio.mp3",
+            image: "images/item_1775565790545_photo-collage.png.png",
+            audioFile: "audio/item_1775565790545_10s_kathai_audio.mp3",
             content: `பத்து செகண்ட் கதை
 
 "அவரு எங்க பேசுறாரு? எப்ப பார்த்தாலும் பேஸ்புக், வாட்ஸ் அப், பேப்பர்... வீட்ல ஒருத்தி இருக்காளா? செத்தாளா? சிந்தனையே கிடையாது" என மனைவி எதிர் வீட்டில் அங்கலாய்ப்பதை கேட்டு உருகிய கணவன் வீட்டுக்கு வந்து மனைவியிடம் மெல்ல பேச ஆரம்பித்தான்.
@@ -3456,15 +3456,15 @@ His wife snapped at him in a rage: "Can't you let me play my video games on the 
 
 
           }
-        ,
+          ,
           {
             id: "item_1775571160804",
             title: "பசுமை நிறைந்த நினைவுகள்",
-            
-            image: "/item_1775571160804_School_photo.jpeg",
-            
-            
-            
+
+            image: "image/item_1775571160804_School_photo.jpeg",
+
+
+
           }
         ],
       },
