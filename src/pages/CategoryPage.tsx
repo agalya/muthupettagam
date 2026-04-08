@@ -17,7 +17,7 @@ import ZipDownloadButton from "@/components/ZipDownloadButton";
 import { features } from "@/config/site";
 
 const CategoryPage = () => {
-  const { id } = useParams<{ id: string }>();
+  const { id, articleId } = useParams<{ id: string, articleId?: string }>();
   const category = categories.find((c) => c.id === id);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   
@@ -28,20 +28,21 @@ const CategoryPage = () => {
   useEffect(() => {
     if (!category) return;
 
-    const hash = window.location.hash.replace('#', '');
+    // Use articleId from URL path as primary, fallback to hash for backward compat.
+    const targetId = articleId || window.location.hash.replace('#', '');
     let foundTabId: string | undefined;
-    let isSubCategoryHash = false;
+    let isSubCategoryTarget = false;
 
-    if (hash && category.subCategories) {
-      // First, check if the hash IS literally a subcategory ID itself
-      if (category.subCategories.some(sub => sub.id === hash)) {
-        foundTabId = hash;
-        isSubCategoryHash = true;
+    if (targetId && category.subCategories) {
+      // First, check if the target IS literally a subcategory ID itself
+      if (category.subCategories.some(sub => sub.id === targetId)) {
+        foundTabId = targetId;
+        isSubCategoryTarget = true;
       } 
-      // If not, check if the hash belongs to an article item inside the subcategories
+      // If not, check if the target belongs to an article item inside the subcategories
       else {
         for (const sub of category.subCategories) {
-          if (sub.items.some(item => item.id === hash)) {
+          if (sub.items.some(item => item.id === targetId)) {
             foundTabId = sub.id;
             break;
           }
@@ -49,22 +50,22 @@ const CategoryPage = () => {
       }
     }
 
-    // Set the tab to the found tab if hash matches, otherwise default to first subcat
+    // Set the tab to the found tab if target matches, otherwise default to first subcat
     if (category.subCategories) {
       setActiveTab(foundTabId || category.subCategories[0].id);
     }
 
-    if (hash && !isSubCategoryHash) {
-      setOpenItems(prev => prev.includes(hash) ? prev : [...prev, hash]);
+    if (targetId && !isSubCategoryTarget) {
+      setOpenItems(prev => prev.includes(targetId) ? prev : [...prev, targetId]);
       // Delay scrolling slightly longer to allow tab content to mount if a switch occurred
       setTimeout(() => {
-        const el = document.getElementById(`article-${hash}`);
+        const el = document.getElementById(`article-${targetId}`);
         if (el) {
           el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 600);
     }
-  }, [location.hash, category?.id]);
+  }, [location.hash, articleId, category?.id]);
 
   const allImages = useMemo(() => {
     const imgs: { src: string, title?: string, id: string, originalItem?: any }[] = [];
@@ -163,7 +164,9 @@ const CategoryPage = () => {
               <div className="flex-shrink-0 flex items-center gap-3">
                 <button
                   onClick={() => {
-                    const url = `${window.location.origin}${window.location.pathname}`;
+                    const publicPath = import.meta.env.VITE_PUBLIC_PATH || '/';
+                    const baseUrl = `${window.location.origin}${publicPath.replace(/\/$/, '')}`;
+                    const url = `${baseUrl}/category/${category.id}`;
                     navigator.clipboard.writeText(url);
                     toast.success("Category link copied to clipboard!");
                   }}
@@ -205,7 +208,9 @@ const CategoryPage = () => {
               <button
                 onClick={() => {
                   if (activeTab) {
-                    const url = `${window.location.origin}${window.location.pathname}#${activeTab}`;
+                    const publicPath = import.meta.env.VITE_PUBLIC_PATH || '/';
+                    const baseUrl = `${window.location.origin}${publicPath.replace(/\/$/, '')}`;
+                    const url = `${baseUrl}/category/${category.id}/${activeTab}`;
                     navigator.clipboard.writeText(url);
                     toast.success("Subcategory link copied to clipboard!");
                   }
@@ -300,7 +305,9 @@ const CategoryPage = () => {
                                   )}
                                   <button
                                     onClick={() => {
-                                      const url = `${window.location.origin}${window.location.pathname}#${item.id}`;
+                                      const publicPath = import.meta.env.VITE_PUBLIC_PATH || '/';
+                                      const baseUrl = `${window.location.origin}${publicPath.replace(/\/$/, '')}`;
+                                      const url = `${baseUrl}/category/${category.id}/${item.id}`;
                                       navigator.clipboard.writeText(url);
                                       toast.success("Link copied to clipboard!");
                                     }}
@@ -437,7 +444,9 @@ const CategoryPage = () => {
                               )}
                               <button
                                 onClick={() => {
-                                  const url = `${window.location.origin}${window.location.pathname}#${item.id}`;
+                                  const publicPath = import.meta.env.VITE_PUBLIC_PATH || '/';
+                                  const baseUrl = `${window.location.origin}${publicPath.replace(/\/$/, '')}`;
+                                  const url = `${baseUrl}/category/${category.id}/${item.id}`;
                                   navigator.clipboard.writeText(url);
                                   toast.success("Link copied to clipboard!");
                                 }}
