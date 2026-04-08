@@ -560,6 +560,110 @@ May the Diamond Jubilee couple live for many more years...
     - பொன். முத்துக்குமார்,
       பணகுடி`
           }
+        ,
+          {
+            id: "item_1775648291568",
+            title: "மன்றல் வாழ்த்து - [மணமகன்: செல்வன் M. சங்கர நாராயண சுவாமி(ஈ.எஸ்.முருகன் மகன்) மணமகள்: செல்வி சுனிதா]",
+            date: "04 பிப்ரவரி 2005",
+            image: "/item_1775648291568_ES_Murugan_Son.png",
+            audioFile: "/item_1775648291568_ES_murugan_son_vaazhthu.m4a",
+            content: `மன்றல் வாழ்த்து
+
+மணமகன்: செல்வன் M. சங்கர நாராயண சுவாமி
+மணமகள்: செல்வி சுனிதா
+மணநாள்: 4.2.2005
+
+இனியவனே! எங்கள் இளவலே!
+சிகரங்களை நோக்கி பீடு நடைபோடும் நன்னெஞ்சனே!
+இருக்கும் இடம் எல்லாம் பெருமை சேர்த்தார் உன் தாத்தா! (பெரியவர் E.S. நாதன்)
+இருக்கும் இடம் எல்லாம் கலகலப்பை ஊட்டினார் உன் அப்பா! (கவிஞர் E.S. முருகன்)
+நீயோ.. இருக்கும் இடமே தெரியாமல் அவர்களுக்கு புகழ் சேர்த்தாய்!
+
+ஆம்.
+இலட்சிய வீரனாய், சலனங்களை துரத்தும் சூரனாய்
+"யார் கண்ணையுமே உறுத்தாத" வசந்தமாய் வலம் வந்தாய்.
+இல்லறம் எனும் நல்லறம் காண
+'சுனிதா' என்னும் மங்கை நல்லாளை
+இன்று கரம் பற்றும் உன்னை
+'வாழ்க வளமோடு' என வாழ்த்தி மகிழ்கிறோம்.
+
+திருமணம் என்பது இருவரை ஒருவராய் வார்த்து எடுப்பது;
+சரிநிகர் சமானமாய் வாழச் செய்வது.
+"வாழ்க்கை என்பது கண்ணாடி"
+புன்னகையோடு அதை எதிர் கொள்க!
+
+பரிவும், புரிதலும் இல்லற வாழ்வை சிறக்கச் செய்யும்.
+அன்பும் அனுசரணையும் அதை செழிக்கச் செய்யும்.
+கரம் பற்றும் காரிகையின் கருத்துக்கும் காதுகொடு!
+கலந்து பேசி கூட்டு முடிவு எடு!
+
+மங்கையர் திலகமே!
+குலசை நகரின் பாரம்பரியமிக்க
+குடும்பத்து விளக்கே!
+பணகுடி தந்தை E.S. நாதன் இல்லத்துக்கு
+ஒளியேற்ற வந்தாய்!
+வாழ்த்தி வரவேற்கிறோம்! பாராட்டி மகிழ்கிறோம்.
+பிறர் மனம் கோணாமல் பேசும் சங்கரின்
+மனம் கோணாமல் பார்த்துக் கொள்!
+
+சிகரங்களைத் தொட பக்கபலமாய் இரு!
+நேசமே சுவாசமாய் இருக்கும்
+இல் வாழ்க்கை சுவாரஸ்யமிக்கதாக இருக்கும் என்பதை
+உங்களின் வாழ்க்கை உணர்த்தட்டும்.
+குடும்ப நிர்வாக நுணுக்கங்களுக்கு மாமியும்
+விசால பார்வை இலக்கிய ஆர்வங்களுக்கு மாமாவும்
+வழிகாட்டும் வாய்ப்பு உள்ளது உனக்கு!
+கொடுத்து வைத்தவள் நீ!
+
+
+ஜோடிப் புறாக்களே!
+செல்வாக்கு மிக்க குடும்ப பின்னணி உங்களுக்கு!
+நேச மழை பொழியுங்கள்! எல்லோரும் விரும்பி நனைய.
+தாத்தா E.S. நாதன் பெயர் சிறக்க
+இல்லறம் காப்பீர் சீராய்!
+உங்கள் வாழ்க்கைப் பாதை நெடுகிலும்
+அன்னை சிவகாமி அருகிருந்து காப்பாள்!
+
+	-பொன்.முத்துக்குமார்,
+	  பணகுடி`,
+            englishTranslation: `Groom: Selvan M. Sankara Narayana Swamy
+Bride: Selvi Sunitha
+Wedding Date: 4.2.2005
+
+To the Groom: Our Dear Young One!
+O noble-hearted one, marching with pride toward the peaks of success!
+Your grandfather (Periyava E.S. Nathan) brought honor to every place he graced.
+Your father (Poet E.S. Murugan) infused vibrancy and joy wherever he went.
+And you? Through your quiet excellence, you have brought them even greater fame without seeking the spotlight for yourself!
+
+Yes...
+You have moved through life like a gentle spring breeze—an idealistic hero, a brave soul who chases away distractions, and a man whose presence is soothing to all. As you hold the hand of the virtuous Sunitha today to begin the noble journey of domestic life, we joyfully bless you: "May you live in prosperity!"
+
+Marriage is the forging of two individuals into one; it is an invitation to live as true equals.
+
+"Life is a mirror."
+Face it with a smile, and it will smile back at you!
+
+Compassion and understanding will make your married life grand. Love and cooperation will make it flourish. Listen to the thoughts of the lady whose hand you hold! Consult each other and make decisions together.
+
+To the Bride: The Jewel among Women!
+O lamp of a family steeped in the traditions of Kulasai town!
+You have come to illuminate the home of E.S. Nathan in Panagudi.
+We welcome you with blessings! We celebrate you with pride.
+Sankar is a man who speaks without ever hurting others; ensure you look after his heart with the same care.
+
+Be the pillar of support as he reaches for the summits! Let your lives prove that when affection is as vital as the air you breathe, domestic life becomes truly enchanting. You are fortunate to have a mother-in-law to guide you through the nuances of household management and a father-in-law to inspire you with his broad perspectives and literary passion!
+
+To the Pair of Lovebirds!
+You come from a background of great influence and legacy.
+Shower the rain of your affection so that everyone may joyfully soak in it.
+To honor the name of your grandfather E.S. Nathan, guard your home with grace and integrity.
+
+Throughout your life's journey, may Mother Sivakami stay by your side and protect you always!
+
+	- Pon Muthukumar,
+	  Panagudi`,
+          }
         ],
       },
       {
@@ -2648,6 +2752,142 @@ Er. V. Selvaganapathy
 Eegai Nagar, Trichy`,
           }
           ,
+          ,
+          {
+            id: "item_1775645943601",
+            title: "உயிர் - பணகுடி கவிஞர் மற்றும் நண்பர் ஈ.எஸ்.முருகனின் இரங்கல்",
+            date: "05 ஏப்ரல் 2026",
+            image: "/item_1775645943601_E_S_Murugan_-pik.png",
+            audioFile: "/item_1775645943601_es-murugan-merged.mp3",
+            content: `என் கவிதைகளின் எழுத்தாணி இவர் .
+கொஞ்சமும் பொறாமையற்ற  பெருந்தன்மை கொண்ட என்னின் தம்பி 
+என்னை ஏற்றி புகழ்வதில் பெருமை கொள்பவர்.
+இவரின் இறப்பு என்னின் பேரிழப்பு .
+E. S. Nathan  குடும்பம் அனைத்திற்கும் பேரிழப்பு .
+அவரை மறப்பது அத்தனை எளிதல்ல
+
+
+பிணமது சுமக்கும்
+பிணியது உயிரோ
+பணமது பேயின்
+புகுதலே உயிரோ
+
+முகமது நடிப்பில்
+மறைந்திடும் மனமும்
+மாறிடும் குணத்தில்
+மூழ்கிடும் உறவும்
+
+பேசும் மொழியது
+பிதற்றலின் பிறப்பும்
+பேசா உயிர்களின்
+பொல்லா போக்கும்
+
+பிறப்பதும் அறியா
+போவதும் அறியா
+பாவத் தோன்றலின்
+பாதையின் உயிராய்
+
+பகலதில் தொடங்கி
+படர்ந்திடும் இரவும்
+பகலவன் கரைந்த
+பாதியின் பிறையும்
+
+பேதமை போற்றும்
+பிறப்பின் குணமும்
+புதுமையின் பிறப்பும்
+பழமையின் இறப்பும்
+பாதையின் பாதையே
+புதுமையும் கண்டிலை
+
+நாளை என்பதை
+நாமும் அறிந்திலை
+நாளை நமதென
+நம்மின் கணக்கும்
+நம்மின் வினையே
+நம்மின் பிறப்பாம்
+
+
+பாடும் பறவையின்
+பலநாள் ஆட்டம்
+பொல்லா தீயில்
+பொசுங்கி மடியும்
+பெட்டியில் புதைபடும்
+பிறப்பின் முடிவுரை
+
+பெட்டியின் பணமும்
+பந்தா பவிசும்
+போனது எங்கே
+புரியுமோ உயிரும்
+
+
+	- பணகுடி கவிஞர் ஈ.எஸ்.முருகன்`,
+            englishTranslation: `Life (Uyir)
+
+He was the very stylus (the driving force) of my poems. A younger brother of immense magnanimity, completely devoid of envy, who took great pride in elevating and praising me.
+
+His passing is a monumental loss to me. It is a devastating loss for the entire family of E.S. Nathan. Forgetting him is not so easy.
+
+
+The Burden and the Illusion
+Is life merely a disease
+that carries a corpse?
+Is it just the entry of a money-maddened ghost?
+
+The Mask of Existence
+The mind hides behind
+the acting of the face;
+Relationships drown
+in the shifting tides of character.
+
+The Chaos of Speech
+The language we speak
+is but the birth of gibberish;
+Yet, there is a cruel indifference
+in the lives that remain silent.
+
+The Unknown Journey
+Unaware of its birth,
+unaware of its end;
+A sinful manifestation
+on the path of life.
+
+The Cycle of Light and Dark
+Starting in the day,
+stretching into the night;
+A crescent moon born
+from the dissolved sun.
+
+The Trap of Tradition
+A nature of birth
+that celebrates ignorance;
+The birth of the new,
+the death of the old;
+A path within a path,
+yet no true "newness" is found.
+
+The Arrogance of Time
+We know nothing of "tomorrow,"
+Yet we calculate,
+claiming "tomorrow is ours."
+Our own destiny (Karma)
+is the reason for our birth.
+
+The Final Chapter
+The long-standing dance
+of the singing bird,
+Ends scorched to ashes
+in the cruel fire;
+The epilogue of birth
+is buried within a box.
+
+The Ultimate Question
+The money in that box,
+the status, and the pride—
+Where did it all go?
+Will the soul ever understand?
+
+	- Panagudi Poet E S Murugan`,
+          },
           {
             id: "item_1775570257954",
             title: "சரசண்ணி குடும்ப தங்கைகள் சார்பாக மருமகள் லட்சுமி சுந்தரின் இரங்கல்",
@@ -2670,6 +2910,7 @@ Eegai Nagar, Trichy`,
 	-Kala Azhagappan's daughter-in-law, 
 	 Lakshmi Sundar`,
           }
+
 
         ],
       },
