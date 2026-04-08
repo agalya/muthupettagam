@@ -30,12 +30,21 @@ const CategoryPage = () => {
 
     const hash = window.location.hash.replace('#', '');
     let foundTabId: string | undefined;
+    let isSubCategoryHash = false;
 
     if (hash && category.subCategories) {
-      for (const sub of category.subCategories) {
-        if (sub.items.some(item => item.id === hash)) {
-          foundTabId = sub.id;
-          break;
+      // First, check if the hash IS literally a subcategory ID itself
+      if (category.subCategories.some(sub => sub.id === hash)) {
+        foundTabId = hash;
+        isSubCategoryHash = true;
+      } 
+      // If not, check if the hash belongs to an article item inside the subcategories
+      else {
+        for (const sub of category.subCategories) {
+          if (sub.items.some(item => item.id === hash)) {
+            foundTabId = sub.id;
+            break;
+          }
         }
       }
     }
@@ -45,7 +54,7 @@ const CategoryPage = () => {
       setActiveTab(foundTabId || category.subCategories[0].id);
     }
 
-    if (hash) {
+    if (hash && !isSubCategoryHash) {
       setOpenItems(prev => prev.includes(hash) ? prev : [...prev, hash]);
       // Delay scrolling slightly longer to allow tab content to mount if a switch occurred
       setTimeout(() => {
@@ -151,7 +160,19 @@ const CategoryPage = () => {
                 </div>
               </div>
 
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 flex items-center gap-3">
+                <button
+                  onClick={() => {
+                    const url = `${window.location.origin}${window.location.pathname}`;
+                    navigator.clipboard.writeText(url);
+                    toast.success("Category link copied to clipboard!");
+                  }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur"
+                  title="Copy category link"
+                >
+                  <LinkIcon className="w-4 h-4" />
+                  <span className="hidden sm:inline">Share Category</span>
+                </button>
                 {features.enableDownloadCategoryZip && <ZipDownloadButton categories={[category]} />}
               </div>
             </div>
@@ -163,13 +184,13 @@ const CategoryPage = () => {
       <div className="flex-1 container mx-auto px-4 py-10 max-w-7xl">
         {category.subCategories ? (
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <div className="w-full relative mb-8 flex flex-wrap justify-start sm:justify-center px-1">
-              <TabsList className="inline-flex h-auto p-1.5 bg-muted/80 backdrop-blur rounded-2xl shadow-inner gap-2 flex-wrap w-full justify-center">
+            <div className="w-full relative mb-8 flex flex-col md:flex-row gap-4 items-center justify-center px-1">
+              <TabsList className="inline-flex h-auto p-1.5 bg-muted/80 backdrop-blur rounded-2xl shadow-inner gap-2 flex-wrap w-full md:w-auto justify-center">
                 {category.subCategories.map(sub => (
                   <TabsTrigger
                     key={sub.id}
                     value={sub.id}
-                    className="flex-1 min-w-[180px] text-center py-2.5 px-5 rounded-xl font-tamil-heading text-sm md:text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all whitespace-nowrap"
+                    className="flex-1 min-w-[150px] md:min-w-[180px] text-center py-2.5 px-5 rounded-xl font-tamil-heading text-sm md:text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all whitespace-nowrap"
                   >
                     <span className="flex items-center justify-center gap-2">
                       {sub.title}
@@ -180,6 +201,21 @@ const CategoryPage = () => {
                   </TabsTrigger>
                 ))}
               </TabsList>
+
+              <button
+                onClick={() => {
+                  if (activeTab) {
+                    const url = `${window.location.origin}${window.location.pathname}#${activeTab}`;
+                    navigator.clipboard.writeText(url);
+                    toast.success("Subcategory link copied to clipboard!");
+                  }
+                }}
+                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary border border-border/50 shadow-sm whitespace-nowrap"
+                title="Copy link to this subcategory"
+              >
+                <LinkIcon className="w-4 h-4" />
+                <span>Share Tab</span>
+              </button>
             </div>
 
             {category.subCategories.map((sub, i) => (
