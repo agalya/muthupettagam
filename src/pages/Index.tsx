@@ -229,14 +229,19 @@ const Index = () => {
                     <AccordionContent>
                       <div className="pt-0 pb-4">
                         {item.content && (
-                          <div className="sticky top-16 md:top-20 z-10 bg-background/95 backdrop-blur-md pt-0 pb-3 mb-6 -mt-2 border-b border-border/50 shadow-sm flex flex-wrap gap-3 items-center max-w-4xl mx-auto rounded-t-lg -mx-2 px-2 md:-mx-4 md:px-4">
+                          <div className="pt-0 pb-3 mb-6 border-b border-border/50 shadow-sm flex flex-wrap gap-3 items-center max-w-4xl mx-auto rounded-t-lg -mx-2 px-2 md:-mx-4 md:px-4">
                             {item.audioFile ? (
                               <div className="flex flex-col gap-1 w-full sm:w-auto flex-grow max-w-sm">
                                 <span className="font-tamil-body text-xs font-semibold text-muted-foreground ml-2">கேட்க :</span>
                                 <audio controls src={getAudioUrl(item.audioFile)} className="w-full h-10 outline-none hover:shadow-sm transition-shadow rounded-full" />
                               </div>
                             ) : (
-                              <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                              <div className="flex flex-col gap-1 w-full sm:w-auto flex-grow max-w-sm">
+                                <span className="font-tamil-body text-xs font-semibold text-muted-foreground ml-2 opacity-0 select-none">கேட்க :</span>
+                                <div className="h-10 flex items-center">
+                                  <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                                </div>
+                              </div>
                             )}
                             {item.englishTranslation && (
                               <button
@@ -259,7 +264,7 @@ const Index = () => {
                           </div>
                         )}
                         {item.image && (
-                          <div className="mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
+                          <div className="mt-8 mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
                             <img src={useAssetUrl(item.image)} alt={articleDisplayTitle(item)} className="w-full h-auto" />
                           </div>
                         )}

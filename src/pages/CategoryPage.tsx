@@ -1,7 +1,7 @@
 import { useAssetUrl } from "@/hooks/useAssetUrl";
 import { getAudioUrl } from "@/lib/audioUtils";
-import { useMemo, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useMemo, useState, useEffect } from "react";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { categories } from "@/data/categories";
 import Header from "@/components/Header";
@@ -11,7 +11,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TextToSpeech from "@/components/TextToSpeech";
 import { ArticleTitle, articleDisplayTitle } from "@/lib/articleDisplayTitle";
 import { downloadArticlePdf } from "@/lib/downloadArticlePdf";
-import { Languages, X, ChevronLeft, ChevronRight, Download } from "lucide-react";
+import { Languages, X, ChevronLeft, ChevronRight, Download, LinkIcon } from "lucide-react";
+import { toast } from "sonner";
 import ZipDownloadButton from "@/components/ZipDownloadButton";
 import { features } from "@/config/site";
 
@@ -19,6 +20,42 @@ const CategoryPage = () => {
   const { id } = useParams<{ id: string }>();
   const category = categories.find((c) => c.id === id);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  
+  const location = useLocation();
+  const [openItems, setOpenItems] = useState<string[]>([]);
+  const [activeTab, setActiveTab] = useState<string | undefined>(category?.subCategories?.[0]?.id);
+
+  useEffect(() => {
+    if (!category) return;
+
+    const hash = window.location.hash.replace('#', '');
+    let foundTabId: string | undefined;
+
+    if (hash && category.subCategories) {
+      for (const sub of category.subCategories) {
+        if (sub.items.some(item => item.id === hash)) {
+          foundTabId = sub.id;
+          break;
+        }
+      }
+    }
+
+    // Set the tab to the found tab if hash matches, otherwise default to first subcat
+    if (category.subCategories) {
+      setActiveTab(foundTabId || category.subCategories[0].id);
+    }
+
+    if (hash) {
+      setOpenItems(prev => prev.includes(hash) ? prev : [...prev, hash]);
+      // Delay scrolling slightly longer to allow tab content to mount if a switch occurred
+      setTimeout(() => {
+        const el = document.getElementById(`article-${hash}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 600);
+    }
+  }, [location.hash, category?.id]);
 
   const allImages = useMemo(() => {
     const imgs: { src: string, title?: string, id: string, originalItem?: any }[] = [];
@@ -125,7 +162,7 @@ const CategoryPage = () => {
       {/* Content */}
       <div className="flex-1 container mx-auto px-4 py-10 max-w-7xl">
         {category.subCategories ? (
-          <Tabs defaultValue={category.subCategories[0].id} className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <div className="w-full relative mb-8 flex flex-wrap justify-start sm:justify-center px-1">
               <TabsList className="inline-flex h-auto p-1.5 bg-muted/80 backdrop-blur rounded-2xl shadow-inner gap-2 flex-wrap w-full justify-center">
                 {category.subCategories.map(sub => (
@@ -197,9 +234,10 @@ const CategoryPage = () => {
                       ))}
                     </div>
                   ) : (
-                    <Accordion type="multiple" className="space-y-4">
+                    <Accordion type="multiple" value={openItems} onValueChange={setOpenItems} className="space-y-4">
                       {sub.items.map((item) => (
                         <AccordionItem
+                          id={`article-${item.id}`}
                           key={item.id}
                           value={item.id}
                           className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
@@ -210,15 +248,32 @@ const CategoryPage = () => {
                           <AccordionContent>
                             <div className="pt-0 pb-4">
                               {item.content && (
-                                <div className="sticky top-16 md:top-20 z-10 bg-background/95 backdrop-blur-md pt-0 pb-3 mb-6 -mt-2 border-b border-border/50 shadow-sm flex flex-wrap gap-3 items-center max-w-4xl mx-auto rounded-t-lg -mx-2 px-2 md:-mx-4 md:px-4">
+                                <div className="pt-0 pb-3 mb-6 border-b border-border/50 shadow-sm flex flex-wrap gap-3 items-center max-w-4xl mx-auto rounded-t-lg -mx-2 px-2 md:-mx-4 md:px-4">
                                   {item.audioFile ? (
                                     <div className="flex flex-col gap-1 w-full sm:w-auto flex-grow max-w-sm">
                                       <span className="font-tamil-body text-xs font-semibold text-muted-foreground ml-2">கேட்க :</span>
                                       <audio controls src={getAudioUrl(item.audioFile)} className="w-full h-10 outline-none hover:shadow-sm transition-shadow rounded-full" />
                                     </div>
                                   ) : (
-                                    <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                                    <div className="flex flex-col gap-1 w-full sm:w-auto flex-grow max-w-sm">
+                                      <span className="font-tamil-body text-xs font-semibold text-muted-foreground ml-2 opacity-0 select-none">கேட்க :</span>
+                                      <div className="h-10 flex items-center">
+                                        <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                                      </div>
+                                    </div>
                                   )}
+                                  <button
+                                    onClick={() => {
+                                      const url = `${window.location.origin}${window.location.pathname}#${item.id}`;
+                                      navigator.clipboard.writeText(url);
+                                      toast.success("Link copied to clipboard!");
+                                    }}
+                                    className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
+                                    title="Copy link to this article"
+                                  >
+                                    <LinkIcon className="w-4 h-4" />
+                                    <span className="hidden sm:inline">Copy Link</span>
+                                  </button>
                                   {item.englishTranslation && (
                                     <button
                                       onClick={() => document.getElementById(`translation-${item.id}`)?.scrollIntoView({ behavior: 'smooth' })}
@@ -240,7 +295,7 @@ const CategoryPage = () => {
                                 </div>
                               )}
                               {item.image && (
-                                <div className="mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
+                                <div className="mt-8 mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
                                   <img src={useAssetUrl(item.image)} alt={articleDisplayTitle(item)} className="w-full h-auto" />
                                 </div>
                               )}
@@ -311,7 +366,7 @@ const CategoryPage = () => {
                 ))}
               </div>
             ) : (
-              <Accordion type="multiple" className="space-y-3">
+              <Accordion type="multiple" value={openItems} onValueChange={setOpenItems} className="space-y-3">
                 {category.items.map((item, i) => (
                   <motion.div
                     key={item.id}
@@ -320,6 +375,7 @@ const CategoryPage = () => {
                     transition={{ delay: i * 0.08, duration: 0.4 }}
                   >
                     <AccordionItem
+                      id={`article-${item.id}`}
                       value={item.id}
                       className="rounded-xl border border-border/50 bg-card px-6 py-2 hover:border-accent/30 hover:shadow-sm transition-all data-[state=open]:bg-muted/10"
                     >
@@ -329,15 +385,32 @@ const CategoryPage = () => {
                       <AccordionContent>
                         <div className="pt-0 pb-4">
                           {item.content && (
-                            <div className="sticky top-16 md:top-20 z-10 bg-background/95 backdrop-blur-md pt-0 pb-3 mb-6 -mt-2 border-b border-border/50 shadow-sm flex flex-wrap gap-3 items-center max-w-4xl mx-auto rounded-t-lg -mx-2 px-2 md:-mx-4 md:px-4">
+                            <div className="pt-0 pb-3 mb-6 border-b border-border/50 shadow-sm flex flex-wrap gap-3 items-center max-w-4xl mx-auto rounded-t-lg -mx-2 px-2 md:-mx-4 md:px-4">
                               {item.audioFile ? (
                                 <div className="flex flex-col gap-1 w-full sm:w-auto flex-grow max-w-sm">
                                   <span className="font-tamil-body text-xs font-semibold text-muted-foreground ml-2">கேட்க :</span>
                                   <audio controls src={getAudioUrl(item.audioFile)} className="w-full h-10 outline-none hover:shadow-sm transition-shadow rounded-full" />
                                 </div>
                               ) : (
-                                <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                                <div className="flex flex-col gap-1 w-full sm:w-auto flex-grow max-w-sm">
+                                  <span className="font-tamil-body text-xs font-semibold text-muted-foreground ml-2 opacity-0 select-none">கேட்க :</span>
+                                  <div className="h-10 flex items-center">
+                                    <TextToSpeech text={item.content} audioFile={item.audioFile} />
+                                  </div>
+                                </div>
                               )}
+                              <button
+                                onClick={() => {
+                                  const url = `${window.location.origin}${window.location.pathname}#${item.id}`;
+                                  navigator.clipboard.writeText(url);
+                                  toast.success("Link copied to clipboard!");
+                                }}
+                                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all bg-secondary/80 text-secondary-foreground hover:bg-secondary"
+                                title="Copy link to this article"
+                              >
+                                <LinkIcon className="w-4 h-4" />
+                                <span className="hidden sm:inline">Copy Link</span>
+                              </button>
                               {item.englishTranslation && (
                                 <button
                                   onClick={() => document.getElementById(`translation-${item.id}`)?.scrollIntoView({ behavior: 'smooth' })}
@@ -359,7 +432,7 @@ const CategoryPage = () => {
                             </div>
                           )}
                           {item.image && (
-                            <div className="mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
+                            <div className="mt-8 mb-6 rounded-lg overflow-hidden border border-border/50 shadow-sm max-w-3xl mx-auto">
                               <img src={useAssetUrl(item.image)} alt={articleDisplayTitle(item)} className="w-full h-auto" />
                             </div>
                           )}
