@@ -22,13 +22,17 @@ function uploadArticlePlugin(): Plugin {
 
               if (imageBase64 && newItem.image) {
                 const base64Data = imageBase64.replace(/^data:image\/[^;]+;base64,/, "");
-                const imagePath = path.join(__dirname, "public", newItem.image.replace(/^\\/, ""));
+                const imagePath = path.join(__dirname, "public", newItem.image.replace(/^[\\\/]/, ""));
+                const dir = path.dirname(imagePath);
+                if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
                 fs.writeFileSync(imagePath, base64Data, "base64");
               }
 
               if (audioBase64 && newItem.audioFile) {
                 const base64Data = audioBase64.replace(/^data:audio\/[^;]+;base64,/, "");
-                const audioPath = path.join(__dirname, "public", newItem.audioFile.replace(/^\\/, ""));
+                const audioPath = path.join(__dirname, "public", newItem.audioFile.replace(/^[\\\/]/, ""));
+                const dir = path.dirname(audioPath);
+                if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
                 fs.writeFileSync(audioPath, base64Data, "base64");
               }
 

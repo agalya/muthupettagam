@@ -104,14 +104,14 @@ export default function Upload() {
       let imageFilePath = "";
       if (imageFile) {
         imageBase64 = await toBase64(imageFile);
-        imageFilePath = `/${itemId}_${imageFile.name.replace(/\s+/g, "_")}`;
+        imageFilePath = `images/${itemId}_${imageFile.name.replace(/\s+/g, "_")}`;
       }
 
       let audioBase64 = "";
       let audioFilePath = "";
       if (audioFile) {
         audioBase64 = await toBase64(audioFile);
-        audioFilePath = `/${itemId}_${audioFile.name.replace(/\s+/g, "_")}`;
+        audioFilePath = `audio/${itemId}_${audioFile.name.replace(/\s+/g, "_")}`;
       }
 
       const payload = {

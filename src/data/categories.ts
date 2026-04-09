@@ -560,13 +560,13 @@ May the Diamond Jubilee couple live for many more years...
     - பொன். முத்துக்குமார்,
       பணகுடி`
           }
-        ,
+          ,
           {
             id: "item_1775648291568",
             title: "மன்றல் வாழ்த்து - [மணமகன்: செல்வன் M. சங்கர நாராயண சுவாமி(ஈ.எஸ்.முருகன் மகன்) மணமகள்: செல்வி சுனிதா]",
             date: "04 பிப்ரவரி 2005",
-            image: "/item_1775648291568_ES_Murugan_Son.png",
-            audioFile: "/item_1775648291568_ES_murugan_son_vaazhthu.m4a",
+            image: "images/item_1775648291568_ES_Murugan_Son.png",
+            audioFile: "audio/item_1775648291568_ES_murugan_son_vaazhthu.m4a",
             content: `மன்றல் வாழ்த்து
 
 மணமகன்: செல்வன் M. சங்கர நாராயண சுவாமி
@@ -664,13 +664,13 @@ Throughout your life's journey, may Mother Sivakami stay by your side and protec
 	- Pon Muthukumar,
 	  Panagudi`,
           }
-        ,
+          ,
           {
             id: "item_1775738417603",
             title: "திரு.கிருஷ்ணனுக்கு வாழ்த்து மடல்",
-            
-            image: "/item_1775738417603_Krishna_mama_collage.png",
-            audioFile: "/item_1775738417603_krishnamama_recording.m4a",
+
+            image: "images/item_1775738417603_Krishna_mama_collage.png",
+            audioFile: "audio/item_1775738417603_krishnamama_recording.m4a",
             content: `ஓய்வறியா சூரியனே!
 அறுபத்தி ஐந்து வயது இளைஞனே!
 எளிமை உன் வாழ்க்கை நெறி
@@ -2852,8 +2852,8 @@ Eegai Nagar, Trichy`,
             id: "item_1775645943601",
             title: "உயிர் - பணகுடி கவிஞர் மற்றும் நண்பர் ஈ.எஸ்.முருகனின் இரங்கல்",
             date: "05 ஏப்ரல் 2026",
-            image: "/item_1775645943601_E_S_Murugan_-pik.png",
-            audioFile: "/item_1775645943601_es-murugan-merged.mp3",
+            image: "images/item_1775645943601_E_S_Murugan_-pik.png",
+            audioFile: "audio/item_1775645943601_es-murugan-merged.mp3",
             content: `என் கவிதைகளின் எழுத்தாணி இவர் .
 கொஞ்சமும் பொறாமையற்ற  பெருந்தன்மை கொண்ட என்னின் தம்பி 
 என்னை ஏற்றி புகழ்வதில் பெருமை கொள்பவர்.
@@ -3820,11 +3820,7 @@ His wife snapped at him in a rage: "Can't you let me play my video games on the 
           {
             id: "item_1775571160804",
             title: "பசுமை நிறைந்த நினைவுகள்",
-
-            image: "image/item_1775571160804_School_photo.jpeg",
-
-
-
+            image: "images/item_1775571160804_School_photo.jpeg",
           }
         ],
       },
@@ -4579,16 +4575,16 @@ Let us worship and protect her.`,
 
 
       }
-    ,
-          {
-            id: "item_1775701200519",
-            title: "கண்கவர் கலைடாஸ்கோப்...👍",
-            
-            image: "/item_1775701200519_கண்கவர்_கலைடாஸ்கோப்...👍.jpeg",
-            
-            
-            
-          }
-        ],
+      ,
+      {
+        id: "item_1775701200519",
+        title: "கண்கவர் கலைடாஸ்கோப்...👍",
+
+        image: "images/item_1775701200519_கண்கவர்_கலைடாஸ்கோப்...👍.jpeg",
+
+
+
+      }
+    ],
   },
 ];
