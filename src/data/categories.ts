@@ -664,6 +664,101 @@ Throughout your life's journey, may Mother Sivakami stay by your side and protec
 	- Pon Muthukumar,
 	  Panagudi`,
           }
+        ,
+          {
+            id: "item_1775738417603",
+            title: "திரு.கிருஷ்ணனுக்கு வாழ்த்து மடல்",
+            
+            image: "/item_1775738417603_Krishna_mama_collage.png",
+            audioFile: "/item_1775738417603_krishnamama_recording.m4a",
+            content: `ஓய்வறியா சூரியனே!
+அறுபத்தி ஐந்து வயது இளைஞனே!
+எளிமை உன் வாழ்க்கை நெறி
+இனிமை உன் இயல்பான குணம்.
+
+நல்ல பெயர் கிடைக்கும் தான்...
+அதற்காக ஆழம் தெரியாமல் காலை விடலாமா?
+புரிதல் உனக்கு உண்டு.
+Safety First; Speed Next.
+நுட்பம் தெரிந்தவன் நீ!
+
+விபத்துக்களை தவிர்க்கும் மந்திரம் தெரிந்தவன்.
+உறவுகளின் நல்லது கெட்டதுகளை
+உடனுக்குடன் பகிர்ந்து கொள்ளும் தூதுவன்.
+மேலத் தெருவுக்கும், கீழத் தெருவுக்கும் பாலம் நீ...
+
+யாரையும் தலையில் வைத்து கொண்டாடுவதும் இல்லை
+எவரையும் காலில் போட்டு மிதிப்பதும் இல்லை.
+சம நிலை பேணும் சாமர்த்தியம் உண்டு உனக்கு.
+
+அஞ்சலகம் விடை கொடுத்தால் என்ன?..
+உறவுகள் இருக்கிறது இருகரம் நீட்டி வரவேற்க...
+உறவுகளை பேணுவதில் எங்கள் அண்ணியார்
+அது தான் உங்கள் அக்கா தானே உங்கள் முன்னோடி...
+
+கிருஷ்ணா!
+நீ எடுக்கும் அவதாரங்கள் தான் எத்தனை? எத்தனை?
+அத்தனையும் நன்மைக்கே... குடும்ப நன்மைக்கே!
+பல வருடங்களுக்கு முன் நெஞ்சு வலி என்றார்கள்...
+பரிதவித்தோம்... கிருஷ்ணனுக்கா... "கிருஷ்ணனுக்கேவா?"
+சலியாத உழைப்பால் உடலை உறுதி செய்தாய்.
+வியந்து போனோம்...
+
+சலியாத உழைப்பு; கட்டுக் கோப்பான நிதி மேலாண்மை;
+அலட்டல் இல்லாத அமைதியான வாழ்க்கை முறை;
+உன் வெற்றிக்கு படிக்கட்டு இவைதானே!
+
+படிக்கட்டும் நம் இளைஞர்களும் இந்த பாடத்தை
+உன்னிடமிருந்து.
+
+	- வாழ்த்தி மகிழ்வது:
+	  பொன். முத்துக்குமார்
+	  மற்றும் உறவுகள்.`,
+            englishTranslation: `To the Sun that never tires!
+A youth of sixty-five!
+Simplicity is your way of life,
+Sweetness is your inherent nature.
+
+Good reputation is earned, of course...
+But should one leap without knowing the depth?
+You possess that understanding.
+Safety First; Speed Next.
+You are a master of technique!
+
+You know the mantra to avoid accidents.
+A messenger who shares the joys and sorrows
+Of relationships instantly.
+You are the bridge between the upper street and the lower street...
+
+You do not place anyone on a pedestal,
+Nor do you trample anyone underfoot.
+You possess the wisdom to maintain balance.
+
+What if the Post Office has bid you farewell?..
+Relationships are there with open arms to welcome you...
+In nurturing relationships, our sister-in-law—
+Who is indeed your elder sister—is your guide.
+
+Krishna!
+How many avatars you take! How many!
+All for the good... for the good of the family.
+Years ago, they said it was chest pain...
+We were devastated... for Krishna?... "For Krishna himself?"
+Through tireless hard work, you strengthened your body.
+We were left in awe...
+
+Relentless hard work; disciplined financial management;
+An unassuming, peaceful way of life;
+Aren't these the steps to your success?
+
+May our youth learn this lesson
+From you.
+
+	With warm wishes and joy,
+
+	Pon. Muthukumar
+	and family/relatives.`,
+          }
         ],
       },
       {
@@ -4484,6 +4579,16 @@ Let us worship and protect her.`,
 
 
       }
-    ],
+    ,
+          {
+            id: "item_1775701200519",
+            title: "கண்கவர் கலைடாஸ்கோப்...👍",
+            
+            image: "/item_1775701200519_கண்கவர்_கலைடாஸ்கோப்...👍.jpeg",
+            
+            
+            
+          }
+        ],
   },
 ];
