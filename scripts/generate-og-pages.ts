@@ -71,6 +71,16 @@ const generate = async () => {
     // Process all SubCategories and Items
     if (category.subCategories) {
       for (const sub of category.subCategories) {
+        // Generate the OG page for the SubCategory link itself (e.g., /category/memories/ninaivu)
+        const subTitle = `${sub.title} - ${category.title}`;
+        const subDesc = sub.description ? sub.description.replace(/"/g, '&quot;') : categoryDesc;
+        const subImage = sub.image ? getAbsImageUrl(sub.image) : categoryImage;
+        const subHtml = injectMeta(baseHtml, subTitle, subDesc, subImage);
+        const subDir = path.join(categoryDir, sub.id);
+        fs.ensureDirSync(subDir);
+        fs.writeFileSync(path.join(subDir, 'index.html'), subHtml);
+        generatedCount++;
+
         for (const item of sub.items) {
           if (!item) continue;
           const safeItemTitle = item.title || category.title || '';
